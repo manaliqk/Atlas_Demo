@@ -2,19 +2,19 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="4508" started-at="2020-01-21T06:42:31Z" finished-at="2020-01-21T06:42:36Z">
+  <suite name="Default suite" duration-ms="6209" started-at="2020-01-21T13:12:26Z" finished-at="2020-01-21T13:12:32Z">
     <groups>
       <group name="cucumber">
-        <method signature="CucumberRunner.feature(cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:com.qaprosoft.carina.demo.API_CreateUserCucumberTest@452e19ca]" name="feature" class="com.qaprosoft.carina.core.foundation.cucumber.CucumberRunner"/>
+        <method signature="CucumberRunner.feature(cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:com.qaprosoft.carina.demo.API_CreateUserCucumberTest@928763c]" name="feature" class="com.qaprosoft.carina.core.foundation.cucumber.CucumberRunner"/>
       </group> <!-- cucumber -->
     </groups>
-    <test name="Default test" duration-ms="4508" started-at="2020-01-21T06:42:31Z" finished-at="2020-01-21T06:42:36Z">
+    <test name="Default test" duration-ms="6209" started-at="2020-01-21T13:12:26Z" finished-at="2020-01-21T13:12:32Z">
       <class name="com.qaprosoft.carina.demo.API_CreateUserCucumberTest">
-        <test-method status="PASS" signature="setUpClass()[pri:0, instance:com.qaprosoft.carina.demo.API_CreateUserCucumberTest@452e19ca]" name="setUpClass" is-config="true" duration-ms="36" started-at="2020-01-21T06:42:31Z" finished-at="2020-01-21T06:42:31Z">
+        <test-method status="PASS" signature="setUpClass()[pri:0, instance:com.qaprosoft.carina.demo.API_CreateUserCucumberTest@928763c]" name="setUpClass" is-config="true" duration-ms="32" started-at="2020-01-21T13:12:26Z" finished-at="2020-01-21T13:12:26Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpClass -->
-        <test-method status="PASS" signature="feature(cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:com.qaprosoft.carina.demo.API_CreateUserCucumberTest@452e19ca]" name="feature" duration-ms="2922" started-at="2020-01-21T06:42:31Z" description="Runs Cucumber Feature" data-provider="features" finished-at="2020-01-21T06:42:34Z">
+        <test-method status="PASS" signature="feature(cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:com.qaprosoft.carina.demo.API_CreateUserCucumberTest@928763c]" name="feature" duration-ms="4336" started-at="2020-01-21T13:12:26Z" description="Runs Cucumber Feature" data-provider="features" finished-at="2020-01-21T13:12:31Z">
           <params>
             <param index="0">
               <value>
@@ -25,11 +25,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- feature -->
-        <test-method status="PASS" signature="tearDownClass(org.testng.ITestContext)[pri:0, instance:com.qaprosoft.carina.demo.API_CreateUserCucumberTest@452e19ca]" name="tearDownClass" is-config="true" duration-ms="1355" started-at="2020-01-21T06:42:34Z" finished-at="2020-01-21T06:42:36Z">
+        <test-method status="PASS" signature="tearDownClass(org.testng.ITestContext)[pri:0, instance:com.qaprosoft.carina.demo.API_CreateUserCucumberTest@928763c]" name="tearDownClass" is-config="true" duration-ms="1649" started-at="2020-01-21T13:12:31Z" finished-at="2020-01-21T13:12:32Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@f9cab00]]>
+                <![CDATA[org.testng.TestRunner@2b4b96a4]]>
               </value>
             </param>
           </params>
