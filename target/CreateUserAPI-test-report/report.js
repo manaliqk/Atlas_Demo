@@ -1,9 +1,9 @@
-$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("src/test/resources/features/CreateUserAPI.feature");
+$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("src/test/resources/features/FirstCry_Mobile.feature");
 formatter.feature({
   "line": 2,
-  "name": "Create User Details",
+  "name": "firstcry feature",
   "description": "",
-  "id": "create-user-details",
+  "id": "firstcry-feature",
   "keyword": "Feature",
   "tags": [
     {
@@ -14,9 +14,9 @@ formatter.feature({
 });
 formatter.scenario({
   "line": 6,
-  "name": "Verify user creation",
+  "name": "Verify if boy is selected",
   "description": "",
-  "id": "create-user-details;verify-user-creation",
+  "id": "firstcry-feature;verify-if-boy-is-selected",
   "type": "scenario",
   "keyword": "Scenario",
   "tags": [
@@ -32,50 +32,60 @@ formatter.scenario({
 });
 formatter.step({
   "line": 7,
-  "name": "Post endpoint given",
+  "name": "launch First Cry App",
   "keyword": "Given "
 });
 formatter.step({
   "line": 8,
-  "name": "Enter Username and Job",
+  "name": "Select Boy and years",
   "keyword": "When "
 });
 formatter.step({
   "line": 9,
-  "name": "Post the api",
-  "keyword": "Then "
+  "name": "Select DOB Child Name",
+  "keyword": "And "
 });
 formatter.step({
   "line": 10,
-  "name": "Get response",
+  "name": "Click Submit",
   "keyword": "And "
 });
+formatter.step({
+  "line": 11,
+  "name": "Check the child name added",
+  "keyword": "Then "
+});
 formatter.match({
-  "location": "CreateUserAPIStepdef.startMethod()"
+  "location": "FirstCryBoyStepdef.MainPage()"
 });
 formatter.result({
-  "duration": 711292800,
+  "duration": 41578890300,
   "status": "passed"
 });
 formatter.match({
-  "location": "CreateUserAPIStepdef.enterdetails()"
+  "location": "FirstCryBoyStepdef.Enterdetails()"
 });
 formatter.result({
-  "duration": 11854800,
-  "status": "passed"
+  "duration": 2383501,
+  "error_message": "java.lang.NullPointerException\r\n\tat com.qaprosoft.carina.demo.cucumber.steps.manali.FirstCryBoyStepdef.Enterdetails(FirstCryBoyStepdef.java:40)\r\n\tat ✽.When Select Boy and years(src/test/resources/features/FirstCry_Mobile.feature:8)\r\n",
+  "status": "failed"
 });
 formatter.match({
-  "location": "CreateUserAPIStepdef.postAPI()"
+  "location": "FirstCryBoyStepdef.selectDOB()"
 });
 formatter.result({
-  "duration": 3553711200,
-  "status": "passed"
+  "status": "skipped"
 });
 formatter.match({
-  "location": "CreateUserAPIStepdef.getResponseTime()"
+  "location": "FirstCryBoyStepdef.clicksubmit()"
 });
 formatter.result({
-  "duration": 2553000,
-  "status": "passed"
+  "status": "skipped"
+});
+formatter.match({
+  "location": "FirstCryBoyStepdef.checkchildname()"
+});
+formatter.result({
+  "status": "skipped"
 });
 });

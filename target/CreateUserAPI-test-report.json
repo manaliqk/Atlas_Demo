@@ -4,59 +4,69 @@
     "elements": [
       {
         "line": 6,
-        "name": "Verify user creation",
+        "name": "Verify if boy is selected",
         "description": "",
-        "id": "create-user-details;verify-user-creation",
+        "id": "firstcry-feature;verify-if-boy-is-selected",
         "type": "scenario",
         "keyword": "Scenario",
         "steps": [
           {
             "result": {
-              "duration": 711292800,
+              "duration": 41578890300,
               "status": "passed"
             },
             "line": 7,
-            "name": "Post endpoint given",
+            "name": "launch First Cry App",
             "match": {
-              "location": "CreateUserAPIStepdef.startMethod()"
+              "location": "FirstCryBoyStepdef.MainPage()"
             },
             "keyword": "Given "
           },
           {
             "result": {
-              "duration": 11854800,
-              "status": "passed"
+              "duration": 2383501,
+              "error_message": "java.lang.NullPointerException\r\n\tat com.qaprosoft.carina.demo.cucumber.steps.manali.FirstCryBoyStepdef.Enterdetails(FirstCryBoyStepdef.java:40)\r\n\tat ✽.When Select Boy and years(src/test/resources/features/FirstCry_Mobile.feature:8)\r\n",
+              "status": "failed"
             },
             "line": 8,
-            "name": "Enter Username and Job",
+            "name": "Select Boy and years",
             "match": {
-              "location": "CreateUserAPIStepdef.enterdetails()"
+              "location": "FirstCryBoyStepdef.Enterdetails()"
             },
             "keyword": "When "
           },
           {
             "result": {
-              "duration": 3553711200,
-              "status": "passed"
+              "status": "skipped"
             },
             "line": 9,
-            "name": "Post the api",
+            "name": "Select DOB Child Name",
             "match": {
-              "location": "CreateUserAPIStepdef.postAPI()"
+              "location": "FirstCryBoyStepdef.selectDOB()"
             },
-            "keyword": "Then "
+            "keyword": "And "
           },
           {
             "result": {
-              "duration": 2553000,
-              "status": "passed"
+              "status": "skipped"
             },
             "line": 10,
-            "name": "Get response",
+            "name": "Click Submit",
             "match": {
-              "location": "CreateUserAPIStepdef.getResponseTime()"
+              "location": "FirstCryBoyStepdef.clicksubmit()"
             },
             "keyword": "And "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 11,
+            "name": "Check the child name added",
+            "match": {
+              "location": "FirstCryBoyStepdef.checkchildname()"
+            },
+            "keyword": "Then "
           }
         ],
         "tags": [
@@ -71,11 +81,11 @@
         ]
       }
     ],
-    "name": "Create User Details",
+    "name": "firstcry feature",
     "description": "",
-    "id": "create-user-details",
+    "id": "firstcry-feature",
     "keyword": "Feature",
-    "uri": "src/test/resources/features/CreateUserAPI.feature",
+    "uri": "src/test/resources/features/FirstCry_Mobile.feature",
     "tags": [
       {
         "line": 1,

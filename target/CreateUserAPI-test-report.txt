@@ -1,9 +1,14 @@
 @APITest
-Feature: Create User Details
+Feature: firstcry feature
 
   @demo @Dev
-  Scenario: Verify user creation [90m# src/test/resources/features/CreateUserAPI.feature:6[0m
-    [32mGiven [0m[32mPost endpoint given[0m    [90m# CreateUserAPIStepdef.startMethod()[0m
-    [32mWhen [0m[32mEnter Username and Job[0m  [90m# CreateUserAPIStepdef.enterdetails()[0m
-    [32mThen [0m[32mPost the api[0m            [90m# CreateUserAPIStepdef.postAPI()[0m
-    [32mAnd [0m[32mGet response[0m             [90m# CreateUserAPIStepdef.getResponseTime()[0m
+  Scenario: Verify if boy is selected [90m# src/test/resources/features/FirstCry_Mobile.feature:6[0m
+    [32mGiven [0m[32mlaunch First Cry App[0m        [90m# FirstCryBoyStepdef.MainPage()[0m
+    [31mWhen [0m[31mSelect Boy and years[0m         [90m# FirstCryBoyStepdef.Enterdetails()[0m
+      [31mjava.lang.NullPointerException
+      	at com.qaprosoft.carina.demo.cucumber.steps.manali.FirstCryBoyStepdef.Enterdetails(FirstCryBoyStepdef.java:40)
+      	at ✽.When Select Boy and years(src/test/resources/features/FirstCry_Mobile.feature:8)
+      [0m
+    [36mAnd [0m[36mSelect DOB Child Name[0m         [90m# FirstCryBoyStepdef.selectDOB()[0m
+    [36mAnd [0m[36mClick Submit[0m                  [90m# FirstCryBoyStepdef.clicksubmit()[0m
+    [36mThen [0m[36mCheck the child name added[0m   [90m# FirstCryBoyStepdef.checkchildname()[0m
