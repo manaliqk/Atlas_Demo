@@ -16,17 +16,15 @@ import cucumber.api.java.en.When;
 
 public class FirstCryBoyStepdef extends CucumberRunner{
 	MainPageBase_FirstCry Main = null;
-	BoyDetailsPagebase_FirstCry Details = null;
+	BoyDetailsPagebase_FirstCry Details;
 
+	
 	@Given("^launch First Cry App$")
 	public void MainPage() throws Exception {
 		Main = initPage(getDriver(), MainPageBase_FirstCry.class);
 		System.out.println("Application launched");
          pause(25);
          System.out.println("Waited");
-//		DesiredCapabilities capabilities = new DesiredCapabilities();
-        
-//capabilities = mobile.setCapabilities("RedmiY2.properties");
 		
 	}
 
@@ -39,17 +37,17 @@ public class FirstCryBoyStepdef extends CucumberRunner{
 		Thread.sleep(5000);*/
 		//Details = initPage(Details.getDriver(), BoyDetailsPagebase_FirstCry.class);
 
-		Main.clickonyears();
+		Main.clickyears();
 //		Details = Main.clickonyears();
 		//Thread.sleep(5000);
 		System.out.println("Clicked on years");
+		pause(6);
 
 	}
 
 	@And("^Select DOB Child Name$")
 	public void selectDOB() throws Throwable {
-		pause(6);
-		Details = initPage(Details.getDriver(), BoyDetailsPagebase_FirstCry.class);
+		Details = initPage(getDriver(), BoyDetailsPagebase_FirstCry.class);
 		Details.clickDOB();
 		pause(5);
 
@@ -64,19 +62,19 @@ public class FirstCryBoyStepdef extends CucumberRunner{
 		
 	}
 
-	@And("^Click Submit$")
+	@Then("^Click Submit$")
 	public void clicksubmit() throws Throwable {
 		Details.clicksubmit();
 		Thread.sleep(5000);
         System.out.println("Submitted");
 	}
 
-	@Then("^Check the child name added$")
+	/*@Then("^Check the child name added$")
 	public void checkchildname() {
 		Main.checkname();
 		System.out.println("Came to Home page");
-		
-	}
+	}*/	
+	
 }
 
 

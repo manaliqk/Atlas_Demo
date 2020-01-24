@@ -1,9 +1,9 @@
-$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("src/test/resources/features/FirstCry_Mobile.feature");
+$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("src/test/resources/features/CarinaDemo.feature");
 formatter.feature({
   "line": 2,
-  "name": "firstcry feature",
+  "name": "CarinaDemo feature",
   "description": "",
-  "id": "firstcry-feature",
+  "id": "carinademo-feature",
   "keyword": "Feature",
   "tags": [
     {
@@ -14,9 +14,9 @@ formatter.feature({
 });
 formatter.scenario({
   "line": 6,
-  "name": "Verify if boy is selected",
+  "name": "Verify if carinademo opens",
   "description": "",
-  "id": "firstcry-feature;verify-if-boy-is-selected",
+  "id": "carinademo-feature;verify-if-carinademo-opens",
   "type": "scenario",
   "keyword": "Scenario",
   "tags": [
@@ -32,60 +32,31 @@ formatter.scenario({
 });
 formatter.step({
   "line": 7,
-  "name": "launch First Cry App",
+  "name": "launch the app",
   "keyword": "Given "
 });
 formatter.step({
   "line": 8,
-  "name": "Select Boy and years",
+  "name": "click on Nextbutton",
   "keyword": "When "
 });
 formatter.step({
   "line": 9,
-  "name": "Select DOB Child Name",
-  "keyword": "And "
+  "name": "Enter Name and Password",
+  "keyword": "Then "
 });
 formatter.step({
   "line": 10,
-  "name": "Click Submit",
+  "name": "click on female and toggle",
   "keyword": "And "
 });
-formatter.step({
-  "line": 11,
-  "name": "Check the child name added",
-  "keyword": "Then "
-});
 formatter.match({
-  "location": "FirstCryBoyStepdef.MainPage()"
+  "location": "CarinaDemoStepdef.MainPage()"
 });
 formatter.result({
-  "duration": 41578890300,
+  "duration": 14529317800,
   "status": "passed"
 });
 formatter.match({
-  "location": "FirstCryBoyStepdef.Enterdetails()"
-});
-formatter.result({
-  "duration": 2383501,
-  "error_message": "java.lang.NullPointerException\r\n\tat com.qaprosoft.carina.demo.cucumber.steps.manali.FirstCryBoyStepdef.Enterdetails(FirstCryBoyStepdef.java:40)\r\n\tat ✽.When Select Boy and years(src/test/resources/features/FirstCry_Mobile.feature:8)\r\n",
-  "status": "failed"
-});
-formatter.match({
-  "location": "FirstCryBoyStepdef.selectDOB()"
-});
-formatter.result({
-  "status": "skipped"
-});
-formatter.match({
-  "location": "FirstCryBoyStepdef.clicksubmit()"
-});
-formatter.result({
-  "status": "skipped"
-});
-formatter.match({
-  "location": "FirstCryBoyStepdef.checkchildname()"
-});
-formatter.result({
-  "status": "skipped"
-});
+  "location": "CarinaDemoStepdef.clicknextbutton()"
 });

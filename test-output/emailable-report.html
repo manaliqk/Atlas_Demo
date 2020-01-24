@@ -9,14 +9,19 @@
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
 <tr><th colspan="7">Default suite</th></tr>
-<tr><td><a href="#t0">Default test</a></td><td class="num">0</td><td class="num">0</td><td class="num attn">1</td><td class="num">48,059</td><td></td><td></td></tr>
+<tr><td><a href="#t0">Default test</a></td><td class="num">0</td><td class="num">0</td><td class="num attn">1</td><td class="num">28,329</td><td></td><td></td></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Default suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Default test &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">com.qaprosoft.carina.demo.manali.Mobile_FirstCryBoyTest</td><td><a href="#m0">feature</a></td><td rowspan="1">1579783772369</td><td rowspan="1">41698</td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Default suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Default test &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">com.qaprosoft.carina.demo.MobileSampleTest</td><td><a href="#m0">testLoginUser</a></td><td rowspan="1">1579863834867</td><td rowspan="1">24142</td></tr></tbody>
 </table>
-<h2>Default test</h2><h3 id="m0">com.qaprosoft.carina.demo.manali.Mobile_FirstCryBoyTest#feature</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>firstcry feature</td></tr><tr><th>Messages</th></tr><tr><td><div class="messages">Redmi Y2 - 94eacea3 TEST [Default test - feature] FAILED at [04:50:18 2020-01-23] - java.lang.NullPointerException
+<h2>Default test</h2><h3 id="m0">com.qaprosoft.carina.demo.MobileSampleTest#testLoginUser</h3><table class="result"><tr><th>Messages</th></tr><tr><td><div class="messages">Redmi Y2 - 94eacea3 TEST [Default test - testLoginUser] FAILED at [03:04:22 2020-01-24] - Unable to detect element: nextBtn (By.id: next_button)
 
-cucumber.api.testng.TestNGCucumberRunner.runCucumber(TestNGCucumberRunner.java:69)
-com.qaprosoft.carina.core.foundation.cucumber.CucumberRunner.feature(CucumberRunner.java:56)
+com.qaprosoft.carina.core.foundation.webdriver.decorator.ExtendedWebElement.doAction(ExtendedWebElement.java:1391)
+com.qaprosoft.carina.core.foundation.webdriver.decorator.ExtendedWebElement.doAction(ExtendedWebElement.java:1345)
+com.qaprosoft.carina.core.foundation.webdriver.decorator.ExtendedWebElement.click(ExtendedWebElement.java:493)
+com.qaprosoft.carina.core.foundation.webdriver.decorator.ExtendedWebElement.click(ExtendedWebElement.java:481)
+com.qaprosoft.carina.core.foundation.webdriver.decorator.ExtendedWebElement.click(ExtendedWebElement.java:472)
+com.qaprosoft.carina.demo.mobile.gui.pages.android.WelcomePage.clickNextBtn(WelcomePage.java:31)
+com.qaprosoft.carina.demo.MobileSampleTest.testLoginUser(MobileSampleTest.java:85)
 sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -41,9 +46,14 @@ org.testng.TestNG.runSuites(TestNG.java:1049)
 org.testng.TestNG.run(TestNG.java:1017)
 org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
 org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)</div></td></tr><tr><th>Exception</th></tr><tr><td><div class="stacktrace">cucumber.runtime.CucumberException: java.lang.NullPointerException
-	at cucumber.api.testng.TestNGCucumberRunner.runCucumber(TestNGCucumberRunner.java:69)
-	at com.qaprosoft.carina.core.foundation.cucumber.CucumberRunner.feature(CucumberRunner.java:56)
+org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)</div></td></tr><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.NoSuchElementException: Unable to detect element: nextBtn (By.id: next_button)
+	at com.qaprosoft.carina.core.foundation.webdriver.decorator.ExtendedWebElement.doAction(ExtendedWebElement.java:1391)
+	at com.qaprosoft.carina.core.foundation.webdriver.decorator.ExtendedWebElement.doAction(ExtendedWebElement.java:1345)
+	at com.qaprosoft.carina.core.foundation.webdriver.decorator.ExtendedWebElement.click(ExtendedWebElement.java:493)
+	at com.qaprosoft.carina.core.foundation.webdriver.decorator.ExtendedWebElement.click(ExtendedWebElement.java:481)
+	at com.qaprosoft.carina.core.foundation.webdriver.decorator.ExtendedWebElement.click(ExtendedWebElement.java:472)
+	at com.qaprosoft.carina.demo.mobile.gui.pages.android.WelcomePage.clickNextBtn(WelcomePage.java:31)
+	at com.qaprosoft.carina.demo.MobileSampleTest.testLoginUser(MobileSampleTest.java:85)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -69,9 +79,43 @@ org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)</div></td></tr><tr><th
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-Caused by: java.lang.NullPointerException
-	at com.qaprosoft.carina.demo.cucumber.steps.manali.FirstCryBoyStepdef.Enterdetails(FirstCryBoyStepdef.java:40)
-	at ✽.When Select Boy and years(src/test/resources/features/FirstCry_Mobile.feature:8)
+Caused by: org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters.
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;T440P&apos;, ip: &apos;192.168.216.94&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_144&apos;
+Driver info: io.appium.java_client.android.AndroidDriver
+Capabilities {appActivity: com.solvd.carinademoapplica..., appPackage: com.solvd.carinademoapplica..., automationName: uiautomator2, carinaTestRunId: 2e6b3560-8600-43a0-8689-01e..., databaseEnabled: false, desired: {appActivity: com.solvd.carinademoapplica..., appPackage: com.solvd.carinademoapplica..., automationName: uiautomator2, carinaTestRunId: 2e6b3560-8600-43a0-8689-01e..., deviceName: redmiy2, deviceType: phone, platformName: android, platformVersion: 9, udid: 94eacea3}, deviceApiLevel: 28, deviceManufacturer: Xiaomi, deviceModel: Redmi Y2, deviceName: 94eacea3, deviceScreenDensity: 320, deviceScreenSize: 720x1440, deviceType: phone, deviceUDID: 94eacea3, javascriptEnabled: true, locationContextEnabled: false, networkConnectionEnabled: true, pixelRatio: 2, platform: LINUX, platformName: ANDROID, platformVersion: 9, statBarHeight: 48, takesScreenshot: true, udid: 94eacea3, viewportRect: {height: 1296, left: 0, top: 48, width: 720}, warnings: {}, webStorageEnabled: false}
+Session ID: b7877e3c-88ce-4b0e-9ce2-09e5be24f0c2
+*** Element info: {Using=id, value=next_button}
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at com.qaprosoft.carina.core.foundation.webdriver.listener.EventFiringAppiumCommandExecutor.execute(EventFiringAppiumCommandExecutor.java:150)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:41)
+	at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.execute(AndroidDriver.java:1)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:61)
+	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:372)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElementById(DefaultGenericMobileDriver.java:69)
+	at io.appium.java_client.AppiumDriver.findElementById(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.findElementById(AndroidDriver.java:1)
+	at org.openqa.selenium.By$ById.findElement(By.java:188)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:57)
+	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
+	at com.qaprosoft.carina.core.foundation.webdriver.decorator.ExtendedWebElement.refindElement(ExtendedWebElement.java:383)
+	at com.qaprosoft.carina.core.foundation.webdriver.decorator.ExtendedWebElement.doAction(ExtendedWebElement.java:1388)
+	... 31 more
 </div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 </body>
 </html>

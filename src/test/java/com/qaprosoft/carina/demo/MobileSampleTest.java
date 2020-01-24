@@ -75,9 +75,9 @@ public class MobileSampleTest extends AbstractTest {
 	
     @Test(description = "JIRA#DEMO-0011")
     @MethodOwner(owner = "qpsdemo")
-    @Parameters(value={"deviceName"})
-    public void testLoginUser(String deviceName) throws Exception {
-    	setCustCaps(deviceName);
+   // @Parameters(value={"deviceName"})
+    public void testLoginUser() throws Exception {
+    	//setCustCaps(deviceName);
         String username = "Test user";
         String password = RandomStringUtils.randomAlphabetic(10);
         WelcomePageBase welcomePage = initPage(getDriver(), WelcomePageBase.class);

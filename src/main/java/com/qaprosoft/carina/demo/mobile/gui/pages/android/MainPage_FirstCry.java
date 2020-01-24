@@ -6,8 +6,6 @@ import org.openqa.selenium.support.FindBy;
 import com.qaprosoft.carina.core.foundation.utils.factory.DeviceType;
 import com.qaprosoft.carina.core.foundation.utils.factory.DeviceType.Type;
 import com.qaprosoft.carina.core.foundation.webdriver.decorator.ExtendedWebElement;
-import com.qaprosoft.carina.demo.mobile.gui.pages.common.BoyDetailsPagebase_FirstCry;
-import com.qaprosoft.carina.demo.mobile.gui.pages.common.LoginPageBase;
 import com.qaprosoft.carina.demo.mobile.gui.pages.common.MainPageBase_FirstCry;
 
 
@@ -21,11 +19,11 @@ import com.qaprosoft.carina.demo.mobile.gui.pages.common.MainPageBase_FirstCry;
 		private ExtendedWebElement Boy;
 
 		@FindBy(xpath="//android.widget.TextView[@text='2 - 4 Years']")
-		private ExtendedWebElement years;
+		private ExtendedWebElement year;
 
-		@FindBy(xpath="//android.widget.TextView[@text='All']")
+		/*@FindBy(xpath="//android.widget.TextView[@text='All']")
 		private ExtendedWebElement checkchildname;
-
+*/
 		public MainPage_FirstCry(WebDriver driver) {
 			super(driver);
 		}
@@ -41,13 +39,17 @@ import com.qaprosoft.carina.demo.mobile.gui.pages.common.MainPageBase_FirstCry;
 		}
 */
 		@Override
-		public void clickonyears() {
-			years.click();
+		public void clickyears() {
+			pause(6);
+			year.click();
+			System.out.println("Clicked on years1");
+			year.pause(10);
+			System.out.println("Clicked on years2");
 		}
-		@Override
+		/*@Override
 		public void checkname() {
 			checkchildname.click();
-		}
+		}*/
 		/*@Override
 	    public BoyDetailsPagebase_FirstCry clickonyears() {
 			years.click();
