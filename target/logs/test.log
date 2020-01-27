@@ -1,14 +1,14 @@
-2020-01-24 01:38:00 CarinaListener [INFO] 
+2020-01-27 00:01:28 CarinaListener [INFO] 
 ============= Test configuration =============
 url={must_override}
 env=DEMO
 env_arg_resolver=com.qaprosoft.carina.core.foundation.utils.DefaultEnvArgResolver
-platform=*
+platform=ANDROID
 browser=
 browser_version=
 browser_language=
-selenium_host=http://0.0.0.0:4723/wd/hub
-driver_event_listeners=com.qaprosoft.carina.demo.utils.PerfEventHandler
+selenium_host=https://qkm1.qualitykiosk.com/appiumcloud/wd/hub
+driver_event_listeners=
 max_driver_count=3
 custom_capabilities=
 chrome_args=
@@ -107,65 +107,94 @@ ignore_ssl=false
 test_run_rules=
 hub_mode=selenium
 extract_sys_log=false
-selenium_host=http://0.0.0.0:4723/wd/hub
+selenium_host=https://qkm1.qualitykiosk.com/appiumcloud/wd/hub
 
 ------------- Driver capabilities -----------
-capabilities.deviceName=redmiy2
-capabilities.appPackage=com.solvd.carinademoapplication
-capabilities.platformVersion=9
-capabilities.appActivity=com.solvd.carinademoapplication.ActivitySplash
-capabilities.automationName=UiAutomator2
-capabilities.platformName=ANDROID
-capabilities.deviceType=phone
-capabilities.udid=94eacea3
 ================================================
 
-2020-01-24 01:38:00 CarinaListener [INFO] Set data_provider_thread_count=1
-2020-01-24 01:38:00 CarinaListener [INFO] CARINA_CORE_VERSION: 6.3.30
-2020-01-24 01:38:01 Messager [INFO]  TEST [Default test - feature] STARTED at [01:38:01 2020-01-24]
-2020-01-24 01:38:19 Device [INFO] Test will be started on device: Redmi Y2:94eacea3
-2020-01-24 01:38:25 DriverListener [INFO] PASS: element 'NextButton' is clicked.
-2020-01-24 01:38:28 ExtendedWebElement [ERROR] catched WebDriverException: 
-org.openqa.selenium.WebDriverException: An unknown server-side error occurred while processing the command. Original error: Could not proxy. Proxy error: Could not proxy command to remote server. Original error: 404 - ""
+2020-01-27 00:01:28 CarinaListener [INFO] Set data_provider_thread_count=1
+2020-01-27 00:01:28 CarinaListener [INFO] CARINA_CORE_VERSION: 6.3.30
+2020-01-27 00:01:28 Messager [INFO]  TEST [Default test - feature] STARTED at [00:01:28 2020-01-27]
+2020-01-27 00:02:18 AbstractApiMethod [INFO] Request method:	POST
+Request path:	https://qkm1.qualitykiosk.com/api/upload_file
+Proxy:			<none>
+Request params:	token=pstpjygn5xgnpjb59sk7xgrx
+				filter=all
+				source_type=raw
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Multiparts:		controlName=file, mimeType=application/octet-stream, charset=<none>, fileName=FirstCry.apk, content=src\main\resources\FirstCry.apk
+Headers:		Accept=*/*
+				Content-Type=multipart/form-data; boundary
+Cookies:		<none>
+Body:			<none>
+HTTP/1.1 200 OK
+Server: nginx
+Date: Mon, 27 Jan 2020 08:02:15 GMT
+Content-Type: text/html; charset=UTF-8
+Transfer-Encoding: chunked
+Connection: keep-alive
+X-Frame-Options: SAMEORIGIN
+X-Content-Type-Options: nosniff
+
+<html>
+  <body>{"result":{"token":"pstpjygn5xgnpjb59sk7xgrx","code":200,"file":"FirstCry.apk"}}
+</body>
+</html>
+
+2020-01-27 00:02:18 M1CloudActivities [INFO] 200
+2020-01-27 00:02:18 M1CloudActivities [INFO] {"result":{"token":"pstpjygn5xgnpjb59sk7xgrx","code":200,"file":"FirstCry.apk"}}
+
+2020-01-27 00:02:18 M1CloudActivities [INFO] DeviceName: OnePlus7.properties
+2020-01-27 00:04:02 ExtendedWebElement [ERROR] FAIL: tap - waitCondition for element 'year (By.xpath: //android.widget.TextView[@text='2 - 4 Years'])' not satisfied!
+2020-01-27 00:04:03 ExtendedWebElement [ERROR] catched WebDriverException: 
+org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters. (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 0 milliseconds
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
 Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
 System info: host: 'T440P', ip: '192.168.216.94', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_144'
 Driver info: io.appium.java_client.android.AndroidDriver
-Capabilities {appActivity: com.solvd.carinademoapplica..., appPackage: com.solvd.carinademoapplica..., automationName: UiAutomator2, carinaTestRunId: e295ec7b-6352-4c3f-aac2-72e..., databaseEnabled: false, desired: {appActivity: com.solvd.carinademoapplica..., appPackage: com.solvd.carinademoapplica..., automationName: UiAutomator2, carinaTestRunId: e295ec7b-6352-4c3f-aac2-72e..., deviceName: redmiy2, deviceType: phone, platformName: android, platformVersion: 9, udid: 94eacea3}, deviceApiLevel: 28, deviceManufacturer: Xiaomi, deviceModel: Redmi Y2, deviceName: 94eacea3, deviceScreenDensity: 320, deviceScreenSize: 720x1440, deviceType: phone, deviceUDID: 94eacea3, javascriptEnabled: true, locationContextEnabled: false, networkConnectionEnabled: true, pixelRatio: 2, platform: LINUX, platformName: ANDROID, platformVersion: 9, statBarHeight: 48, takesScreenshot: true, udid: 94eacea3, viewportRect: {height: 1296, left: 0, top: 48, width: 720}, warnings: {}, webStorageEnabled: false}
-Session ID: b845cb8e-c990-463a-bc7d-79d2d7b0fa15
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+Capabilities {app: /home/radmin/build/raid-dat..., appActivity: fc.admin.fcexpressadmin.Hom..., appPackage: fc.admin.fcexpressadmin, autoGrantPermissions: true, automationName: uiautomator2, databaseEnabled: false, desired: {app: /home/radmin/build/raid-dat..., appActivity: fc.admin.fcexpressadmin.Hom..., appPackage: fc.admin.fcexpressadmin, autoGrantPermissions: true, automationName: uiautomator2, deviceName: 69, deviceType: phone, noSign: true, pCloudy_ApiKey: dv9zjs7zrv9gy26y6prjmpfr, pCloudy_ApplicationName: FirstCry.apk, pCloudy_DeviceFullName: Oneplus_7_Android_10.0.0, pCloudy_DurationInMinutes: 60, pCloudy_Username: qk_narendirans@toyota-kirlo..., platformName: ANDROID, udid: 593ed169}, deviceApiLevel: 29, deviceManufacturer: OnePlus, deviceModel: GM1901, deviceName: 593ed169, deviceScreenDensity: 420, deviceScreenSize: 1080x2340, deviceType: phone, deviceUDID: 593ed169, javascriptEnabled: true, locationContextEnabled: false, networkConnectionEnabled: true, noSign: true, pCloudy_ApiKey: dv9zjs7zrv9gy26y6prjmpfr, pCloudy_ApplicationName: FirstCry.apk, pCloudy_DeviceFullName: Oneplus_7_Android_10.0.0, pCloudy_DurationInMinutes: 60, pCloudy_Username: qk_narendirans@toyota-kirlo..., pixelRatio: 2.625, platform: LINUX, platformName: ANDROID, platformVersion: 10, statBarHeight: 80, takesScreenshot: true, udid: 593ed169, viewportRect: {height: 2054, left: 0, top: 80, width: 1080}, warnings: {}, webStorageEnabled: false}
+Session ID: 9ff4bd7e-ffc7-419e-837c-f9b6bbd8353f
+*** Element info: {Using=xpath, value=//android.widget.TextView[@text='2 - 4 Years']}
+	at sun.reflect.GeneratedConstructorAccessor22.newInstance(Unknown Source)
 	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
 	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:214)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:166)
+	at org.openqa.selenium.remote.http.JsonHttpResponseCodec.reconstructValue(JsonHttpResponseCodec.java:40)
+	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:80)
+	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:44)
 	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
 	at com.qaprosoft.carina.core.foundation.webdriver.listener.EventFiringAppiumCommandExecutor.execute(EventFiringAppiumCommandExecutor.java:150)
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:45)
+	at io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:41)
 	at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)
 	at io.appium.java_client.android.AndroidDriver.execute(AndroidDriver.java:1)
-	at org.openqa.selenium.remote.RemoteWebDriver.getTitle(RemoteWebDriver.java:281)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:61)
+	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElementByXPath(DefaultGenericMobileDriver.java:151)
+	at io.appium.java_client.AppiumDriver.findElementByXPath(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.findElementByXPath(AndroidDriver.java:1)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:57)
+	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
 	at java.lang.reflect.Method.invoke(Method.java:498)
 	at org.openqa.selenium.support.events.EventFiringWebDriver.lambda$new$1(EventFiringWebDriver.java:105)
-	at io.appium.java_client.android.$Proxy37.getTitle(Unknown Source)
-	at com.qaprosoft.carina.demo.utils.PerfEventHandler.afterClickOn(PerfEventHandler.java:39)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.openqa.selenium.support.events.EventFiringWebDriver.lambda$new$0(EventFiringWebDriver.java:84)
-	at com.sun.proxy.$Proxy36.afterClickOn(Unknown Source)
-	at org.openqa.selenium.support.events.EventFiringWebDriver$EventFiringWebElement.click(EventFiringWebDriver.java:418)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
-	at com.sun.proxy.$Proxy41.click(Unknown Source)
+	at io.appium.java_client.android.$Proxy38.findElement(Unknown Source)
+	at org.openqa.selenium.support.events.EventFiringWebDriver.findElement(EventFiringWebDriver.java:194)
+	at com.qaprosoft.carina.core.foundation.webdriver.locator.ExtendedElementLocator.findElement(ExtendedElementLocator.java:111)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at com.sun.proxy.$Proxy42.click(Unknown Source)
 	at com.qaprosoft.carina.core.foundation.webdriver.decorator.ExtendedWebElement$1.doTap(ExtendedWebElement.java:1442)
 	at com.qaprosoft.carina.core.foundation.webdriver.decorator.ExtendedWebElement.executeAction(ExtendedWebElement.java:1266)
 	at com.qaprosoft.carina.core.foundation.webdriver.decorator.ExtendedWebElement.overrideAction(ExtendedWebElement.java:1408)
@@ -174,8 +203,8 @@ Session ID: b845cb8e-c990-463a-bc7d-79d2d7b0fa15
 	at com.qaprosoft.carina.core.foundation.webdriver.decorator.ExtendedWebElement.click(ExtendedWebElement.java:493)
 	at com.qaprosoft.carina.core.foundation.webdriver.decorator.ExtendedWebElement.click(ExtendedWebElement.java:481)
 	at com.qaprosoft.carina.core.foundation.webdriver.decorator.ExtendedWebElement.click(ExtendedWebElement.java:472)
-	at com.tatadigital.training.gui.CarinaDemoPage.ClickNext(CarinaDemoPage.java:37)
-	at com.qaprosoft.carina.demo.cucumber.steps.manali.CarinaDemoStepdef.clicknextbutton(CarinaDemoStepdef.java:25)
+	at com.qaprosoft.carina.demo.mobile.gui.pages.android.MainPage_FirstCry.clickyears(MainPage_FirstCry.java:44)
+	at com.qaprosoft.carina.demo.cucumber.steps.manali.FirstCryBoyStepdef.Enterdetails(FirstCryBoyStepdef.java:47)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -217,7 +246,7 @@ Session ID: b845cb8e-c990-463a-bc7d-79d2d7b0fa15
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-2020-01-24 01:38:32 Messager [ERROR] Redmi Y2 - 94eacea3 TEST [Default test - feature] FAILED at [01:38:32 2020-01-24] - org.openqa.selenium.NoSuchElementException: Unable to detect element: NextButton (By.xpath: //android.widget.Button[@text='Next'])
+2020-01-27 00:04:10 Messager [ERROR] GM1901 - 593ed169 TEST [Default test - feature] FAILED at [00:04:10 2020-01-27] - org.openqa.selenium.NoSuchElementException: Unable to detect element: year (By.xpath: //android.widget.TextView[@text='2 - 4 Years'])
 
 cucumber.api.testng.TestNGCucumberRunner.runCucumber(TestNGCucumberRunner.java:69)
 com.qaprosoft.carina.core.foundation.cucumber.CucumberRunner.feature(CucumberRunner.java:56)
@@ -246,21 +275,21 @@ org.testng.TestNG.run(TestNG.java:1017)
 org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
 org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-2020-01-24 01:38:32 CucumberRunner [INFO] In  @AfterClass tearDownClass
-2020-01-24 01:38:33 CucumberRunner [INFO] Report json: CreateUserAPI-test-report.json
-2020-01-24 01:38:34 Messager [INFO] INFO: '**************** Test execution summary ****************'.
-2020-01-24 01:38:34 Messager [INFO] RESULT #1: TEST [Default test - feature] FAIL [screenshots=file://D:\Man_softwares\Myworkspace\Atlas_Demo\.\reports\qa\1579858680715/ffd0ce80-e53f-4f00-ae07-a4a9bec5c48a/report.html | log=file://D:\Man_softwares\Myworkspace\Atlas_Demo\.\reports\qa\1579858680715/ffd0ce80-e53f-4f00-ae07-a4a9bec5c48a/test.log]
-2020-01-24 02:05:34 CarinaListener [INFO] 
+2020-01-27 00:04:10 CucumberRunner [INFO] In  @AfterClass tearDownClass
+2020-01-27 00:04:11 CucumberRunner [INFO] Report json: CreateUserAPI-test-report.json
+2020-01-27 00:04:13 Messager [INFO] INFO: '**************** Test execution summary ****************'.
+2020-01-27 00:04:13 Messager [INFO] RESULT #1: TEST [Default test - feature] FAIL [screenshots=file://D:\Man_softwares\Myworkspace\Atlas_Demo\.\reports\qa\1580112088354/2c45e749-bf37-4358-93fb-241f0214d399/report.html | log=file://D:\Man_softwares\Myworkspace\Atlas_Demo\.\reports\qa\1580112088354/2c45e749-bf37-4358-93fb-241f0214d399/test.log]
+2020-01-27 00:46:23 CarinaListener [INFO] 
 ============= Test configuration =============
 url={must_override}
 env=DEMO
 env_arg_resolver=com.qaprosoft.carina.core.foundation.utils.DefaultEnvArgResolver
-platform=*
+platform=ANDROID
 browser=
 browser_version=
 browser_language=
-selenium_host=http://0.0.0.0:4723/wd/hub
-driver_event_listeners=com.qaprosoft.carina.demo.utils.PerfEventHandler
+selenium_host=https://qkm1.qualitykiosk.com/appiumcloud/wd/hub
+driver_event_listeners=
 max_driver_count=3
 custom_capabilities=
 chrome_args=
@@ -359,65 +388,63 @@ ignore_ssl=false
 test_run_rules=
 hub_mode=selenium
 extract_sys_log=false
-selenium_host=http://0.0.0.0:4723/wd/hub
+selenium_host=https://qkm1.qualitykiosk.com/appiumcloud/wd/hub
 
 ------------- Driver capabilities -----------
-capabilities.deviceName=redmiy2
-capabilities.appPackage=com.solvd.carinademoapplication
-capabilities.platformVersion=9
-capabilities.appActivity=com.solvd.carinademoapplication.ActivitySplash
-capabilities.automationName=UiAutomator2
-capabilities.platformName=ANDROID
-capabilities.deviceType=phone
-capabilities.udid=94eacea3
 ================================================
 
-2020-01-24 02:05:34 CarinaListener [INFO] Set data_provider_thread_count=1
-2020-01-24 02:05:34 CarinaListener [INFO] CARINA_CORE_VERSION: 6.3.30
-2020-01-24 02:05:34 Messager [INFO]  TEST [Default test - feature] STARTED at [02:05:34 2020-01-24]
-2020-01-24 02:06:03 Device [INFO] Test will be started on device: Redmi Y2:94eacea3
-2020-01-24 02:06:08 DriverListener [INFO] PASS: element 'NextButton' is clicked.
-2020-01-24 02:06:11 ExtendedWebElement [ERROR] catched WebDriverException: 
-org.openqa.selenium.WebDriverException: An unknown server-side error occurred while processing the command. Original error: Could not proxy. Proxy error: Could not proxy command to remote server. Original error: 404 - ""
+2020-01-27 00:46:24 CarinaListener [INFO] Set data_provider_thread_count=1
+2020-01-27 00:46:24 CarinaListener [INFO] CARINA_CORE_VERSION: 6.3.30
+2020-01-27 00:46:24 Messager [INFO]  TEST [Default test - feature] STARTED at [00:46:24 2020-01-27]
+2020-01-27 00:46:24 M1CloudActivities [INFO] DeviceName: OnePlus7.properties
+2020-01-27 00:47:59 ExtendedWebElement [ERROR] FAIL: tap - waitCondition for element 'year (By.xpath: //android.widget.TextView[@text='2 - 4 Years'])' not satisfied!
+2020-01-27 00:48:01 ExtendedWebElement [ERROR] catched WebDriverException: 
+org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters. (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 0 milliseconds
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
 Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
 System info: host: 'T440P', ip: '192.168.216.94', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_144'
 Driver info: io.appium.java_client.android.AndroidDriver
-Capabilities {appActivity: com.solvd.carinademoapplica..., appPackage: com.solvd.carinademoapplica..., automationName: UiAutomator2, carinaTestRunId: db071f08-f52e-4d95-87fe-7cc..., databaseEnabled: false, desired: {appActivity: com.solvd.carinademoapplica..., appPackage: com.solvd.carinademoapplica..., automationName: UiAutomator2, carinaTestRunId: db071f08-f52e-4d95-87fe-7cc..., deviceName: redmiy2, deviceType: phone, platformName: android, platformVersion: 9, udid: 94eacea3}, deviceApiLevel: 28, deviceManufacturer: Xiaomi, deviceModel: Redmi Y2, deviceName: 94eacea3, deviceScreenDensity: 320, deviceScreenSize: 720x1440, deviceType: phone, deviceUDID: 94eacea3, javascriptEnabled: true, locationContextEnabled: false, networkConnectionEnabled: true, pixelRatio: 2, platform: LINUX, platformName: ANDROID, platformVersion: 9, statBarHeight: 48, takesScreenshot: true, udid: 94eacea3, viewportRect: {height: 1296, left: 0, top: 48, width: 720}, warnings: {}, webStorageEnabled: false}
-Session ID: 3b1a5c33-2cc4-4e4d-adb7-3c7e8de77719
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+Capabilities {app: /home/radmin/build/raid-dat..., appActivity: fc.admin.fcexpressadmin.Hom..., appPackage: fc.admin.fcexpressadmin, autoGrantPermissions: true, automationName: uiautomator2, databaseEnabled: false, desired: {app: /home/radmin/build/raid-dat..., appActivity: fc.admin.fcexpressadmin.Hom..., appPackage: fc.admin.fcexpressadmin, autoGrantPermissions: true, automationName: uiautomator2, deviceName: 69, deviceType: phone, noSign: true, pCloudy_ApiKey: dv9zjs7zrv9gy26y6prjmpfr, pCloudy_ApplicationName: FirstCry.apk, pCloudy_DeviceFullName: Oneplus_7_Android_10.0.0, pCloudy_DurationInMinutes: 60, pCloudy_Username: qk_narendirans@toyota-kirlo..., platformName: ANDROID, udid: 593ed169}, deviceApiLevel: 29, deviceManufacturer: OnePlus, deviceModel: GM1901, deviceName: 593ed169, deviceScreenDensity: 420, deviceScreenSize: 1080x2340, deviceType: phone, deviceUDID: 593ed169, javascriptEnabled: true, locationContextEnabled: false, networkConnectionEnabled: true, noSign: true, pCloudy_ApiKey: dv9zjs7zrv9gy26y6prjmpfr, pCloudy_ApplicationName: FirstCry.apk, pCloudy_DeviceFullName: Oneplus_7_Android_10.0.0, pCloudy_DurationInMinutes: 60, pCloudy_Username: qk_narendirans@toyota-kirlo..., pixelRatio: 2.625, platform: LINUX, platformName: ANDROID, platformVersion: 10, statBarHeight: 80, takesScreenshot: true, udid: 593ed169, viewportRect: {height: 2054, left: 0, top: 80, width: 1080}, warnings: {}, webStorageEnabled: false}
+Session ID: c51cfb78-8176-40f0-9c39-ac504324b87d
+*** Element info: {Using=xpath, value=//android.widget.TextView[@text='2 - 4 Years']}
+	at sun.reflect.GeneratedConstructorAccessor18.newInstance(Unknown Source)
 	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
 	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:214)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:166)
+	at org.openqa.selenium.remote.http.JsonHttpResponseCodec.reconstructValue(JsonHttpResponseCodec.java:40)
+	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:80)
+	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:44)
 	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
 	at com.qaprosoft.carina.core.foundation.webdriver.listener.EventFiringAppiumCommandExecutor.execute(EventFiringAppiumCommandExecutor.java:150)
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:45)
+	at io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:41)
 	at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)
 	at io.appium.java_client.android.AndroidDriver.execute(AndroidDriver.java:1)
-	at org.openqa.selenium.remote.RemoteWebDriver.getTitle(RemoteWebDriver.java:281)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:61)
+	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElementByXPath(DefaultGenericMobileDriver.java:151)
+	at io.appium.java_client.AppiumDriver.findElementByXPath(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.findElementByXPath(AndroidDriver.java:1)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:57)
+	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
 	at java.lang.reflect.Method.invoke(Method.java:498)
 	at org.openqa.selenium.support.events.EventFiringWebDriver.lambda$new$1(EventFiringWebDriver.java:105)
-	at io.appium.java_client.android.$Proxy37.getTitle(Unknown Source)
-	at com.qaprosoft.carina.demo.utils.PerfEventHandler.afterClickOn(PerfEventHandler.java:39)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.openqa.selenium.support.events.EventFiringWebDriver.lambda$new$0(EventFiringWebDriver.java:84)
-	at com.sun.proxy.$Proxy36.afterClickOn(Unknown Source)
-	at org.openqa.selenium.support.events.EventFiringWebDriver$EventFiringWebElement.click(EventFiringWebDriver.java:418)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
-	at com.sun.proxy.$Proxy41.click(Unknown Source)
+	at io.appium.java_client.android.$Proxy36.findElement(Unknown Source)
+	at org.openqa.selenium.support.events.EventFiringWebDriver.findElement(EventFiringWebDriver.java:194)
+	at com.qaprosoft.carina.core.foundation.webdriver.locator.ExtendedElementLocator.findElement(ExtendedElementLocator.java:111)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at com.sun.proxy.$Proxy40.click(Unknown Source)
 	at com.qaprosoft.carina.core.foundation.webdriver.decorator.ExtendedWebElement$1.doTap(ExtendedWebElement.java:1442)
 	at com.qaprosoft.carina.core.foundation.webdriver.decorator.ExtendedWebElement.executeAction(ExtendedWebElement.java:1266)
 	at com.qaprosoft.carina.core.foundation.webdriver.decorator.ExtendedWebElement.overrideAction(ExtendedWebElement.java:1408)
@@ -426,8 +453,8 @@ Session ID: 3b1a5c33-2cc4-4e4d-adb7-3c7e8de77719
 	at com.qaprosoft.carina.core.foundation.webdriver.decorator.ExtendedWebElement.click(ExtendedWebElement.java:493)
 	at com.qaprosoft.carina.core.foundation.webdriver.decorator.ExtendedWebElement.click(ExtendedWebElement.java:481)
 	at com.qaprosoft.carina.core.foundation.webdriver.decorator.ExtendedWebElement.click(ExtendedWebElement.java:472)
-	at com.tatadigital.training.gui.CarinaDemoPage.ClickNext(CarinaDemoPage.java:37)
-	at com.qaprosoft.carina.demo.cucumber.steps.manali.CarinaDemoStepdef.clicknextbutton(CarinaDemoStepdef.java:26)
+	at com.qaprosoft.carina.demo.mobile.gui.pages.android.MainPage_FirstCry.clickyears(MainPage_FirstCry.java:44)
+	at com.qaprosoft.carina.demo.cucumber.steps.manali.FirstCryBoyStepdef.Enterdetails(FirstCryBoyStepdef.java:47)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -469,7 +496,7 @@ Session ID: 3b1a5c33-2cc4-4e4d-adb7-3c7e8de77719
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-2020-01-24 02:06:16 Messager [ERROR] Redmi Y2 - 94eacea3 TEST [Default test - feature] FAILED at [02:06:16 2020-01-24] - org.openqa.selenium.NoSuchElementException: Unable to detect element: NextButton (By.xpath: //android.widget.Button[@text='Next'])
+2020-01-27 00:48:06 Messager [ERROR] GM1901 - 593ed169 TEST [Default test - feature] FAILED at [00:48:06 2020-01-27] - org.openqa.selenium.NoSuchElementException: Unable to detect element: year (By.xpath: //android.widget.TextView[@text='2 - 4 Years'])
 
 cucumber.api.testng.TestNGCucumberRunner.runCucumber(TestNGCucumberRunner.java:69)
 com.qaprosoft.carina.core.foundation.cucumber.CucumberRunner.feature(CucumberRunner.java:56)
@@ -498,21 +525,21 @@ org.testng.TestNG.run(TestNG.java:1017)
 org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
 org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-2020-01-24 02:06:17 CucumberRunner [INFO] In  @AfterClass tearDownClass
-2020-01-24 02:06:17 CucumberRunner [INFO] Report json: CreateUserAPI-test-report.json
-2020-01-24 02:06:18 Messager [INFO] INFO: '**************** Test execution summary ****************'.
-2020-01-24 02:06:18 Messager [INFO] RESULT #1: TEST [Default test - feature] FAIL [screenshots=file://D:\Man_softwares\Myworkspace\Atlas_Demo\.\reports\qa\1579860334145/acb32bb0-e593-4d79-aa91-78c9f9f285aa/report.html | log=file://D:\Man_softwares\Myworkspace\Atlas_Demo\.\reports\qa\1579860334145/acb32bb0-e593-4d79-aa91-78c9f9f285aa/test.log]
-2020-01-24 02:07:32 CarinaListener [INFO] 
+2020-01-27 00:48:06 CucumberRunner [INFO] In  @AfterClass tearDownClass
+2020-01-27 00:48:06 CucumberRunner [INFO] Report json: CreateUserAPI-test-report.json
+2020-01-27 00:48:07 Messager [INFO] INFO: '**************** Test execution summary ****************'.
+2020-01-27 00:48:07 Messager [INFO] RESULT #1: TEST [Default test - feature] FAIL [screenshots=file://D:\Man_softwares\Myworkspace\Atlas_Demo\.\reports\qa\1580114783896/2f8451b9-f0ad-431f-9a6f-cb6558ba50aa/report.html | log=file://D:\Man_softwares\Myworkspace\Atlas_Demo\.\reports\qa\1580114783896/2f8451b9-f0ad-431f-9a6f-cb6558ba50aa/test.log]
+2020-01-27 01:19:11 CarinaListener [INFO] 
 ============= Test configuration =============
 url={must_override}
 env=DEMO
 env_arg_resolver=com.qaprosoft.carina.core.foundation.utils.DefaultEnvArgResolver
-platform=*
+platform=ANDROID
 browser=
 browser_version=
 browser_language=
-selenium_host=http://0.0.0.0:4723/wd/hub
-driver_event_listeners=com.qaprosoft.carina.demo.utils.PerfEventHandler
+selenium_host=https://qkm1.qualitykiosk.com/appiumcloud/wd/hub
+driver_event_listeners=
 max_driver_count=3
 custom_capabilities=
 chrome_args=
@@ -611,1047 +638,276 @@ ignore_ssl=false
 test_run_rules=
 hub_mode=selenium
 extract_sys_log=false
-selenium_host=http://0.0.0.0:4723/wd/hub
+selenium_host=https://qkm1.qualitykiosk.com/appiumcloud/wd/hub
 
 ------------- Driver capabilities -----------
-capabilities.deviceName=redmiy2
-capabilities.appPackage=com.solvd.carinademoapplication
-capabilities.platformVersion=9
-capabilities.appActivity=com.solvd.carinademoapplication.ActivitySplash
-capabilities.automationName=UiAutomator2
-capabilities.platformName=ANDROID
-capabilities.deviceType=phone
-capabilities.udid=94eacea3
 ================================================
 
-2020-01-24 02:07:32 CarinaListener [INFO] Set data_provider_thread_count=1
-2020-01-24 02:07:32 CarinaListener [INFO] CARINA_CORE_VERSION: 6.3.30
-2020-01-24 02:07:32 Messager [INFO]  TEST [Default test - feature] STARTED at [02:07:32 2020-01-24]
-2020-01-24 02:08:00 Device [INFO] Test will be started on device: Redmi Y2:94eacea3
-2020-01-24 02:08:06 DriverListener [INFO] PASS: element 'NextButton' is clicked.
-2020-01-24 02:08:09 ExtendedWebElement [ERROR] catched WebDriverException: 
-org.openqa.selenium.WebDriverException: An unknown server-side error occurred while processing the command. Original error: Could not proxy. Proxy error: Could not proxy command to remote server. Original error: 404 - ""
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'T440P', ip: '192.168.216.94', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_144'
-Driver info: io.appium.java_client.android.AndroidDriver
-Capabilities {appActivity: com.solvd.carinademoapplica..., appPackage: com.solvd.carinademoapplica..., automationName: UiAutomator2, carinaTestRunId: be83b34b-2b74-441c-ad9d-ac1..., databaseEnabled: false, desired: {appActivity: com.solvd.carinademoapplica..., appPackage: com.solvd.carinademoapplica..., automationName: UiAutomator2, carinaTestRunId: be83b34b-2b74-441c-ad9d-ac1..., deviceName: redmiy2, deviceType: phone, platformName: android, platformVersion: 9, udid: 94eacea3}, deviceApiLevel: 28, deviceManufacturer: Xiaomi, deviceModel: Redmi Y2, deviceName: 94eacea3, deviceScreenDensity: 320, deviceScreenSize: 720x1440, deviceType: phone, deviceUDID: 94eacea3, javascriptEnabled: true, locationContextEnabled: false, networkConnectionEnabled: true, pixelRatio: 2, platform: LINUX, platformName: ANDROID, platformVersion: 9, statBarHeight: 48, takesScreenshot: true, udid: 94eacea3, viewportRect: {height: 1296, left: 0, top: 48, width: 720}, warnings: {}, webStorageEnabled: false}
-Session ID: 26b80bd7-d5b8-4681-a98b-4a28f6e5dbb4
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-	at com.qaprosoft.carina.core.foundation.webdriver.listener.EventFiringAppiumCommandExecutor.execute(EventFiringAppiumCommandExecutor.java:150)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:45)
-	at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)
-	at io.appium.java_client.android.AndroidDriver.execute(AndroidDriver.java:1)
-	at org.openqa.selenium.remote.RemoteWebDriver.getTitle(RemoteWebDriver.java:281)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.openqa.selenium.support.events.EventFiringWebDriver.lambda$new$1(EventFiringWebDriver.java:105)
-	at io.appium.java_client.android.$Proxy37.getTitle(Unknown Source)
-	at com.qaprosoft.carina.demo.utils.PerfEventHandler.afterClickOn(PerfEventHandler.java:39)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.openqa.selenium.support.events.EventFiringWebDriver.lambda$new$0(EventFiringWebDriver.java:84)
-	at com.sun.proxy.$Proxy36.afterClickOn(Unknown Source)
-	at org.openqa.selenium.support.events.EventFiringWebDriver$EventFiringWebElement.click(EventFiringWebDriver.java:418)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
-	at com.sun.proxy.$Proxy41.click(Unknown Source)
-	at com.qaprosoft.carina.core.foundation.webdriver.decorator.ExtendedWebElement$1.doTap(ExtendedWebElement.java:1442)
-	at com.qaprosoft.carina.core.foundation.webdriver.decorator.ExtendedWebElement.executeAction(ExtendedWebElement.java:1266)
-	at com.qaprosoft.carina.core.foundation.webdriver.decorator.ExtendedWebElement.overrideAction(ExtendedWebElement.java:1408)
-	at com.qaprosoft.carina.core.foundation.webdriver.decorator.ExtendedWebElement.doAction(ExtendedWebElement.java:1377)
-	at com.qaprosoft.carina.core.foundation.webdriver.decorator.ExtendedWebElement.doAction(ExtendedWebElement.java:1345)
-	at com.qaprosoft.carina.core.foundation.webdriver.decorator.ExtendedWebElement.click(ExtendedWebElement.java:493)
-	at com.qaprosoft.carina.core.foundation.webdriver.decorator.ExtendedWebElement.click(ExtendedWebElement.java:481)
-	at com.qaprosoft.carina.core.foundation.webdriver.decorator.ExtendedWebElement.click(ExtendedWebElement.java:472)
-	at com.tatadigital.training.gui.CarinaDemoPage.ClickNext(CarinaDemoPage.java:37)
-	at com.qaprosoft.carina.demo.cucumber.steps.manali.CarinaDemoStepdef.clicknextbutton(CarinaDemoStepdef.java:26)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at cucumber.runtime.Utils$1.call(Utils.java:40)
-	at cucumber.runtime.Timeout.timeout(Timeout.java:16)
-	at cucumber.runtime.Utils.invoke(Utils.java:34)
-	at cucumber.runtime.java.JavaStepDefinition.execute(JavaStepDefinition.java:38)
-	at cucumber.runtime.StepDefinitionMatch.runStep(StepDefinitionMatch.java:37)
-	at cucumber.runtime.Runtime.runStep(Runtime.java:300)
-	at cucumber.runtime.model.StepContainer.runStep(StepContainer.java:44)
-	at cucumber.runtime.model.StepContainer.runSteps(StepContainer.java:39)
-	at cucumber.runtime.model.CucumberScenario.run(CucumberScenario.java:44)
-	at cucumber.runtime.model.CucumberFeature.run(CucumberFeature.java:165)
-	at cucumber.api.testng.TestNGCucumberRunner.runCucumber(TestNGCucumberRunner.java:63)
-	at com.qaprosoft.carina.core.foundation.cucumber.CucumberRunner.feature(CucumberRunner.java:56)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
-	at org.testng.TestRunner.privateRun(TestRunner.java:648)
-	at org.testng.TestRunner.run(TestRunner.java:505)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
-	at org.testng.TestNG.runSuites(TestNG.java:1049)
-	at org.testng.TestNG.run(TestNG.java:1017)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-2020-01-24 02:08:13 Messager [ERROR] Redmi Y2 - 94eacea3 TEST [Default test - feature] FAILED at [02:08:13 2020-01-24] - org.openqa.selenium.NoSuchElementException: Unable to detect element: NextButton (By.xpath: //android.widget.Button[@text='Next'])
-
-cucumber.api.testng.TestNGCucumberRunner.runCucumber(TestNGCucumberRunner.java:69)
-com.qaprosoft.carina.core.foundation.cucumber.CucumberRunner.feature(CucumberRunner.java:56)
-sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-java.lang.reflect.Method.invoke(Method.java:498)
-org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
-org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
-org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
-org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
-org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
-org.testng.TestRunner.privateRun(TestRunner.java:648)
-org.testng.TestRunner.run(TestRunner.java:505)
-org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
-org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
-org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
-org.testng.SuiteRunner.run(SuiteRunner.java:364)
-org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
-org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
-org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
-org.testng.TestNG.runSuites(TestNG.java:1049)
-org.testng.TestNG.run(TestNG.java:1017)
-org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-2020-01-24 02:08:14 CucumberRunner [INFO] In  @AfterClass tearDownClass
-2020-01-24 02:08:14 CucumberRunner [INFO] Report json: CreateUserAPI-test-report.json
-2020-01-24 02:08:16 Messager [INFO] INFO: '**************** Test execution summary ****************'.
-2020-01-24 02:08:16 Messager [INFO] RESULT #1: TEST [Default test - feature] FAIL [screenshots=file://D:\Man_softwares\Myworkspace\Atlas_Demo\.\reports\qa\1579860452425/062080dd-96ae-49c9-8eef-4503ee9b564a/report.html | log=file://D:\Man_softwares\Myworkspace\Atlas_Demo\.\reports\qa\1579860452425/062080dd-96ae-49c9-8eef-4503ee9b564a/test.log]
-2020-01-24 02:10:12 CarinaListener [INFO] 
-============= Test configuration =============
-url={must_override}
-env=DEMO
-env_arg_resolver=com.qaprosoft.carina.core.foundation.utils.DefaultEnvArgResolver
-platform=*
-browser=
-browser_version=
-browser_language=
-selenium_host=http://0.0.0.0:4723/wd/hub
-driver_event_listeners=com.qaprosoft.carina.demo.utils.PerfEventHandler
-max_driver_count=3
-custom_capabilities=
-chrome_args=
-chrome_experimental_opts=
-chrome_mobile_emulation_opts=
-firefox_args=
-firefox_preferences=
-app_version=
-proxy_host=
-proxy_port=
-proxy_protocols=http,https,ftp
-browsermob_proxy=false
-browsermob_host=
-browsermob_port=0
-browsermob_ports_range=
-browsermob_disabled_mitm=false
-proxy_set_to_system=false
-report_url=
-email_list=
-failure_email_list=
-track_known_issues=false
-auto_screenshot=true
-implicit_timeout=10
-explicit_timeout=20
-auto_download=false
-auto_download_apps=
-custom_artifacts_folder=
-retry_interval=5
-project_report_directory=./reports/qa
-max_screen_history=10
-max_log_file_size=150
-result_sorting=true
-big_screen_width=-1
-big_screen_height=-1
-small_screen_width=90
-small_screen_height=60
-init_retry_count=0
-init_retry_interval=1
-retry_count=0
-enable_l10n=true
-l10n_encoding=ISO-8859-1
-locale=en_US
-enable_i18n=true
-language=en_US
-thread_count=1
-data_provider_thread_count=-1
-core_log_level=INFO
-core_log_packages=com.qaprosoft.carina.core
-artifacts_expiration_seconds=2592000
-log_all_json=true
-date_format=HH:mm:ss yyyy-MM-dd
-time_format=HH:mm:ss
-suite_name=
-jira_updater=com.qaprosoft.carina.core.foundation.jira.DefaultJiraUpdater
-jira_url=
-jira_user=
-jira_password=
-jira_suite_id=
-jira_project=
-jira_project_short=
-jira_create_new_ticket=false
-test_naming_pattern={method_name}
-optimize_video_recording=false
-testrail_run_name=
-testrail_milestone=
-testrail_assignee=
-qtest_cycle_name=DailyAutomation
-qtest_suite_name=
-s3_bucket_name=
-access_key_id=
-secret_key=
-s3_use_presign_url=false
-s3_local_storage=.
-appcenter_token=
-appcenter_local_storage=.
-add_new_localization=false
-add_new_localization_encoding=utf-8
-add_new_localization_path=
-add_new_localization_property_name=new_custom_messages_
-tls_keysecure_location=
-health_check_class=
-health_check_methods=
-uninstall_related_apps=false
-default_device_timezone=GMT
-default_device_time_format=24
-default_device_language=en_US
-android_screen_record_size=
-android_screen_record_bitrate=
-android_enable_bug_report=true
-ios_screen_record_quality=MEDIUM
-ios_screen_record_codec=libx264
-ios_screen_record_fps=10
-screen_record_duration=180
-video_scale=-2:720
-ignore_ssl=false
-test_run_rules=
-hub_mode=selenium
-extract_sys_log=false
-selenium_host=http://0.0.0.0:4723/wd/hub
-
-------------- Driver capabilities -----------
-capabilities.deviceName=redmiy2
-capabilities.appPackage=com.solvd.carinademoapplication
-capabilities.platformVersion=9
-capabilities.appActivity=com.solvd.carinademoapplication.ActivitySplash
-capabilities.automationName=UiAutomator2
-capabilities.platformName=ANDROID
-capabilities.deviceType=phone
-capabilities.udid=94eacea3
-================================================
-
-2020-01-24 02:10:12 CarinaListener [INFO] Set data_provider_thread_count=1
-2020-01-24 02:10:12 CarinaListener [INFO] CARINA_CORE_VERSION: 6.3.30
-2020-01-24 02:10:12 Messager [INFO]  TEST [Default test - feature] STARTED at [02:10:12 2020-01-24]
-2020-01-24 02:10:40 Device [INFO] Test will be started on device: Redmi Y2:94eacea3
-2020-01-24 02:10:46 DriverListener [INFO] PASS: element 'NextButton' is clicked.
-2020-01-24 02:10:49 ExtendedWebElement [ERROR] catched WebDriverException: 
-org.openqa.selenium.WebDriverException: An unknown server-side error occurred while processing the command. Original error: Could not proxy. Proxy error: Could not proxy command to remote server. Original error: 404 - ""
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'T440P', ip: '192.168.216.94', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_144'
-Driver info: io.appium.java_client.android.AndroidDriver
-Capabilities {appActivity: com.solvd.carinademoapplica..., appPackage: com.solvd.carinademoapplica..., automationName: UiAutomator2, carinaTestRunId: e12014be-db31-495a-9bd1-99e..., databaseEnabled: false, desired: {appActivity: com.solvd.carinademoapplica..., appPackage: com.solvd.carinademoapplica..., automationName: UiAutomator2, carinaTestRunId: e12014be-db31-495a-9bd1-99e..., deviceName: redmiy2, deviceType: phone, platformName: android, platformVersion: 9, udid: 94eacea3}, deviceApiLevel: 28, deviceManufacturer: Xiaomi, deviceModel: Redmi Y2, deviceName: 94eacea3, deviceScreenDensity: 320, deviceScreenSize: 720x1440, deviceType: phone, deviceUDID: 94eacea3, javascriptEnabled: true, locationContextEnabled: false, networkConnectionEnabled: true, pixelRatio: 2, platform: LINUX, platformName: ANDROID, platformVersion: 9, statBarHeight: 48, takesScreenshot: true, udid: 94eacea3, viewportRect: {height: 1296, left: 0, top: 48, width: 720}, warnings: {}, webStorageEnabled: false}
-Session ID: 5f113d42-6a5d-4125-8e09-2dbba901cb29
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-	at com.qaprosoft.carina.core.foundation.webdriver.listener.EventFiringAppiumCommandExecutor.execute(EventFiringAppiumCommandExecutor.java:150)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:45)
-	at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)
-	at io.appium.java_client.android.AndroidDriver.execute(AndroidDriver.java:1)
-	at org.openqa.selenium.remote.RemoteWebDriver.getTitle(RemoteWebDriver.java:281)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.openqa.selenium.support.events.EventFiringWebDriver.lambda$new$1(EventFiringWebDriver.java:105)
-	at io.appium.java_client.android.$Proxy37.getTitle(Unknown Source)
-	at com.qaprosoft.carina.demo.utils.PerfEventHandler.afterClickOn(PerfEventHandler.java:39)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.openqa.selenium.support.events.EventFiringWebDriver.lambda$new$0(EventFiringWebDriver.java:84)
-	at com.sun.proxy.$Proxy36.afterClickOn(Unknown Source)
-	at org.openqa.selenium.support.events.EventFiringWebDriver$EventFiringWebElement.click(EventFiringWebDriver.java:418)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
-	at com.sun.proxy.$Proxy41.click(Unknown Source)
-	at com.qaprosoft.carina.core.foundation.webdriver.decorator.ExtendedWebElement$1.doTap(ExtendedWebElement.java:1442)
-	at com.qaprosoft.carina.core.foundation.webdriver.decorator.ExtendedWebElement.executeAction(ExtendedWebElement.java:1266)
-	at com.qaprosoft.carina.core.foundation.webdriver.decorator.ExtendedWebElement.overrideAction(ExtendedWebElement.java:1408)
-	at com.qaprosoft.carina.core.foundation.webdriver.decorator.ExtendedWebElement.doAction(ExtendedWebElement.java:1377)
-	at com.qaprosoft.carina.core.foundation.webdriver.decorator.ExtendedWebElement.doAction(ExtendedWebElement.java:1345)
-	at com.qaprosoft.carina.core.foundation.webdriver.decorator.ExtendedWebElement.click(ExtendedWebElement.java:493)
-	at com.qaprosoft.carina.core.foundation.webdriver.decorator.ExtendedWebElement.click(ExtendedWebElement.java:481)
-	at com.qaprosoft.carina.core.foundation.webdriver.decorator.ExtendedWebElement.click(ExtendedWebElement.java:472)
-	at com.tatadigital.training.gui.CarinaDemoPage.ClickNext(CarinaDemoPage.java:37)
-	at com.qaprosoft.carina.demo.cucumber.steps.manali.CarinaDemoStepdef.clicknextbutton(CarinaDemoStepdef.java:26)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at cucumber.runtime.Utils$1.call(Utils.java:40)
-	at cucumber.runtime.Timeout.timeout(Timeout.java:16)
-	at cucumber.runtime.Utils.invoke(Utils.java:34)
-	at cucumber.runtime.java.JavaStepDefinition.execute(JavaStepDefinition.java:38)
-	at cucumber.runtime.StepDefinitionMatch.runStep(StepDefinitionMatch.java:37)
-	at cucumber.runtime.Runtime.runStep(Runtime.java:300)
-	at cucumber.runtime.model.StepContainer.runStep(StepContainer.java:44)
-	at cucumber.runtime.model.StepContainer.runSteps(StepContainer.java:39)
-	at cucumber.runtime.model.CucumberScenario.run(CucumberScenario.java:44)
-	at cucumber.runtime.model.CucumberFeature.run(CucumberFeature.java:165)
-	at cucumber.api.testng.TestNGCucumberRunner.runCucumber(TestNGCucumberRunner.java:63)
-	at com.qaprosoft.carina.core.foundation.cucumber.CucumberRunner.feature(CucumberRunner.java:56)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
-	at org.testng.TestRunner.privateRun(TestRunner.java:648)
-	at org.testng.TestRunner.run(TestRunner.java:505)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
-	at org.testng.TestNG.runSuites(TestNG.java:1049)
-	at org.testng.TestNG.run(TestNG.java:1017)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-2020-01-24 02:10:54 Messager [ERROR] Redmi Y2 - 94eacea3 TEST [Default test - feature] FAILED at [02:10:54 2020-01-24] - org.openqa.selenium.NoSuchElementException: Unable to detect element: NextButton (By.xpath: //android.widget.Button[@text='Next'])
-
-cucumber.api.testng.TestNGCucumberRunner.runCucumber(TestNGCucumberRunner.java:69)
-com.qaprosoft.carina.core.foundation.cucumber.CucumberRunner.feature(CucumberRunner.java:56)
-sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-java.lang.reflect.Method.invoke(Method.java:498)
-org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
-org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
-org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
-org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
-org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
-org.testng.TestRunner.privateRun(TestRunner.java:648)
-org.testng.TestRunner.run(TestRunner.java:505)
-org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
-org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
-org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
-org.testng.SuiteRunner.run(SuiteRunner.java:364)
-org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
-org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
-org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
-org.testng.TestNG.runSuites(TestNG.java:1049)
-org.testng.TestNG.run(TestNG.java:1017)
-org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-2020-01-24 02:10:54 CucumberRunner [INFO] In  @AfterClass tearDownClass
-2020-01-24 02:10:54 CucumberRunner [INFO] Report json: CreateUserAPI-test-report.json
-2020-01-24 02:10:56 Messager [INFO] INFO: '**************** Test execution summary ****************'.
-2020-01-24 02:10:56 Messager [INFO] RESULT #1: TEST [Default test - feature] FAIL [screenshots=file://D:\Man_softwares\Myworkspace\Atlas_Demo\.\reports\qa\1579860612570/3ad95822-1d67-4cd3-b1de-2940fdc4c5e7/report.html | log=file://D:\Man_softwares\Myworkspace\Atlas_Demo\.\reports\qa\1579860612570/3ad95822-1d67-4cd3-b1de-2940fdc4c5e7/test.log]
-2020-01-24 02:12:52 CarinaListener [INFO] 
-============= Test configuration =============
-url={must_override}
-env=DEMO
-env_arg_resolver=com.qaprosoft.carina.core.foundation.utils.DefaultEnvArgResolver
-platform=*
-browser=
-browser_version=
-browser_language=
-selenium_host=http://0.0.0.0:4723/wd/hub
-driver_event_listeners=com.qaprosoft.carina.demo.utils.PerfEventHandler
-max_driver_count=3
-custom_capabilities=
-chrome_args=
-chrome_experimental_opts=
-chrome_mobile_emulation_opts=
-firefox_args=
-firefox_preferences=
-app_version=
-proxy_host=
-proxy_port=
-proxy_protocols=http,https,ftp
-browsermob_proxy=false
-browsermob_host=
-browsermob_port=0
-browsermob_ports_range=
-browsermob_disabled_mitm=false
-proxy_set_to_system=false
-report_url=
-email_list=
-failure_email_list=
-track_known_issues=false
-auto_screenshot=true
-implicit_timeout=10
-explicit_timeout=20
-auto_download=false
-auto_download_apps=
-custom_artifacts_folder=
-retry_interval=5
-project_report_directory=./reports/qa
-max_screen_history=10
-max_log_file_size=150
-result_sorting=true
-big_screen_width=-1
-big_screen_height=-1
-small_screen_width=90
-small_screen_height=60
-init_retry_count=0
-init_retry_interval=1
-retry_count=0
-enable_l10n=true
-l10n_encoding=ISO-8859-1
-locale=en_US
-enable_i18n=true
-language=en_US
-thread_count=1
-data_provider_thread_count=-1
-core_log_level=INFO
-core_log_packages=com.qaprosoft.carina.core
-artifacts_expiration_seconds=2592000
-log_all_json=true
-date_format=HH:mm:ss yyyy-MM-dd
-time_format=HH:mm:ss
-suite_name=
-jira_updater=com.qaprosoft.carina.core.foundation.jira.DefaultJiraUpdater
-jira_url=
-jira_user=
-jira_password=
-jira_suite_id=
-jira_project=
-jira_project_short=
-jira_create_new_ticket=false
-test_naming_pattern={method_name}
-optimize_video_recording=false
-testrail_run_name=
-testrail_milestone=
-testrail_assignee=
-qtest_cycle_name=DailyAutomation
-qtest_suite_name=
-s3_bucket_name=
-access_key_id=
-secret_key=
-s3_use_presign_url=false
-s3_local_storage=.
-appcenter_token=
-appcenter_local_storage=.
-add_new_localization=false
-add_new_localization_encoding=utf-8
-add_new_localization_path=
-add_new_localization_property_name=new_custom_messages_
-tls_keysecure_location=
-health_check_class=
-health_check_methods=
-uninstall_related_apps=false
-default_device_timezone=GMT
-default_device_time_format=24
-default_device_language=en_US
-android_screen_record_size=
-android_screen_record_bitrate=
-android_enable_bug_report=true
-ios_screen_record_quality=MEDIUM
-ios_screen_record_codec=libx264
-ios_screen_record_fps=10
-screen_record_duration=180
-video_scale=-2:720
-ignore_ssl=false
-test_run_rules=
-hub_mode=selenium
-extract_sys_log=false
-selenium_host=http://0.0.0.0:4723/wd/hub
-
-------------- Driver capabilities -----------
-capabilities.deviceName=redmiy2
-capabilities.appPackage=com.solvd.carinademoapplication
-capabilities.platformVersion=9
-capabilities.appActivity=com.solvd.carinademoapplication.ActivitySplash
-capabilities.automationName=UiAutomator2
-capabilities.platformName=ANDROID
-capabilities.deviceType=phone
-capabilities.udid=94eacea3
-================================================
-
-2020-01-24 02:12:52 CarinaListener [INFO] Set data_provider_thread_count=1
-2020-01-24 02:12:52 CarinaListener [INFO] CARINA_CORE_VERSION: 6.3.30
-2020-01-24 02:12:52 Messager [INFO]  TEST [Default test - feature] STARTED at [02:12:52 2020-01-24]
-2020-01-24 02:13:06 Device [INFO] Test will be started on device: Redmi Y2:94eacea3
-2020-01-24 02:13:12 DriverListener [INFO] PASS: element 'NextButton' is clicked.
-2020-01-24 02:13:15 ExtendedWebElement [ERROR] catched WebDriverException: 
-org.openqa.selenium.WebDriverException: An unknown server-side error occurred while processing the command. Original error: Could not proxy. Proxy error: Could not proxy command to remote server. Original error: 404 - ""
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'T440P', ip: '192.168.216.94', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_144'
-Driver info: io.appium.java_client.android.AndroidDriver
-Capabilities {appActivity: com.solvd.carinademoapplica..., appPackage: com.solvd.carinademoapplica..., automationName: UiAutomator2, carinaTestRunId: 4340f564-395d-4255-a665-893..., databaseEnabled: false, desired: {appActivity: com.solvd.carinademoapplica..., appPackage: com.solvd.carinademoapplica..., automationName: UiAutomator2, carinaTestRunId: 4340f564-395d-4255-a665-893..., deviceName: redmiy2, deviceType: phone, platformName: android, platformVersion: 9, udid: 94eacea3}, deviceApiLevel: 28, deviceManufacturer: Xiaomi, deviceModel: Redmi Y2, deviceName: 94eacea3, deviceScreenDensity: 320, deviceScreenSize: 720x1440, deviceType: phone, deviceUDID: 94eacea3, javascriptEnabled: true, locationContextEnabled: false, networkConnectionEnabled: true, pixelRatio: 2, platform: LINUX, platformName: ANDROID, platformVersion: 9, statBarHeight: 48, takesScreenshot: true, udid: 94eacea3, viewportRect: {height: 1296, left: 0, top: 48, width: 720}, warnings: {}, webStorageEnabled: false}
-Session ID: a321f4c6-68e8-4f70-90b9-b6ac6fbd57a3
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-	at com.qaprosoft.carina.core.foundation.webdriver.listener.EventFiringAppiumCommandExecutor.execute(EventFiringAppiumCommandExecutor.java:150)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:45)
-	at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)
-	at io.appium.java_client.android.AndroidDriver.execute(AndroidDriver.java:1)
-	at org.openqa.selenium.remote.RemoteWebDriver.getTitle(RemoteWebDriver.java:281)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.openqa.selenium.support.events.EventFiringWebDriver.lambda$new$1(EventFiringWebDriver.java:105)
-	at io.appium.java_client.android.$Proxy37.getTitle(Unknown Source)
-	at com.qaprosoft.carina.demo.utils.PerfEventHandler.afterClickOn(PerfEventHandler.java:39)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.openqa.selenium.support.events.EventFiringWebDriver.lambda$new$0(EventFiringWebDriver.java:84)
-	at com.sun.proxy.$Proxy36.afterClickOn(Unknown Source)
-	at org.openqa.selenium.support.events.EventFiringWebDriver$EventFiringWebElement.click(EventFiringWebDriver.java:418)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
-	at com.sun.proxy.$Proxy41.click(Unknown Source)
-	at com.qaprosoft.carina.core.foundation.webdriver.decorator.ExtendedWebElement$1.doTap(ExtendedWebElement.java:1442)
-	at com.qaprosoft.carina.core.foundation.webdriver.decorator.ExtendedWebElement.executeAction(ExtendedWebElement.java:1266)
-	at com.qaprosoft.carina.core.foundation.webdriver.decorator.ExtendedWebElement.overrideAction(ExtendedWebElement.java:1408)
-	at com.qaprosoft.carina.core.foundation.webdriver.decorator.ExtendedWebElement.doAction(ExtendedWebElement.java:1377)
-	at com.qaprosoft.carina.core.foundation.webdriver.decorator.ExtendedWebElement.doAction(ExtendedWebElement.java:1345)
-	at com.qaprosoft.carina.core.foundation.webdriver.decorator.ExtendedWebElement.click(ExtendedWebElement.java:493)
-	at com.qaprosoft.carina.core.foundation.webdriver.decorator.ExtendedWebElement.click(ExtendedWebElement.java:481)
-	at com.qaprosoft.carina.core.foundation.webdriver.decorator.ExtendedWebElement.click(ExtendedWebElement.java:472)
-	at com.tatadigital.training.gui.CarinaDemoPage.ClickNext(CarinaDemoPage.java:37)
-	at com.qaprosoft.carina.demo.cucumber.steps.manali.CarinaDemoStepdef.clicknextbutton(CarinaDemoStepdef.java:26)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at cucumber.runtime.Utils$1.call(Utils.java:40)
-	at cucumber.runtime.Timeout.timeout(Timeout.java:16)
-	at cucumber.runtime.Utils.invoke(Utils.java:34)
-	at cucumber.runtime.java.JavaStepDefinition.execute(JavaStepDefinition.java:38)
-	at cucumber.runtime.StepDefinitionMatch.runStep(StepDefinitionMatch.java:37)
-	at cucumber.runtime.Runtime.runStep(Runtime.java:300)
-	at cucumber.runtime.model.StepContainer.runStep(StepContainer.java:44)
-	at cucumber.runtime.model.StepContainer.runSteps(StepContainer.java:39)
-	at cucumber.runtime.model.CucumberScenario.run(CucumberScenario.java:44)
-	at cucumber.runtime.model.CucumberFeature.run(CucumberFeature.java:165)
-	at cucumber.api.testng.TestNGCucumberRunner.runCucumber(TestNGCucumberRunner.java:63)
-	at com.qaprosoft.carina.core.foundation.cucumber.CucumberRunner.feature(CucumberRunner.java:56)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
-	at org.testng.TestRunner.privateRun(TestRunner.java:648)
-	at org.testng.TestRunner.run(TestRunner.java:505)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
-	at org.testng.TestNG.runSuites(TestNG.java:1049)
-	at org.testng.TestNG.run(TestNG.java:1017)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-2020-01-24 02:13:19 Messager [ERROR] Redmi Y2 - 94eacea3 TEST [Default test - feature] FAILED at [02:13:19 2020-01-24] - org.openqa.selenium.NoSuchElementException: Unable to detect element: NextButton (By.xpath: //android.widget.Button[@text='Next'])
-
-cucumber.api.testng.TestNGCucumberRunner.runCucumber(TestNGCucumberRunner.java:69)
-com.qaprosoft.carina.core.foundation.cucumber.CucumberRunner.feature(CucumberRunner.java:56)
-sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-java.lang.reflect.Method.invoke(Method.java:498)
-org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
-org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
-org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
-org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
-org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
-org.testng.TestRunner.privateRun(TestRunner.java:648)
-org.testng.TestRunner.run(TestRunner.java:505)
-org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
-org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
-org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
-org.testng.SuiteRunner.run(SuiteRunner.java:364)
-org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
-org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
-org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
-org.testng.TestNG.runSuites(TestNG.java:1049)
-org.testng.TestNG.run(TestNG.java:1017)
-org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-2020-01-24 02:13:19 CucumberRunner [INFO] In  @AfterClass tearDownClass
-2020-01-24 02:13:20 CucumberRunner [INFO] Report json: CreateUserAPI-test-report.json
-2020-01-24 02:13:21 Messager [INFO] INFO: '**************** Test execution summary ****************'.
-2020-01-24 02:13:21 Messager [INFO] RESULT #1: TEST [Default test - feature] FAIL [screenshots=file://D:\Man_softwares\Myworkspace\Atlas_Demo\.\reports\qa\1579860772554/8f2e8e55-0468-464f-9efb-685b993d8bfd/report.html | log=file://D:\Man_softwares\Myworkspace\Atlas_Demo\.\reports\qa\1579860772554/8f2e8e55-0468-464f-9efb-685b993d8bfd/test.log]
-2020-01-24 02:15:32 CarinaListener [INFO] 
-============= Test configuration =============
-url={must_override}
-env=DEMO
-env_arg_resolver=com.qaprosoft.carina.core.foundation.utils.DefaultEnvArgResolver
-platform=*
-browser=
-browser_version=
-browser_language=
-selenium_host=http://0.0.0.0:4723/wd/hub
-driver_event_listeners=com.qaprosoft.carina.demo.utils.PerfEventHandler
-max_driver_count=3
-custom_capabilities=
-chrome_args=
-chrome_experimental_opts=
-chrome_mobile_emulation_opts=
-firefox_args=
-firefox_preferences=
-app_version=
-proxy_host=
-proxy_port=
-proxy_protocols=http,https,ftp
-browsermob_proxy=false
-browsermob_host=
-browsermob_port=0
-browsermob_ports_range=
-browsermob_disabled_mitm=false
-proxy_set_to_system=false
-report_url=
-email_list=
-failure_email_list=
-track_known_issues=false
-auto_screenshot=true
-implicit_timeout=10
-explicit_timeout=20
-auto_download=false
-auto_download_apps=
-custom_artifacts_folder=
-retry_interval=5
-project_report_directory=./reports/qa
-max_screen_history=10
-max_log_file_size=150
-result_sorting=true
-big_screen_width=-1
-big_screen_height=-1
-small_screen_width=90
-small_screen_height=60
-init_retry_count=0
-init_retry_interval=1
-retry_count=0
-enable_l10n=true
-l10n_encoding=ISO-8859-1
-locale=en_US
-enable_i18n=true
-language=en_US
-thread_count=1
-data_provider_thread_count=-1
-core_log_level=INFO
-core_log_packages=com.qaprosoft.carina.core
-artifacts_expiration_seconds=2592000
-log_all_json=true
-date_format=HH:mm:ss yyyy-MM-dd
-time_format=HH:mm:ss
-suite_name=
-jira_updater=com.qaprosoft.carina.core.foundation.jira.DefaultJiraUpdater
-jira_url=
-jira_user=
-jira_password=
-jira_suite_id=
-jira_project=
-jira_project_short=
-jira_create_new_ticket=false
-test_naming_pattern={method_name}
-optimize_video_recording=false
-testrail_run_name=
-testrail_milestone=
-testrail_assignee=
-qtest_cycle_name=DailyAutomation
-qtest_suite_name=
-s3_bucket_name=
-access_key_id=
-secret_key=
-s3_use_presign_url=false
-s3_local_storage=.
-appcenter_token=
-appcenter_local_storage=.
-add_new_localization=false
-add_new_localization_encoding=utf-8
-add_new_localization_path=
-add_new_localization_property_name=new_custom_messages_
-tls_keysecure_location=
-health_check_class=
-health_check_methods=
-uninstall_related_apps=false
-default_device_timezone=GMT
-default_device_time_format=24
-default_device_language=en_US
-android_screen_record_size=
-android_screen_record_bitrate=
-android_enable_bug_report=true
-ios_screen_record_quality=MEDIUM
-ios_screen_record_codec=libx264
-ios_screen_record_fps=10
-screen_record_duration=180
-video_scale=-2:720
-ignore_ssl=false
-test_run_rules=
-hub_mode=selenium
-extract_sys_log=false
-selenium_host=http://0.0.0.0:4723/wd/hub
-
-------------- Driver capabilities -----------
-capabilities.deviceName=redmiy2
-capabilities.appPackage=com.solvd.carinademoapplication
-capabilities.platformVersion=9
-capabilities.appActivity=com.solvd.carinademoapplication.ActivitySplash
-capabilities.automationName=UiAutomator2
-capabilities.platformName=ANDROID
-capabilities.deviceType=phone
-capabilities.udid=94eacea3
-================================================
-
-2020-01-24 02:15:33 CarinaListener [INFO] Set data_provider_thread_count=1
-2020-01-24 02:15:33 CarinaListener [INFO] CARINA_CORE_VERSION: 6.3.30
-2020-01-24 02:15:33 Messager [INFO]  TEST [Default test - feature] STARTED at [02:15:33 2020-01-24]
-2020-01-24 02:15:47 Device [INFO] Test will be started on device: Redmi Y2:94eacea3
-2020-01-24 02:15:52 DriverListener [INFO] PASS: element 'NextButton' is clicked.
-2020-01-24 02:15:55 ExtendedWebElement [ERROR] catched WebDriverException: 
-org.openqa.selenium.WebDriverException: An unknown server-side error occurred while processing the command. Original error: Could not proxy. Proxy error: Could not proxy command to remote server. Original error: 404 - ""
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'T440P', ip: '192.168.216.94', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_144'
-Driver info: io.appium.java_client.android.AndroidDriver
-Capabilities {appActivity: com.solvd.carinademoapplica..., appPackage: com.solvd.carinademoapplica..., automationName: UiAutomator2, carinaTestRunId: 437afaaa-6e97-4bcb-8883-1e9..., databaseEnabled: false, desired: {appActivity: com.solvd.carinademoapplica..., appPackage: com.solvd.carinademoapplica..., automationName: UiAutomator2, carinaTestRunId: 437afaaa-6e97-4bcb-8883-1e9..., deviceName: redmiy2, deviceType: phone, platformName: android, platformVersion: 9, udid: 94eacea3}, deviceApiLevel: 28, deviceManufacturer: Xiaomi, deviceModel: Redmi Y2, deviceName: 94eacea3, deviceScreenDensity: 320, deviceScreenSize: 720x1440, deviceType: phone, deviceUDID: 94eacea3, javascriptEnabled: true, locationContextEnabled: false, networkConnectionEnabled: true, pixelRatio: 2, platform: LINUX, platformName: ANDROID, platformVersion: 9, statBarHeight: 48, takesScreenshot: true, udid: 94eacea3, viewportRect: {height: 1296, left: 0, top: 48, width: 720}, warnings: {}, webStorageEnabled: false}
-Session ID: 33fb9bc7-89f6-4cf3-b175-80ab052b3a71
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-	at com.qaprosoft.carina.core.foundation.webdriver.listener.EventFiringAppiumCommandExecutor.execute(EventFiringAppiumCommandExecutor.java:150)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:45)
-	at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)
-	at io.appium.java_client.android.AndroidDriver.execute(AndroidDriver.java:1)
-	at org.openqa.selenium.remote.RemoteWebDriver.getTitle(RemoteWebDriver.java:281)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.openqa.selenium.support.events.EventFiringWebDriver.lambda$new$1(EventFiringWebDriver.java:105)
-	at io.appium.java_client.android.$Proxy37.getTitle(Unknown Source)
-	at com.qaprosoft.carina.demo.utils.PerfEventHandler.afterClickOn(PerfEventHandler.java:39)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.openqa.selenium.support.events.EventFiringWebDriver.lambda$new$0(EventFiringWebDriver.java:84)
-	at com.sun.proxy.$Proxy36.afterClickOn(Unknown Source)
-	at org.openqa.selenium.support.events.EventFiringWebDriver$EventFiringWebElement.click(EventFiringWebDriver.java:418)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
-	at com.sun.proxy.$Proxy41.click(Unknown Source)
-	at com.qaprosoft.carina.core.foundation.webdriver.decorator.ExtendedWebElement$1.doTap(ExtendedWebElement.java:1442)
-	at com.qaprosoft.carina.core.foundation.webdriver.decorator.ExtendedWebElement.executeAction(ExtendedWebElement.java:1266)
-	at com.qaprosoft.carina.core.foundation.webdriver.decorator.ExtendedWebElement.overrideAction(ExtendedWebElement.java:1408)
-	at com.qaprosoft.carina.core.foundation.webdriver.decorator.ExtendedWebElement.doAction(ExtendedWebElement.java:1377)
-	at com.qaprosoft.carina.core.foundation.webdriver.decorator.ExtendedWebElement.doAction(ExtendedWebElement.java:1345)
-	at com.qaprosoft.carina.core.foundation.webdriver.decorator.ExtendedWebElement.click(ExtendedWebElement.java:493)
-	at com.qaprosoft.carina.core.foundation.webdriver.decorator.ExtendedWebElement.click(ExtendedWebElement.java:481)
-	at com.qaprosoft.carina.core.foundation.webdriver.decorator.ExtendedWebElement.click(ExtendedWebElement.java:472)
-	at com.tatadigital.training.gui.CarinaDemoPage.ClickNext(CarinaDemoPage.java:37)
-	at com.qaprosoft.carina.demo.cucumber.steps.manali.CarinaDemoStepdef.clicknextbutton(CarinaDemoStepdef.java:26)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at cucumber.runtime.Utils$1.call(Utils.java:40)
-	at cucumber.runtime.Timeout.timeout(Timeout.java:16)
-	at cucumber.runtime.Utils.invoke(Utils.java:34)
-	at cucumber.runtime.java.JavaStepDefinition.execute(JavaStepDefinition.java:38)
-	at cucumber.runtime.StepDefinitionMatch.runStep(StepDefinitionMatch.java:37)
-	at cucumber.runtime.Runtime.runStep(Runtime.java:300)
-	at cucumber.runtime.model.StepContainer.runStep(StepContainer.java:44)
-	at cucumber.runtime.model.StepContainer.runSteps(StepContainer.java:39)
-	at cucumber.runtime.model.CucumberScenario.run(CucumberScenario.java:44)
-	at cucumber.runtime.model.CucumberFeature.run(CucumberFeature.java:165)
-	at cucumber.api.testng.TestNGCucumberRunner.runCucumber(TestNGCucumberRunner.java:63)
-	at com.qaprosoft.carina.core.foundation.cucumber.CucumberRunner.feature(CucumberRunner.java:56)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
-	at org.testng.TestRunner.privateRun(TestRunner.java:648)
-	at org.testng.TestRunner.run(TestRunner.java:505)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
-	at org.testng.TestNG.runSuites(TestNG.java:1049)
-	at org.testng.TestNG.run(TestNG.java:1017)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-2020-01-24 02:15:59 Messager [ERROR] Redmi Y2 - 94eacea3 TEST [Default test - feature] FAILED at [02:15:59 2020-01-24] - org.openqa.selenium.NoSuchElementException: Unable to detect element: NextButton (By.id: com.solvd.carinademoapplication:id/next_button)
-
-cucumber.api.testng.TestNGCucumberRunner.runCucumber(TestNGCucumberRunner.java:69)
-com.qaprosoft.carina.core.foundation.cucumber.CucumberRunner.feature(CucumberRunner.java:56)
-sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-java.lang.reflect.Method.invoke(Method.java:498)
-org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
-org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
-org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
-org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
-org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
-org.testng.TestRunner.privateRun(TestRunner.java:648)
-org.testng.TestRunner.run(TestRunner.java:505)
-org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
-org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
-org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
-org.testng.SuiteRunner.run(SuiteRunner.java:364)
-org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
-org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
-org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
-org.testng.TestNG.runSuites(TestNG.java:1049)
-org.testng.TestNG.run(TestNG.java:1017)
-org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-2020-01-24 02:16:00 CucumberRunner [INFO] In  @AfterClass tearDownClass
-2020-01-24 02:16:00 CucumberRunner [INFO] Report json: CreateUserAPI-test-report.json
-2020-01-24 02:16:02 Messager [INFO] INFO: '**************** Test execution summary ****************'.
-2020-01-24 02:16:02 Messager [INFO] RESULT #1: TEST [Default test - feature] FAIL [screenshots=file://D:\Man_softwares\Myworkspace\Atlas_Demo\.\reports\qa\1579860932906/28f22b2a-2bf3-4721-bb2e-e1f4462998f3/report.html | log=file://D:\Man_softwares\Myworkspace\Atlas_Demo\.\reports\qa\1579860932906/28f22b2a-2bf3-4721-bb2e-e1f4462998f3/test.log]
-2020-01-24 02:18:03 CarinaListener [INFO] 
-============= Test configuration =============
-url={must_override}
-env=DEMO
-env_arg_resolver=com.qaprosoft.carina.core.foundation.utils.DefaultEnvArgResolver
-platform=*
-browser=
-browser_version=
-browser_language=
-selenium_host=http://0.0.0.0:4723/wd/hub
-driver_event_listeners=com.qaprosoft.carina.demo.utils.PerfEventHandler
-max_driver_count=3
-custom_capabilities=
-chrome_args=
-chrome_experimental_opts=
-chrome_mobile_emulation_opts=
-firefox_args=
-firefox_preferences=
-app_version=
-proxy_host=
-proxy_port=
-proxy_protocols=http,https,ftp
-browsermob_proxy=false
-browsermob_host=
-browsermob_port=0
-browsermob_ports_range=
-browsermob_disabled_mitm=false
-proxy_set_to_system=false
-report_url=
-email_list=
-failure_email_list=
-track_known_issues=false
-auto_screenshot=true
-implicit_timeout=10
-explicit_timeout=20
-auto_download=false
-auto_download_apps=
-custom_artifacts_folder=
-retry_interval=5
-project_report_directory=./reports/qa
-max_screen_history=10
-max_log_file_size=150
-result_sorting=true
-big_screen_width=-1
-big_screen_height=-1
-small_screen_width=90
-small_screen_height=60
-init_retry_count=0
-init_retry_interval=1
-retry_count=0
-enable_l10n=true
-l10n_encoding=ISO-8859-1
-locale=en_US
-enable_i18n=true
-language=en_US
-thread_count=1
-data_provider_thread_count=-1
-core_log_level=INFO
-core_log_packages=com.qaprosoft.carina.core
-artifacts_expiration_seconds=2592000
-log_all_json=true
-date_format=HH:mm:ss yyyy-MM-dd
-time_format=HH:mm:ss
-suite_name=
-jira_updater=com.qaprosoft.carina.core.foundation.jira.DefaultJiraUpdater
-jira_url=
-jira_user=
-jira_password=
-jira_suite_id=
-jira_project=
-jira_project_short=
-jira_create_new_ticket=false
-test_naming_pattern={method_name}
-optimize_video_recording=false
-testrail_run_name=
-testrail_milestone=
-testrail_assignee=
-qtest_cycle_name=DailyAutomation
-qtest_suite_name=
-s3_bucket_name=
-access_key_id=
-secret_key=
-s3_use_presign_url=false
-s3_local_storage=.
-appcenter_token=
-appcenter_local_storage=.
-add_new_localization=false
-add_new_localization_encoding=utf-8
-add_new_localization_path=
-add_new_localization_property_name=new_custom_messages_
-tls_keysecure_location=
-health_check_class=
-health_check_methods=
-uninstall_related_apps=false
-default_device_timezone=GMT
-default_device_time_format=24
-default_device_language=en_US
-android_screen_record_size=
-android_screen_record_bitrate=
-android_enable_bug_report=true
-ios_screen_record_quality=MEDIUM
-ios_screen_record_codec=libx264
-ios_screen_record_fps=10
-screen_record_duration=180
-video_scale=-2:720
-ignore_ssl=false
-test_run_rules=
-hub_mode=selenium
-extract_sys_log=false
-selenium_host=http://0.0.0.0:4723/wd/hub
-
-------------- Driver capabilities -----------
-capabilities.deviceName=redmiy2
-capabilities.appPackage=com.solvd.carinademoapplication
-capabilities.platformVersion=9
-capabilities.appActivity=com.solvd.carinademoapplication.ActivitySplash
-capabilities.automationName=UiAutomator2
-capabilities.platformName=ANDROID
-capabilities.deviceType=phone
-capabilities.udid=94eacea3
-================================================
-
-2020-01-24 02:18:04 CarinaListener [INFO] Set data_provider_thread_count=1
-2020-01-24 02:18:04 CarinaListener [INFO] CARINA_CORE_VERSION: 6.3.30
-2020-01-24 02:18:04 Messager [INFO]  TEST [Default test - feature] STARTED at [02:18:04 2020-01-24]
-2020-01-24 02:18:36 Device [INFO] Test will be started on device: redmiy2:94eacea3
-2020-01-24 02:18:36 IDriverPool [ERROR] Driver initialization 'default' FAILED! Retry 1 of 1 time - org.openqa.selenium.WebDriverException: An unknown server-side error occurred while processing the command. Original error: Error executing adbExec. Original error: 'Command 'D:\\Man_softwares\\platform-tools\\adb.exe -P 5037 -s 94eacea3 shell pm install -r /data/local/tmp/appium_cache/6182aac4ebb838d50b05162ea2558727e9706f33.apk' exited with code 1'; Stderr: ''; Code: '1'
+2020-01-27 01:19:12 CarinaListener [INFO] Set data_provider_thread_count=1
+2020-01-27 01:19:12 CarinaListener [INFO] CARINA_CORE_VERSION: 6.3.30
+2020-01-27 01:19:12 Messager [INFO]  TEST [Default test - feature] STARTED at [01:19:12 2020-01-27]
+2020-01-27 01:19:12 M1CloudActivities [INFO] DeviceName: OnePlus7.properties
+2020-01-27 01:19:13 IDriverPool [ERROR] Driver initialization 'DEFAULT' FAILED! Retry 1 of 1 time - org.openqa.selenium.SessionNotCreatedException: com.ssts.pcloudy.exceptions.DeviceNotBookedException : Requested Device Full 'Oneplus_7_Android_10.0.0'name not found/already booked. (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 309 milliseconds
 Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
 System info: host: 'T440P', ip: '192.168.216.94', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_144'
 Driver info: driver.version: AndroidDriver
-remote stacktrace: UnknownError: An unknown server-side error occurred while processing the command. Original error: Error executing adbExec. Original error: 'Command 'D:\\Man_softwares\\platform-tools\\adb.exe -P 5037 -s 94eacea3 shell pm install -r /data/local/tmp/appium_cache/6182aac4ebb838d50b05162ea2558727e9706f33.apk' exited with code 1'; Stderr: ''; Code: '1'
-    at getResponseForW3CError (C:\Program Files\Appium\resources\app\node_modules\appium\node_modules\appium-base-driver\lib\protocol\errors.js:804:9)
-    at asyncHandler (C:\Program Files\Appium\resources\app\node_modules\appium\node_modules\appium-base-driver\lib\protocol\protocol.js:388:37)
-    at process._tickCallback (internal/process/next_tick.js:68:7)
-org.openqa.selenium.WebDriverException: org.openqa.selenium.WebDriverException: An unknown server-side error occurred while processing the command. Original error: Error executing adbExec. Original error: 'Command 'D:\\Man_softwares\\platform-tools\\adb.exe -P 5037 -s 94eacea3 shell pm install -r /data/local/tmp/appium_cache/6182aac4ebb838d50b05162ea2558727e9706f33.apk' exited with code 1'; Stderr: ''; Code: '1'
+org.openqa.selenium.WebDriverException: org.openqa.selenium.SessionNotCreatedException: com.ssts.pcloudy.exceptions.DeviceNotBookedException : Requested Device Full 'Oneplus_7_Android_10.0.0'name not found/already booked. (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 309 milliseconds
 Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
 System info: host: 'T440P', ip: '192.168.216.94', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_144'
 Driver info: driver.version: AndroidDriver
-remote stacktrace: UnknownError: An unknown server-side error occurred while processing the command. Original error: Error executing adbExec. Original error: 'Command 'D:\\Man_softwares\\platform-tools\\adb.exe -P 5037 -s 94eacea3 shell pm install -r /data/local/tmp/appium_cache/6182aac4ebb838d50b05162ea2558727e9706f33.apk' exited with code 1'; Stderr: ''; Code: '1'
-    at getResponseForW3CError (C:\Program Files\Appium\resources\app\node_modules\appium\node_modules\appium-base-driver\lib\protocol\errors.js:804:9)
-    at asyncHandler (C:\Program Files\Appium\resources\app\node_modules\appium\node_modules\appium-base-driver\lib\protocol\protocol.js:388:37)
-    at process._tickCallback (internal/process/next_tick.js:68:7)
+	at com.qaprosoft.carina.core.foundation.webdriver.listener.EventFiringAppiumCommandExecutor.execute(EventFiringAppiumCommandExecutor.java:169)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:41)
+	at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.execute(AndroidDriver.java:1)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:213)
+	at io.appium.java_client.AppiumDriver.startSession(AppiumDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:131)
+	at io.appium.java_client.DefaultGenericMobileDriver.<init>(DefaultGenericMobileDriver.java:37)
+	at io.appium.java_client.AppiumDriver.<init>(AppiumDriver.java:86)
+	at io.appium.java_client.android.AndroidDriver.<init>(AndroidDriver.java:84)
+	at com.qaprosoft.carina.core.foundation.webdriver.core.factory.impl.MobileFactory.create(MobileFactory.java:167)
+	at com.qaprosoft.carina.core.foundation.webdriver.core.factory.DriverFactory.create(DriverFactory.java:71)
+	at com.qaprosoft.carina.core.foundation.webdriver.IDriverPool.createDriver(IDriverPool.java:353)
+	at com.qaprosoft.carina.core.foundation.webdriver.IDriverPool.getDriver(IDriverPool.java:143)
+	at com.qaprosoft.carina.demo.cucumber.steps.manali.FirstCryBoyStepdef.MainPage(FirstCryBoyStepdef.java:31)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at cucumber.runtime.Utils$1.call(Utils.java:40)
+	at cucumber.runtime.Timeout.timeout(Timeout.java:16)
+	at cucumber.runtime.Utils.invoke(Utils.java:34)
+	at cucumber.runtime.java.JavaStepDefinition.execute(JavaStepDefinition.java:38)
+	at cucumber.runtime.StepDefinitionMatch.runStep(StepDefinitionMatch.java:37)
+	at cucumber.runtime.Runtime.runStep(Runtime.java:300)
+	at cucumber.runtime.model.StepContainer.runStep(StepContainer.java:44)
+	at cucumber.runtime.model.StepContainer.runSteps(StepContainer.java:39)
+	at cucumber.runtime.model.CucumberScenario.run(CucumberScenario.java:44)
+	at cucumber.runtime.model.CucumberFeature.run(CucumberFeature.java:165)
+	at cucumber.api.testng.TestNGCucumberRunner.runCucumber(TestNGCucumberRunner.java:63)
+	at com.qaprosoft.carina.core.foundation.cucumber.CucumberRunner.feature(CucumberRunner.java:56)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+Caused by: org.openqa.selenium.SessionNotCreatedException: com.ssts.pcloudy.exceptions.DeviceNotBookedException : Requested Device Full 'Oneplus_7_Android_10.0.0'name not found/already booked. (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 309 milliseconds
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'T440P', ip: '192.168.216.94', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_144'
+Driver info: driver.version: AndroidDriver
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:214)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:166)
+	at org.openqa.selenium.remote.JsonWireProtocolResponse.lambda$errorHandler$0(JsonWireProtocolResponse.java:54)
+	at org.openqa.selenium.remote.HandshakeResponse.lambda$getResponseFunction$0(HandshakeResponse.java:30)
+	at org.openqa.selenium.remote.ProtocolHandshake.lambda$createSession$0(ProtocolHandshake.java:126)
+	at java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:193)
+	at java.util.Spliterators$ArraySpliterator.tryAdvance(Spliterators.java:958)
+	at java.util.stream.ReferencePipeline.forEachWithCancel(ReferencePipeline.java:126)
+	at java.util.stream.AbstractPipeline.copyIntoWithCancel(AbstractPipeline.java:498)
+	at java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:485)
+	at java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:471)
+	at java.util.stream.FindOps$FindOp.evaluateSequential(FindOps.java:152)
+	at java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.util.stream.ReferencePipeline.findFirst(ReferencePipeline.java:464)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:128)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:74)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:136)
+	at com.qaprosoft.carina.core.foundation.webdriver.listener.EventFiringAppiumCommandExecutor.execute(EventFiringAppiumCommandExecutor.java:150)
+	... 56 more
+2020-01-27 01:19:13 Messager [ERROR]  TEST [Default test - feature] FAILED at [01:19:13 2020-01-27] - org.openqa.selenium.WebDriverException: org.openqa.selenium.SessionNotCreatedException: com.ssts.pcloudy.exceptions.DeviceNotBookedException : Requested Device Full 'Oneplus_7_Android_10.0.0'name not found/already booked. (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 309 milliseconds
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'T440P', ip: '192.168.216.94', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_144'
+Driver info: driver.version: AndroidDriver
+
+cucumber.api.testng.TestNGCucumberRunner.runCucumber(TestNGCucumberRunner.java:69)
+com.qaprosoft.carina.core.foundation.cucumber.CucumberRunner.feature(CucumberRunner.java:56)
+sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+java.lang.reflect.Method.invoke(Method.java:498)
+org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+org.testng.TestRunner.privateRun(TestRunner.java:648)
+org.testng.TestRunner.run(TestRunner.java:505)
+org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+org.testng.SuiteRunner.run(SuiteRunner.java:364)
+org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+org.testng.TestNG.runSuites(TestNG.java:1049)
+org.testng.TestNG.run(TestNG.java:1017)
+org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+2020-01-27 01:19:13 CucumberRunner [INFO] In  @AfterClass tearDownClass
+2020-01-27 01:19:13 CucumberRunner [INFO] Report json: CreateUserAPI-test-report.json
+2020-01-27 01:19:15 Messager [INFO] INFO: '**************** Test execution summary ****************'.
+2020-01-27 01:19:15 Messager [INFO] RESULT #1: TEST [Default test - feature] FAIL [log=file://D:\Man_softwares\Myworkspace\Atlas_Demo\.\reports\qa\1580116752055/e91de82f-0694-4533-a737-f1aba7bdabdb/test.log]
+2020-01-27 01:22:02 CarinaListener [INFO] 
+============= Test configuration =============
+url={must_override}
+env=DEMO
+env_arg_resolver=com.qaprosoft.carina.core.foundation.utils.DefaultEnvArgResolver
+platform=ANDROID
+browser=
+browser_version=
+browser_language=
+selenium_host=https://qkm1.qualitykiosk.com/appiumcloud/wd/hub
+driver_event_listeners=
+max_driver_count=3
+custom_capabilities=
+chrome_args=
+chrome_experimental_opts=
+chrome_mobile_emulation_opts=
+firefox_args=
+firefox_preferences=
+app_version=
+proxy_host=
+proxy_port=
+proxy_protocols=http,https,ftp
+browsermob_proxy=false
+browsermob_host=
+browsermob_port=0
+browsermob_ports_range=
+browsermob_disabled_mitm=false
+proxy_set_to_system=false
+report_url=
+email_list=
+failure_email_list=
+track_known_issues=false
+auto_screenshot=true
+implicit_timeout=10
+explicit_timeout=20
+auto_download=false
+auto_download_apps=
+custom_artifacts_folder=
+retry_interval=5
+project_report_directory=./reports/qa
+max_screen_history=10
+max_log_file_size=150
+result_sorting=true
+big_screen_width=-1
+big_screen_height=-1
+small_screen_width=90
+small_screen_height=60
+init_retry_count=0
+init_retry_interval=1
+retry_count=0
+enable_l10n=true
+l10n_encoding=ISO-8859-1
+locale=en_US
+enable_i18n=true
+language=en_US
+thread_count=1
+data_provider_thread_count=-1
+core_log_level=INFO
+core_log_packages=com.qaprosoft.carina.core
+artifacts_expiration_seconds=2592000
+log_all_json=true
+date_format=HH:mm:ss yyyy-MM-dd
+time_format=HH:mm:ss
+suite_name=
+jira_updater=com.qaprosoft.carina.core.foundation.jira.DefaultJiraUpdater
+jira_url=
+jira_user=
+jira_password=
+jira_suite_id=
+jira_project=
+jira_project_short=
+jira_create_new_ticket=false
+test_naming_pattern={method_name}
+optimize_video_recording=false
+testrail_run_name=
+testrail_milestone=
+testrail_assignee=
+qtest_cycle_name=DailyAutomation
+qtest_suite_name=
+s3_bucket_name=
+access_key_id=
+secret_key=
+s3_use_presign_url=false
+s3_local_storage=.
+appcenter_token=
+appcenter_local_storage=.
+add_new_localization=false
+add_new_localization_encoding=utf-8
+add_new_localization_path=
+add_new_localization_property_name=new_custom_messages_
+tls_keysecure_location=
+health_check_class=
+health_check_methods=
+uninstall_related_apps=false
+default_device_timezone=GMT
+default_device_time_format=24
+default_device_language=en_US
+android_screen_record_size=
+android_screen_record_bitrate=
+android_enable_bug_report=true
+ios_screen_record_quality=MEDIUM
+ios_screen_record_codec=libx264
+ios_screen_record_fps=10
+screen_record_duration=180
+video_scale=-2:720
+ignore_ssl=false
+test_run_rules=
+hub_mode=selenium
+extract_sys_log=false
+selenium_host=https://qkm1.qualitykiosk.com/appiumcloud/wd/hub
+
+------------- Driver capabilities -----------
+================================================
+
+2020-01-27 01:22:02 CarinaListener [INFO] Set data_provider_thread_count=1
+2020-01-27 01:22:02 CarinaListener [INFO] CARINA_CORE_VERSION: 6.3.30
+2020-01-27 01:22:02 Messager [INFO]  TEST [Default test - feature] STARTED at [01:22:02 2020-01-27]
+2020-01-27 01:22:03 M1CloudActivities [INFO] DeviceName: OnePlus7.properties
+2020-01-27 01:23:06 DriverListener [INFO] PASS: element 'Boy' is clicked.
+2020-01-27 01:23:20 IDriverPool [ERROR] Driver initialization 'default' FAILED! Retry 1 of 1 time - org.openqa.selenium.SessionNotCreatedException: com.ssts.pcloudy.exception.ConnectError : Prefix not configured into Cloud (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 201 milliseconds
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'T440P', ip: '192.168.216.94', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_144'
+Driver info: driver.version: AndroidDriver
+org.openqa.selenium.WebDriverException: org.openqa.selenium.SessionNotCreatedException: com.ssts.pcloudy.exception.ConnectError : Prefix not configured into Cloud (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 201 milliseconds
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'T440P', ip: '192.168.216.94', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_144'
+Driver info: driver.version: AndroidDriver
 	at com.qaprosoft.carina.core.foundation.webdriver.listener.EventFiringAppiumCommandExecutor.execute(EventFiringAppiumCommandExecutor.java:169)
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
 	at io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:41)
@@ -1669,7 +925,7 @@ remote stacktrace: UnknownError: An unknown server-side error occurred while pro
 	at com.qaprosoft.carina.core.foundation.webdriver.IDriverPool.getDriver(IDriverPool.java:143)
 	at com.qaprosoft.carina.core.foundation.webdriver.IDriverPool.getDriver(IDriverPool.java:78)
 	at com.qaprosoft.carina.core.foundation.webdriver.IDriverPool.getDriver(IDriverPool.java:66)
-	at com.qaprosoft.carina.demo.cucumber.steps.manali.CarinaDemoStepdef.MainPage(CarinaDemoStepdef.java:18)
+	at com.qaprosoft.carina.demo.cucumber.steps.manali.FirstCryBoyStepdef.selectDOB(FirstCryBoyStepdef.java:58)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -1711,19 +967,18 @@ remote stacktrace: UnknownError: An unknown server-side error occurred while pro
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-Caused by: org.openqa.selenium.WebDriverException: An unknown server-side error occurred while processing the command. Original error: Error executing adbExec. Original error: 'Command 'D:\\Man_softwares\\platform-tools\\adb.exe -P 5037 -s 94eacea3 shell pm install -r /data/local/tmp/appium_cache/6182aac4ebb838d50b05162ea2558727e9706f33.apk' exited with code 1'; Stderr: ''; Code: '1'
+Caused by: org.openqa.selenium.SessionNotCreatedException: com.ssts.pcloudy.exception.ConnectError : Prefix not configured into Cloud (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 201 milliseconds
 Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
 System info: host: 'T440P', ip: '192.168.216.94', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_144'
 Driver info: driver.version: AndroidDriver
-remote stacktrace: UnknownError: An unknown server-side error occurred while processing the command. Original error: Error executing adbExec. Original error: 'Command 'D:\\Man_softwares\\platform-tools\\adb.exe -P 5037 -s 94eacea3 shell pm install -r /data/local/tmp/appium_cache/6182aac4ebb838d50b05162ea2558727e9706f33.apk' exited with code 1'; Stderr: ''; Code: '1'
-    at getResponseForW3CError (C:\Program Files\Appium\resources\app\node_modules\appium\node_modules\appium-base-driver\lib\protocol\errors.js:804:9)
-    at asyncHandler (C:\Program Files\Appium\resources\app\node_modules\appium\node_modules\appium-base-driver\lib\protocol\protocol.js:388:37)
-    at process._tickCallback (internal/process/next_tick.js:68:7)
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
 	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
 	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
-	at org.openqa.selenium.remote.W3CHandshakeResponse.lambda$errorHandler$0(W3CHandshakeResponse.java:62)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:214)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:166)
+	at org.openqa.selenium.remote.JsonWireProtocolResponse.lambda$errorHandler$0(JsonWireProtocolResponse.java:54)
 	at org.openqa.selenium.remote.HandshakeResponse.lambda$getResponseFunction$0(HandshakeResponse.java:30)
 	at org.openqa.selenium.remote.ProtocolHandshake.lambda$createSession$0(ProtocolHandshake.java:126)
 	at java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:193)
@@ -1740,14 +995,11 @@ remote stacktrace: UnknownError: An unknown server-side error occurred while pro
 	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:136)
 	at com.qaprosoft.carina.core.foundation.webdriver.listener.EventFiringAppiumCommandExecutor.execute(EventFiringAppiumCommandExecutor.java:150)
 	... 58 more
-2020-01-24 02:18:36 Messager [ERROR] redmiy2 - 94eacea3 TEST [Default test - feature] FAILED at [02:18:36 2020-01-24] - org.openqa.selenium.WebDriverException: org.openqa.selenium.WebDriverException: An unknown server-side error occurred while processing the command. Original error: Error executing adbExec. Original error: 'Command 'D:\\Man_softwares\\platform-tools\\adb.exe -P 5037 -s 94eacea3 shell pm install -r /data/local/tmp/appium_cache/6182aac4ebb838d50b05162ea2558727e9706f33.apk' exited with code 1'; Stderr: ''; Code: '1'
+2020-01-27 01:23:23 Messager [ERROR]  TEST [Default test - feature] FAILED at [01:23:23 2020-01-27] - org.openqa.selenium.WebDriverException: org.openqa.selenium.SessionNotCreatedException: com.ssts.pcloudy.exception.ConnectError : Prefix not configured into Cloud (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 201 milliseconds
 Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
 System info: host: 'T440P', ip: '192.168.216.94', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_144'
 Driver info: driver.version: AndroidDriver
-remote stacktrace: UnknownError: An unknown server-side error occurred while processing the command. Original error: Error executing adbExec. Original error: 'Command 'D:\\Man_softwares\\platform-tools\\adb.exe -P 5037 -s 94eacea3 shell pm install -r /data/local/tmp/appium_cache/6182aac4ebb838d50b05162ea2558727e9706f33.apk' exited with code 1'; Stderr: ''; Code: '1'
-    at getResponseForW3CError (C:\Program Files\Appium\resources\app\node_modules\appium\node_modules\appium-base-driver\lib\protocol\errors.js:804:9)
-    at asyncHandler (C:\Program Files\Appium\resources\app\node_modules\appium\node_modules\appium-base-driver\lib\protocol\protocol.js:388:37)
-    at process._tickCallback (internal/process/next_tick.js:68:7)
 
 cucumber.api.testng.TestNGCucumberRunner.runCucumber(TestNGCucumberRunner.java:69)
 com.qaprosoft.carina.core.foundation.cucumber.CucumberRunner.feature(CucumberRunner.java:56)
@@ -1776,1226 +1028,7 @@ org.testng.TestNG.run(TestNG.java:1017)
 org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
 org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-2020-01-24 02:18:36 CucumberRunner [INFO] In  @AfterClass tearDownClass
-2020-01-24 02:18:36 CucumberRunner [INFO] Report json: CreateUserAPI-test-report.json
-2020-01-24 02:18:38 Messager [INFO] INFO: '**************** Test execution summary ****************'.
-2020-01-24 02:18:38 Messager [INFO] RESULT #1: TEST [Default test - feature] FAIL [log=file://D:\Man_softwares\Myworkspace\Atlas_Demo\.\reports\qa\1579861083921/9da5affe-674b-40d8-8354-3614668db158/test.log]
-2020-01-24 02:20:44 CarinaListener [INFO] 
-============= Test configuration =============
-url={must_override}
-env=DEMO
-env_arg_resolver=com.qaprosoft.carina.core.foundation.utils.DefaultEnvArgResolver
-platform=*
-browser=
-browser_version=
-browser_language=
-selenium_host=http://0.0.0.0:4723/wd/hub
-driver_event_listeners=com.qaprosoft.carina.demo.utils.PerfEventHandler
-max_driver_count=3
-custom_capabilities=
-chrome_args=
-chrome_experimental_opts=
-chrome_mobile_emulation_opts=
-firefox_args=
-firefox_preferences=
-app_version=
-proxy_host=
-proxy_port=
-proxy_protocols=http,https,ftp
-browsermob_proxy=false
-browsermob_host=
-browsermob_port=0
-browsermob_ports_range=
-browsermob_disabled_mitm=false
-proxy_set_to_system=false
-report_url=
-email_list=
-failure_email_list=
-track_known_issues=false
-auto_screenshot=true
-implicit_timeout=10
-explicit_timeout=20
-auto_download=false
-auto_download_apps=
-custom_artifacts_folder=
-retry_interval=5
-project_report_directory=./reports/qa
-max_screen_history=10
-max_log_file_size=150
-result_sorting=true
-big_screen_width=-1
-big_screen_height=-1
-small_screen_width=90
-small_screen_height=60
-init_retry_count=0
-init_retry_interval=1
-retry_count=0
-enable_l10n=true
-l10n_encoding=ISO-8859-1
-locale=en_US
-enable_i18n=true
-language=en_US
-thread_count=1
-data_provider_thread_count=-1
-core_log_level=INFO
-core_log_packages=com.qaprosoft.carina.core
-artifacts_expiration_seconds=2592000
-log_all_json=true
-date_format=HH:mm:ss yyyy-MM-dd
-time_format=HH:mm:ss
-suite_name=
-jira_updater=com.qaprosoft.carina.core.foundation.jira.DefaultJiraUpdater
-jira_url=
-jira_user=
-jira_password=
-jira_suite_id=
-jira_project=
-jira_project_short=
-jira_create_new_ticket=false
-test_naming_pattern={method_name}
-optimize_video_recording=false
-testrail_run_name=
-testrail_milestone=
-testrail_assignee=
-qtest_cycle_name=DailyAutomation
-qtest_suite_name=
-s3_bucket_name=
-access_key_id=
-secret_key=
-s3_use_presign_url=false
-s3_local_storage=.
-appcenter_token=
-appcenter_local_storage=.
-add_new_localization=false
-add_new_localization_encoding=utf-8
-add_new_localization_path=
-add_new_localization_property_name=new_custom_messages_
-tls_keysecure_location=
-health_check_class=
-health_check_methods=
-uninstall_related_apps=false
-default_device_timezone=GMT
-default_device_time_format=24
-default_device_language=en_US
-android_screen_record_size=
-android_screen_record_bitrate=
-android_enable_bug_report=true
-ios_screen_record_quality=MEDIUM
-ios_screen_record_codec=libx264
-ios_screen_record_fps=10
-screen_record_duration=180
-video_scale=-2:720
-ignore_ssl=false
-test_run_rules=
-hub_mode=selenium
-extract_sys_log=false
-selenium_host=http://0.0.0.0:4723/wd/hub
-
-------------- Driver capabilities -----------
-capabilities.deviceName=redmiy2
-capabilities.appPackage=com.solvd.carinademoapplication
-capabilities.platformVersion=9
-capabilities.appActivity=com.solvd.carinademoapplication.ActivitySplash
-capabilities.automationName=UiAutomator2
-capabilities.platformName=ANDROID
-capabilities.deviceType=phone
-capabilities.udid=94eacea3
-================================================
-
-2020-01-24 02:20:44 CarinaListener [INFO] Set data_provider_thread_count=1
-2020-01-24 02:20:44 CarinaListener [INFO] CARINA_CORE_VERSION: 6.3.30
-2020-01-24 02:20:44 Messager [INFO]  TEST [Default test - feature] STARTED at [02:20:44 2020-01-24]
-2020-01-24 02:21:02 Device [INFO] Test will be started on device: redmiy2:94eacea3
-2020-01-24 02:21:02 IDriverPool [ERROR] Driver initialization 'default' FAILED! Retry 1 of 1 time - org.openqa.selenium.WebDriverException: An unknown server-side error occurred while processing the command. Original error: Error executing adbExec. Original error: 'Command 'D:\\Man_softwares\\platform-tools\\adb.exe -P 5037 -s 94eacea3 shell pm install -r /data/local/tmp/appium_cache/6182aac4ebb838d50b05162ea2558727e9706f33.apk' exited with code 1'; Stderr: ''; Code: '1'
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'T440P', ip: '192.168.216.94', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_144'
-Driver info: driver.version: AndroidDriver
-remote stacktrace: UnknownError: An unknown server-side error occurred while processing the command. Original error: Error executing adbExec. Original error: 'Command 'D:\\Man_softwares\\platform-tools\\adb.exe -P 5037 -s 94eacea3 shell pm install -r /data/local/tmp/appium_cache/6182aac4ebb838d50b05162ea2558727e9706f33.apk' exited with code 1'; Stderr: ''; Code: '1'
-    at getResponseForW3CError (C:\Program Files\Appium\resources\app\node_modules\appium\node_modules\appium-base-driver\lib\protocol\errors.js:804:9)
-    at asyncHandler (C:\Program Files\Appium\resources\app\node_modules\appium\node_modules\appium-base-driver\lib\protocol\protocol.js:388:37)
-    at process._tickCallback (internal/process/next_tick.js:68:7)
-org.openqa.selenium.WebDriverException: org.openqa.selenium.WebDriverException: An unknown server-side error occurred while processing the command. Original error: Error executing adbExec. Original error: 'Command 'D:\\Man_softwares\\platform-tools\\adb.exe -P 5037 -s 94eacea3 shell pm install -r /data/local/tmp/appium_cache/6182aac4ebb838d50b05162ea2558727e9706f33.apk' exited with code 1'; Stderr: ''; Code: '1'
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'T440P', ip: '192.168.216.94', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_144'
-Driver info: driver.version: AndroidDriver
-remote stacktrace: UnknownError: An unknown server-side error occurred while processing the command. Original error: Error executing adbExec. Original error: 'Command 'D:\\Man_softwares\\platform-tools\\adb.exe -P 5037 -s 94eacea3 shell pm install -r /data/local/tmp/appium_cache/6182aac4ebb838d50b05162ea2558727e9706f33.apk' exited with code 1'; Stderr: ''; Code: '1'
-    at getResponseForW3CError (C:\Program Files\Appium\resources\app\node_modules\appium\node_modules\appium-base-driver\lib\protocol\errors.js:804:9)
-    at asyncHandler (C:\Program Files\Appium\resources\app\node_modules\appium\node_modules\appium-base-driver\lib\protocol\protocol.js:388:37)
-    at process._tickCallback (internal/process/next_tick.js:68:7)
-	at com.qaprosoft.carina.core.foundation.webdriver.listener.EventFiringAppiumCommandExecutor.execute(EventFiringAppiumCommandExecutor.java:169)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:41)
-	at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)
-	at io.appium.java_client.android.AndroidDriver.execute(AndroidDriver.java:1)
-	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:213)
-	at io.appium.java_client.AppiumDriver.startSession(AppiumDriver.java:323)
-	at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:131)
-	at io.appium.java_client.DefaultGenericMobileDriver.<init>(DefaultGenericMobileDriver.java:37)
-	at io.appium.java_client.AppiumDriver.<init>(AppiumDriver.java:86)
-	at io.appium.java_client.android.AndroidDriver.<init>(AndroidDriver.java:84)
-	at com.qaprosoft.carina.core.foundation.webdriver.core.factory.impl.MobileFactory.create(MobileFactory.java:167)
-	at com.qaprosoft.carina.core.foundation.webdriver.core.factory.DriverFactory.create(DriverFactory.java:71)
-	at com.qaprosoft.carina.core.foundation.webdriver.IDriverPool.createDriver(IDriverPool.java:353)
-	at com.qaprosoft.carina.core.foundation.webdriver.IDriverPool.getDriver(IDriverPool.java:143)
-	at com.qaprosoft.carina.core.foundation.webdriver.IDriverPool.getDriver(IDriverPool.java:78)
-	at com.qaprosoft.carina.core.foundation.webdriver.IDriverPool.getDriver(IDriverPool.java:66)
-	at com.qaprosoft.carina.demo.cucumber.steps.manali.CarinaDemoStepdef.MainPage(CarinaDemoStepdef.java:18)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at cucumber.runtime.Utils$1.call(Utils.java:40)
-	at cucumber.runtime.Timeout.timeout(Timeout.java:16)
-	at cucumber.runtime.Utils.invoke(Utils.java:34)
-	at cucumber.runtime.java.JavaStepDefinition.execute(JavaStepDefinition.java:38)
-	at cucumber.runtime.StepDefinitionMatch.runStep(StepDefinitionMatch.java:37)
-	at cucumber.runtime.Runtime.runStep(Runtime.java:300)
-	at cucumber.runtime.model.StepContainer.runStep(StepContainer.java:44)
-	at cucumber.runtime.model.StepContainer.runSteps(StepContainer.java:39)
-	at cucumber.runtime.model.CucumberScenario.run(CucumberScenario.java:44)
-	at cucumber.runtime.model.CucumberFeature.run(CucumberFeature.java:165)
-	at cucumber.api.testng.TestNGCucumberRunner.runCucumber(TestNGCucumberRunner.java:63)
-	at com.qaprosoft.carina.core.foundation.cucumber.CucumberRunner.feature(CucumberRunner.java:56)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
-	at org.testng.TestRunner.privateRun(TestRunner.java:648)
-	at org.testng.TestRunner.run(TestRunner.java:505)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
-	at org.testng.TestNG.runSuites(TestNG.java:1049)
-	at org.testng.TestNG.run(TestNG.java:1017)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-Caused by: org.openqa.selenium.WebDriverException: An unknown server-side error occurred while processing the command. Original error: Error executing adbExec. Original error: 'Command 'D:\\Man_softwares\\platform-tools\\adb.exe -P 5037 -s 94eacea3 shell pm install -r /data/local/tmp/appium_cache/6182aac4ebb838d50b05162ea2558727e9706f33.apk' exited with code 1'; Stderr: ''; Code: '1'
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'T440P', ip: '192.168.216.94', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_144'
-Driver info: driver.version: AndroidDriver
-remote stacktrace: UnknownError: An unknown server-side error occurred while processing the command. Original error: Error executing adbExec. Original error: 'Command 'D:\\Man_softwares\\platform-tools\\adb.exe -P 5037 -s 94eacea3 shell pm install -r /data/local/tmp/appium_cache/6182aac4ebb838d50b05162ea2558727e9706f33.apk' exited with code 1'; Stderr: ''; Code: '1'
-    at getResponseForW3CError (C:\Program Files\Appium\resources\app\node_modules\appium\node_modules\appium-base-driver\lib\protocol\errors.js:804:9)
-    at asyncHandler (C:\Program Files\Appium\resources\app\node_modules\appium\node_modules\appium-base-driver\lib\protocol\protocol.js:388:37)
-    at process._tickCallback (internal/process/next_tick.js:68:7)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
-	at org.openqa.selenium.remote.W3CHandshakeResponse.lambda$errorHandler$0(W3CHandshakeResponse.java:62)
-	at org.openqa.selenium.remote.HandshakeResponse.lambda$getResponseFunction$0(HandshakeResponse.java:30)
-	at org.openqa.selenium.remote.ProtocolHandshake.lambda$createSession$0(ProtocolHandshake.java:126)
-	at java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:193)
-	at java.util.Spliterators$ArraySpliterator.tryAdvance(Spliterators.java:958)
-	at java.util.stream.ReferencePipeline.forEachWithCancel(ReferencePipeline.java:126)
-	at java.util.stream.AbstractPipeline.copyIntoWithCancel(AbstractPipeline.java:498)
-	at java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:485)
-	at java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:471)
-	at java.util.stream.FindOps$FindOp.evaluateSequential(FindOps.java:152)
-	at java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
-	at java.util.stream.ReferencePipeline.findFirst(ReferencePipeline.java:464)
-	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:128)
-	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:74)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:136)
-	at com.qaprosoft.carina.core.foundation.webdriver.listener.EventFiringAppiumCommandExecutor.execute(EventFiringAppiumCommandExecutor.java:150)
-	... 58 more
-2020-01-24 02:21:02 Messager [ERROR] redmiy2 - 94eacea3 TEST [Default test - feature] FAILED at [02:21:02 2020-01-24] - org.openqa.selenium.WebDriverException: org.openqa.selenium.WebDriverException: An unknown server-side error occurred while processing the command. Original error: Error executing adbExec. Original error: 'Command 'D:\\Man_softwares\\platform-tools\\adb.exe -P 5037 -s 94eacea3 shell pm install -r /data/local/tmp/appium_cache/6182aac4ebb838d50b05162ea2558727e9706f33.apk' exited with code 1'; Stderr: ''; Code: '1'
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'T440P', ip: '192.168.216.94', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_144'
-Driver info: driver.version: AndroidDriver
-remote stacktrace: UnknownError: An unknown server-side error occurred while processing the command. Original error: Error executing adbExec. Original error: 'Command 'D:\\Man_softwares\\platform-tools\\adb.exe -P 5037 -s 94eacea3 shell pm install -r /data/local/tmp/appium_cache/6182aac4ebb838d50b05162ea2558727e9706f33.apk' exited with code 1'; Stderr: ''; Code: '1'
-    at getResponseForW3CError (C:\Program Files\Appium\resources\app\node_modules\appium\node_modules\appium-base-driver\lib\protocol\errors.js:804:9)
-    at asyncHandler (C:\Program Files\Appium\resources\app\node_modules\appium\node_modules\appium-base-driver\lib\protocol\protocol.js:388:37)
-    at process._tickCallback (internal/process/next_tick.js:68:7)
-
-cucumber.api.testng.TestNGCucumberRunner.runCucumber(TestNGCucumberRunner.java:69)
-com.qaprosoft.carina.core.foundation.cucumber.CucumberRunner.feature(CucumberRunner.java:56)
-sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-java.lang.reflect.Method.invoke(Method.java:498)
-org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
-org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
-org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
-org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
-org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
-org.testng.TestRunner.privateRun(TestRunner.java:648)
-org.testng.TestRunner.run(TestRunner.java:505)
-org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
-org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
-org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
-org.testng.SuiteRunner.run(SuiteRunner.java:364)
-org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
-org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
-org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
-org.testng.TestNG.runSuites(TestNG.java:1049)
-org.testng.TestNG.run(TestNG.java:1017)
-org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-2020-01-24 02:21:02 CucumberRunner [INFO] In  @AfterClass tearDownClass
-2020-01-24 02:21:02 CucumberRunner [INFO] Report json: CreateUserAPI-test-report.json
-2020-01-24 02:21:04 Messager [INFO] INFO: '**************** Test execution summary ****************'.
-2020-01-24 02:21:04 Messager [INFO] RESULT #1: TEST [Default test - feature] FAIL [log=file://D:\Man_softwares\Myworkspace\Atlas_Demo\.\reports\qa\1579861244063/d439c643-cedb-4a11-8245-c58bfe44e875/test.log]
-2020-01-24 02:21:14 CarinaListener [INFO] 
-============= Test configuration =============
-url={must_override}
-env=DEMO
-env_arg_resolver=com.qaprosoft.carina.core.foundation.utils.DefaultEnvArgResolver
-platform=*
-browser=
-browser_version=
-browser_language=
-selenium_host=http://0.0.0.0:4723/wd/hub
-driver_event_listeners=com.qaprosoft.carina.demo.utils.PerfEventHandler
-max_driver_count=3
-custom_capabilities=
-chrome_args=
-chrome_experimental_opts=
-chrome_mobile_emulation_opts=
-firefox_args=
-firefox_preferences=
-app_version=
-proxy_host=
-proxy_port=
-proxy_protocols=http,https,ftp
-browsermob_proxy=false
-browsermob_host=
-browsermob_port=0
-browsermob_ports_range=
-browsermob_disabled_mitm=false
-proxy_set_to_system=false
-report_url=
-email_list=
-failure_email_list=
-track_known_issues=false
-auto_screenshot=true
-implicit_timeout=10
-explicit_timeout=20
-auto_download=false
-auto_download_apps=
-custom_artifacts_folder=
-retry_interval=5
-project_report_directory=./reports/qa
-max_screen_history=10
-max_log_file_size=150
-result_sorting=true
-big_screen_width=-1
-big_screen_height=-1
-small_screen_width=90
-small_screen_height=60
-init_retry_count=0
-init_retry_interval=1
-retry_count=0
-enable_l10n=true
-l10n_encoding=ISO-8859-1
-locale=en_US
-enable_i18n=true
-language=en_US
-thread_count=1
-data_provider_thread_count=-1
-core_log_level=INFO
-core_log_packages=com.qaprosoft.carina.core
-artifacts_expiration_seconds=2592000
-log_all_json=true
-date_format=HH:mm:ss yyyy-MM-dd
-time_format=HH:mm:ss
-suite_name=
-jira_updater=com.qaprosoft.carina.core.foundation.jira.DefaultJiraUpdater
-jira_url=
-jira_user=
-jira_password=
-jira_suite_id=
-jira_project=
-jira_project_short=
-jira_create_new_ticket=false
-test_naming_pattern={method_name}
-optimize_video_recording=false
-testrail_run_name=
-testrail_milestone=
-testrail_assignee=
-qtest_cycle_name=DailyAutomation
-qtest_suite_name=
-s3_bucket_name=
-access_key_id=
-secret_key=
-s3_use_presign_url=false
-s3_local_storage=.
-appcenter_token=
-appcenter_local_storage=.
-add_new_localization=false
-add_new_localization_encoding=utf-8
-add_new_localization_path=
-add_new_localization_property_name=new_custom_messages_
-tls_keysecure_location=
-health_check_class=
-health_check_methods=
-uninstall_related_apps=false
-default_device_timezone=GMT
-default_device_time_format=24
-default_device_language=en_US
-android_screen_record_size=
-android_screen_record_bitrate=
-android_enable_bug_report=true
-ios_screen_record_quality=MEDIUM
-ios_screen_record_codec=libx264
-ios_screen_record_fps=10
-screen_record_duration=180
-video_scale=-2:720
-ignore_ssl=false
-test_run_rules=
-hub_mode=selenium
-extract_sys_log=false
-selenium_host=http://0.0.0.0:4723/wd/hub
-
-------------- Driver capabilities -----------
-capabilities.deviceName=redmiy2
-capabilities.appPackage=com.solvd.carinademoapplication
-capabilities.platformVersion=9
-capabilities.appActivity=com.solvd.carinademoapplication.ActivitySplash
-capabilities.automationName=UiAutomator2
-capabilities.platformName=ANDROID
-capabilities.deviceType=phone
-capabilities.udid=94eacea3
-================================================
-
-2020-01-24 02:21:15 CarinaListener [INFO] Set data_provider_thread_count=1
-2020-01-24 02:21:15 CarinaListener [INFO] CARINA_CORE_VERSION: 6.3.30
-2020-01-24 02:21:15 Messager [INFO]  TEST [Default test - feature] STARTED at [02:21:15 2020-01-24]
-2020-01-24 02:21:34 Device [INFO] Test will be started on device: Redmi Y2:94eacea3
-2020-01-24 02:21:40 DriverListener [INFO] PASS: element 'NextButton' is clicked.
-2020-01-24 02:21:43 ExtendedWebElement [ERROR] catched WebDriverException: 
-org.openqa.selenium.WebDriverException: An unknown server-side error occurred while processing the command. Original error: Could not proxy. Proxy error: Could not proxy command to remote server. Original error: 404 - ""
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'T440P', ip: '192.168.216.94', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_144'
-Driver info: io.appium.java_client.android.AndroidDriver
-Capabilities {appActivity: com.solvd.carinademoapplica..., appPackage: com.solvd.carinademoapplica..., automationName: UiAutomator2, carinaTestRunId: 2ceeffee-f6ee-4949-9cad-39b..., databaseEnabled: false, desired: {appActivity: com.solvd.carinademoapplica..., appPackage: com.solvd.carinademoapplica..., automationName: UiAutomator2, carinaTestRunId: 2ceeffee-f6ee-4949-9cad-39b..., deviceName: redmiy2, deviceType: phone, platformName: android, platformVersion: 9, udid: 94eacea3}, deviceApiLevel: 28, deviceManufacturer: Xiaomi, deviceModel: Redmi Y2, deviceName: 94eacea3, deviceScreenDensity: 320, deviceScreenSize: 720x1440, deviceType: phone, deviceUDID: 94eacea3, javascriptEnabled: true, locationContextEnabled: false, networkConnectionEnabled: true, pixelRatio: 2, platform: LINUX, platformName: ANDROID, platformVersion: 9, statBarHeight: 48, takesScreenshot: true, udid: 94eacea3, viewportRect: {height: 1296, left: 0, top: 48, width: 720}, warnings: {}, webStorageEnabled: false}
-Session ID: 8ad5387b-7876-4686-a336-7519a150268c
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-	at com.qaprosoft.carina.core.foundation.webdriver.listener.EventFiringAppiumCommandExecutor.execute(EventFiringAppiumCommandExecutor.java:150)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:45)
-	at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)
-	at io.appium.java_client.android.AndroidDriver.execute(AndroidDriver.java:1)
-	at org.openqa.selenium.remote.RemoteWebDriver.getTitle(RemoteWebDriver.java:281)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.openqa.selenium.support.events.EventFiringWebDriver.lambda$new$1(EventFiringWebDriver.java:105)
-	at io.appium.java_client.android.$Proxy37.getTitle(Unknown Source)
-	at com.qaprosoft.carina.demo.utils.PerfEventHandler.afterClickOn(PerfEventHandler.java:39)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.openqa.selenium.support.events.EventFiringWebDriver.lambda$new$0(EventFiringWebDriver.java:84)
-	at com.sun.proxy.$Proxy36.afterClickOn(Unknown Source)
-	at org.openqa.selenium.support.events.EventFiringWebDriver$EventFiringWebElement.click(EventFiringWebDriver.java:418)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
-	at com.sun.proxy.$Proxy41.click(Unknown Source)
-	at com.qaprosoft.carina.core.foundation.webdriver.decorator.ExtendedWebElement$1.doTap(ExtendedWebElement.java:1442)
-	at com.qaprosoft.carina.core.foundation.webdriver.decorator.ExtendedWebElement.executeAction(ExtendedWebElement.java:1266)
-	at com.qaprosoft.carina.core.foundation.webdriver.decorator.ExtendedWebElement.overrideAction(ExtendedWebElement.java:1408)
-	at com.qaprosoft.carina.core.foundation.webdriver.decorator.ExtendedWebElement.doAction(ExtendedWebElement.java:1377)
-	at com.qaprosoft.carina.core.foundation.webdriver.decorator.ExtendedWebElement.doAction(ExtendedWebElement.java:1345)
-	at com.qaprosoft.carina.core.foundation.webdriver.decorator.ExtendedWebElement.click(ExtendedWebElement.java:493)
-	at com.qaprosoft.carina.core.foundation.webdriver.decorator.ExtendedWebElement.click(ExtendedWebElement.java:481)
-	at com.qaprosoft.carina.core.foundation.webdriver.decorator.ExtendedWebElement.click(ExtendedWebElement.java:472)
-	at com.tatadigital.training.gui.CarinaDemoPage.ClickNext(CarinaDemoPage.java:37)
-	at com.qaprosoft.carina.demo.cucumber.steps.manali.CarinaDemoStepdef.clicknextbutton(CarinaDemoStepdef.java:26)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at cucumber.runtime.Utils$1.call(Utils.java:40)
-	at cucumber.runtime.Timeout.timeout(Timeout.java:16)
-	at cucumber.runtime.Utils.invoke(Utils.java:34)
-	at cucumber.runtime.java.JavaStepDefinition.execute(JavaStepDefinition.java:38)
-	at cucumber.runtime.StepDefinitionMatch.runStep(StepDefinitionMatch.java:37)
-	at cucumber.runtime.Runtime.runStep(Runtime.java:300)
-	at cucumber.runtime.model.StepContainer.runStep(StepContainer.java:44)
-	at cucumber.runtime.model.StepContainer.runSteps(StepContainer.java:39)
-	at cucumber.runtime.model.CucumberScenario.run(CucumberScenario.java:44)
-	at cucumber.runtime.model.CucumberFeature.run(CucumberFeature.java:165)
-	at cucumber.api.testng.TestNGCucumberRunner.runCucumber(TestNGCucumberRunner.java:63)
-	at com.qaprosoft.carina.core.foundation.cucumber.CucumberRunner.feature(CucumberRunner.java:56)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
-	at org.testng.TestRunner.privateRun(TestRunner.java:648)
-	at org.testng.TestRunner.run(TestRunner.java:505)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
-	at org.testng.TestNG.runSuites(TestNG.java:1049)
-	at org.testng.TestNG.run(TestNG.java:1017)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-2020-01-24 02:21:47 Messager [ERROR] Redmi Y2 - 94eacea3 TEST [Default test - feature] FAILED at [02:21:47 2020-01-24] - org.openqa.selenium.NoSuchElementException: Unable to detect element: NextButton (By.id: com.solvd.carinademoapplication:id/next_button)
-
-cucumber.api.testng.TestNGCucumberRunner.runCucumber(TestNGCucumberRunner.java:69)
-com.qaprosoft.carina.core.foundation.cucumber.CucumberRunner.feature(CucumberRunner.java:56)
-sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-java.lang.reflect.Method.invoke(Method.java:498)
-org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
-org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
-org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
-org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
-org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
-org.testng.TestRunner.privateRun(TestRunner.java:648)
-org.testng.TestRunner.run(TestRunner.java:505)
-org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
-org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
-org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
-org.testng.SuiteRunner.run(SuiteRunner.java:364)
-org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
-org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
-org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
-org.testng.TestNG.runSuites(TestNG.java:1049)
-org.testng.TestNG.run(TestNG.java:1017)
-org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-2020-01-24 02:21:47 CucumberRunner [INFO] In  @AfterClass tearDownClass
-2020-01-24 02:21:47 CucumberRunner [INFO] Report json: CreateUserAPI-test-report.json
-2020-01-24 02:21:49 Messager [INFO] INFO: '**************** Test execution summary ****************'.
-2020-01-24 02:21:49 Messager [INFO] RESULT #1: TEST [Default test - feature] FAIL [screenshots=file://D:\Man_softwares\Myworkspace\Atlas_Demo\.\reports\qa\1579861274902/00a641b1-f9dc-4996-92e0-f84ec6d7db97/report.html | log=file://D:\Man_softwares\Myworkspace\Atlas_Demo\.\reports\qa\1579861274902/00a641b1-f9dc-4996-92e0-f84ec6d7db97/test.log]
-2020-01-24 02:57:54 CarinaListener [INFO] 
-============= Test configuration =============
-url={must_override}
-env=DEMO
-env_arg_resolver=com.qaprosoft.carina.core.foundation.utils.DefaultEnvArgResolver
-platform=*
-browser=
-browser_version=
-browser_language=
-selenium_host=http://0.0.0.0:4723/wd/hub
-driver_event_listeners=com.qaprosoft.carina.demo.utils.PerfEventHandler
-max_driver_count=3
-custom_capabilities=
-chrome_args=
-chrome_experimental_opts=
-chrome_mobile_emulation_opts=
-firefox_args=
-firefox_preferences=
-app_version=
-proxy_host=
-proxy_port=
-proxy_protocols=http,https,ftp
-browsermob_proxy=false
-browsermob_host=
-browsermob_port=0
-browsermob_ports_range=
-browsermob_disabled_mitm=false
-proxy_set_to_system=false
-report_url=
-email_list=
-failure_email_list=
-track_known_issues=false
-auto_screenshot=true
-implicit_timeout=10
-explicit_timeout=20
-auto_download=false
-auto_download_apps=
-custom_artifacts_folder=
-retry_interval=5
-project_report_directory=./reports/qa
-max_screen_history=10
-max_log_file_size=150
-result_sorting=true
-big_screen_width=-1
-big_screen_height=-1
-small_screen_width=90
-small_screen_height=60
-init_retry_count=0
-init_retry_interval=1
-retry_count=0
-enable_l10n=true
-l10n_encoding=ISO-8859-1
-locale=en_US
-enable_i18n=true
-language=en_US
-thread_count=1
-data_provider_thread_count=-1
-core_log_level=INFO
-core_log_packages=com.qaprosoft.carina.core
-artifacts_expiration_seconds=2592000
-log_all_json=true
-date_format=HH:mm:ss yyyy-MM-dd
-time_format=HH:mm:ss
-suite_name=
-jira_updater=com.qaprosoft.carina.core.foundation.jira.DefaultJiraUpdater
-jira_url=
-jira_user=
-jira_password=
-jira_suite_id=
-jira_project=
-jira_project_short=
-jira_create_new_ticket=false
-test_naming_pattern={method_name}
-optimize_video_recording=false
-testrail_run_name=
-testrail_milestone=
-testrail_assignee=
-qtest_cycle_name=DailyAutomation
-qtest_suite_name=
-s3_bucket_name=
-access_key_id=
-secret_key=
-s3_use_presign_url=false
-s3_local_storage=.
-appcenter_token=
-appcenter_local_storage=.
-add_new_localization=false
-add_new_localization_encoding=utf-8
-add_new_localization_path=
-add_new_localization_property_name=new_custom_messages_
-tls_keysecure_location=
-health_check_class=
-health_check_methods=
-uninstall_related_apps=false
-default_device_timezone=GMT
-default_device_time_format=24
-default_device_language=en_US
-android_screen_record_size=
-android_screen_record_bitrate=
-android_enable_bug_report=true
-ios_screen_record_quality=MEDIUM
-ios_screen_record_codec=libx264
-ios_screen_record_fps=10
-screen_record_duration=180
-video_scale=-2:720
-ignore_ssl=false
-test_run_rules=
-hub_mode=selenium
-extract_sys_log=false
-selenium_host=http://0.0.0.0:4723/wd/hub
-
-------------- Driver capabilities -----------
-capabilities.deviceName=redmiy2
-capabilities.appPackage=com.solvd.carinademoapplication
-capabilities.platformVersion=9
-capabilities.appActivity=com.solvd.carinademoapplication.ActivitySplash
-capabilities.automationName=UiAutomator2
-capabilities.platformName=ANDROID
-capabilities.deviceType=phone
-capabilities.udid=94eacea3
-================================================
-
-2020-01-24 02:57:55 CarinaListener [INFO] Set data_provider_thread_count=1
-2020-01-24 02:57:55 CarinaListener [INFO] CARINA_CORE_VERSION: 6.3.30
-2020-01-24 02:57:55 Messager [INFO]  TEST [Default test - feature] STARTED at [02:57:55 2020-01-24]
-2020-01-24 02:58:09 Device [INFO] Test will be started on device: Redmi Y2:94eacea3
-2020-01-24 02:58:20 DriverListener [INFO] PASS: element 'NextButton' is clicked.
-2020-01-24 03:00:51 ExtendedWebElement [ERROR] catched WebDriverException: 
-org.openqa.selenium.NoSuchSessionException: A session is either terminated or not started
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'T440P', ip: '192.168.216.94', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_144'
-Driver info: io.appium.java_client.android.AndroidDriver
-Capabilities {appActivity: com.solvd.carinademoapplica..., appPackage: com.solvd.carinademoapplica..., automationName: UiAutomator2, carinaTestRunId: 70234b8b-0598-4487-81cf-08b..., databaseEnabled: false, desired: {appActivity: com.solvd.carinademoapplica..., appPackage: com.solvd.carinademoapplica..., automationName: UiAutomator2, carinaTestRunId: 70234b8b-0598-4487-81cf-08b..., deviceName: redmiy2, deviceType: phone, platformName: android, platformVersion: 9, udid: 94eacea3}, deviceApiLevel: 28, deviceManufacturer: Xiaomi, deviceModel: Redmi Y2, deviceName: 94eacea3, deviceScreenDensity: 320, deviceScreenSize: 720x1440, deviceType: phone, deviceUDID: 94eacea3, javascriptEnabled: true, locationContextEnabled: false, networkConnectionEnabled: true, pixelRatio: 2, platform: LINUX, platformName: ANDROID, platformVersion: 9, statBarHeight: 48, takesScreenshot: true, udid: 94eacea3, viewportRect: {height: 1296, left: 0, top: 48, width: 720}, warnings: {}, webStorageEnabled: false}
-Session ID: 6b379671-b11b-49ff-a3d4-f4c5b5bf65c7
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-	at com.qaprosoft.carina.core.foundation.webdriver.listener.EventFiringAppiumCommandExecutor.execute(EventFiringAppiumCommandExecutor.java:150)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:45)
-	at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)
-	at io.appium.java_client.android.AndroidDriver.execute(AndroidDriver.java:1)
-	at org.openqa.selenium.remote.RemoteWebDriver.getTitle(RemoteWebDriver.java:281)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.openqa.selenium.support.events.EventFiringWebDriver.lambda$new$1(EventFiringWebDriver.java:105)
-	at io.appium.java_client.android.$Proxy37.getTitle(Unknown Source)
-	at com.qaprosoft.carina.demo.utils.PerfEventHandler.afterClickOn(PerfEventHandler.java:39)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.openqa.selenium.support.events.EventFiringWebDriver.lambda$new$0(EventFiringWebDriver.java:84)
-	at com.sun.proxy.$Proxy36.afterClickOn(Unknown Source)
-	at org.openqa.selenium.support.events.EventFiringWebDriver$EventFiringWebElement.click(EventFiringWebDriver.java:418)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
-	at com.sun.proxy.$Proxy41.click(Unknown Source)
-	at com.qaprosoft.carina.core.foundation.webdriver.decorator.ExtendedWebElement$1.doTap(ExtendedWebElement.java:1442)
-	at com.qaprosoft.carina.core.foundation.webdriver.decorator.ExtendedWebElement.executeAction(ExtendedWebElement.java:1266)
-	at com.qaprosoft.carina.core.foundation.webdriver.decorator.ExtendedWebElement.overrideAction(ExtendedWebElement.java:1408)
-	at com.qaprosoft.carina.core.foundation.webdriver.decorator.ExtendedWebElement.doAction(ExtendedWebElement.java:1377)
-	at com.qaprosoft.carina.core.foundation.webdriver.decorator.ExtendedWebElement.doAction(ExtendedWebElement.java:1345)
-	at com.qaprosoft.carina.core.foundation.webdriver.decorator.ExtendedWebElement.click(ExtendedWebElement.java:493)
-	at com.qaprosoft.carina.core.foundation.webdriver.decorator.ExtendedWebElement.click(ExtendedWebElement.java:481)
-	at com.qaprosoft.carina.core.foundation.webdriver.decorator.ExtendedWebElement.click(ExtendedWebElement.java:472)
-	at com.tatadigital.training.gui.CarinaDemoPage.ClickNext(CarinaDemoPage.java:34)
-	at com.qaprosoft.carina.demo.cucumber.steps.manali.CarinaDemoStepdef.clicknextbutton(CarinaDemoStepdef.java:23)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at cucumber.runtime.Utils$1.call(Utils.java:40)
-	at cucumber.runtime.Timeout.timeout(Timeout.java:16)
-	at cucumber.runtime.Utils.invoke(Utils.java:34)
-	at cucumber.runtime.java.JavaStepDefinition.execute(JavaStepDefinition.java:38)
-	at cucumber.runtime.StepDefinitionMatch.runStep(StepDefinitionMatch.java:37)
-	at cucumber.runtime.Runtime.runStep(Runtime.java:300)
-	at cucumber.runtime.model.StepContainer.runStep(StepContainer.java:44)
-	at cucumber.runtime.model.StepContainer.runSteps(StepContainer.java:39)
-	at cucumber.runtime.model.CucumberScenario.run(CucumberScenario.java:44)
-	at cucumber.runtime.model.CucumberFeature.run(CucumberFeature.java:165)
-	at cucumber.api.testng.TestNGCucumberRunner.runCucumber(TestNGCucumberRunner.java:63)
-	at com.qaprosoft.carina.core.foundation.cucumber.CucumberRunner.feature(CucumberRunner.java:56)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
-	at org.testng.TestRunner.privateRun(TestRunner.java:648)
-	at org.testng.TestRunner.run(TestRunner.java:505)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
-	at org.testng.TestNG.runSuites(TestNG.java:1049)
-	at org.testng.TestNG.run(TestNG.java:1017)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-2020-01-24 03:01:52 CarinaListener [INFO] 
-============= Test configuration =============
-url={must_override}
-env=DEMO
-env_arg_resolver=com.qaprosoft.carina.core.foundation.utils.DefaultEnvArgResolver
-platform=*
-browser=
-browser_version=
-browser_language=
-selenium_host=http://0.0.0.0:4723/wd/hub
-driver_event_listeners=com.qaprosoft.carina.demo.utils.PerfEventHandler
-max_driver_count=3
-custom_capabilities=
-chrome_args=
-chrome_experimental_opts=
-chrome_mobile_emulation_opts=
-firefox_args=
-firefox_preferences=
-app_version=
-proxy_host=
-proxy_port=
-proxy_protocols=http,https,ftp
-browsermob_proxy=false
-browsermob_host=
-browsermob_port=0
-browsermob_ports_range=
-browsermob_disabled_mitm=false
-proxy_set_to_system=false
-report_url=
-email_list=
-failure_email_list=
-track_known_issues=false
-auto_screenshot=true
-implicit_timeout=10
-explicit_timeout=20
-auto_download=false
-auto_download_apps=
-custom_artifacts_folder=
-retry_interval=5
-project_report_directory=./reports/qa
-max_screen_history=10
-max_log_file_size=150
-result_sorting=true
-big_screen_width=-1
-big_screen_height=-1
-small_screen_width=90
-small_screen_height=60
-init_retry_count=0
-init_retry_interval=1
-retry_count=0
-enable_l10n=true
-l10n_encoding=ISO-8859-1
-locale=en_US
-enable_i18n=true
-language=en_US
-thread_count=1
-data_provider_thread_count=-1
-core_log_level=INFO
-core_log_packages=com.qaprosoft.carina.core
-artifacts_expiration_seconds=2592000
-log_all_json=true
-date_format=HH:mm:ss yyyy-MM-dd
-time_format=HH:mm:ss
-suite_name=
-jira_updater=com.qaprosoft.carina.core.foundation.jira.DefaultJiraUpdater
-jira_url=
-jira_user=
-jira_password=
-jira_suite_id=
-jira_project=
-jira_project_short=
-jira_create_new_ticket=false
-test_naming_pattern={method_name}
-optimize_video_recording=false
-testrail_run_name=
-testrail_milestone=
-testrail_assignee=
-qtest_cycle_name=DailyAutomation
-qtest_suite_name=
-s3_bucket_name=
-access_key_id=
-secret_key=
-s3_use_presign_url=false
-s3_local_storage=.
-appcenter_token=
-appcenter_local_storage=.
-add_new_localization=false
-add_new_localization_encoding=utf-8
-add_new_localization_path=
-add_new_localization_property_name=new_custom_messages_
-tls_keysecure_location=
-health_check_class=
-health_check_methods=
-uninstall_related_apps=false
-default_device_timezone=GMT
-default_device_time_format=24
-default_device_language=en_US
-android_screen_record_size=
-android_screen_record_bitrate=
-android_enable_bug_report=true
-ios_screen_record_quality=MEDIUM
-ios_screen_record_codec=libx264
-ios_screen_record_fps=10
-screen_record_duration=180
-video_scale=-2:720
-ignore_ssl=false
-test_run_rules=
-hub_mode=selenium
-extract_sys_log=false
-selenium_host=http://0.0.0.0:4723/wd/hub
-
-------------- Driver capabilities -----------
-capabilities.deviceName=redmiy2
-capabilities.appPackage=com.solvd.carinademoapplication
-capabilities.platformVersion=9
-capabilities.appActivity=com.solvd.carinademoapplication.ActivitySplash
-capabilities.automationName=UiAutomator2
-capabilities.platformName=ANDROID
-capabilities.deviceType=phone
-capabilities.udid=94eacea3
-================================================
-
-2020-01-24 03:01:52 CarinaListener [INFO] Set data_provider_thread_count=1
-2020-01-24 03:01:52 CarinaListener [INFO] CARINA_CORE_VERSION: 6.3.30
-2020-01-24 03:01:52 Messager [INFO]  TEST [Default test - testLoginUser] STARTED at [03:01:52 2020-01-24]
-2020-01-24 03:02:05 Device [INFO] Test will be started on device: Redmi Y2:94eacea3
-2020-01-24 03:02:05 DriverListener [INFO] PASS: element 'nextBtn' is clicked.
-2020-01-24 03:02:08 ExtendedWebElement [ERROR] catched WebDriverException: 
-org.openqa.selenium.WebDriverException: An unknown server-side error occurred while processing the command. Original error: Could not proxy. Proxy error: Could not proxy command to remote server. Original error: 404 - ""
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'T440P', ip: '192.168.216.94', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_144'
-Driver info: io.appium.java_client.android.AndroidDriver
-Capabilities {appActivity: com.solvd.carinademoapplica..., appPackage: com.solvd.carinademoapplica..., automationName: UiAutomator2, carinaTestRunId: 944a30ae-aa97-428f-ac50-9d0..., databaseEnabled: false, desired: {appActivity: com.solvd.carinademoapplica..., appPackage: com.solvd.carinademoapplica..., automationName: UiAutomator2, carinaTestRunId: 944a30ae-aa97-428f-ac50-9d0..., deviceName: redmiy2, deviceType: phone, platformName: android, platformVersion: 9, udid: 94eacea3}, deviceApiLevel: 28, deviceManufacturer: Xiaomi, deviceModel: Redmi Y2, deviceName: 94eacea3, deviceScreenDensity: 320, deviceScreenSize: 720x1440, deviceType: phone, deviceUDID: 94eacea3, javascriptEnabled: true, locationContextEnabled: false, networkConnectionEnabled: true, pixelRatio: 2, platform: LINUX, platformName: ANDROID, platformVersion: 9, statBarHeight: 48, takesScreenshot: true, udid: 94eacea3, viewportRect: {height: 1296, left: 0, top: 48, width: 720}, warnings: {}, webStorageEnabled: false}
-Session ID: fb7d03ff-d72e-49c8-8208-6e1812215d66
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-	at com.qaprosoft.carina.core.foundation.webdriver.listener.EventFiringAppiumCommandExecutor.execute(EventFiringAppiumCommandExecutor.java:150)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:45)
-	at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)
-	at io.appium.java_client.android.AndroidDriver.execute(AndroidDriver.java:1)
-	at org.openqa.selenium.remote.RemoteWebDriver.getTitle(RemoteWebDriver.java:281)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.openqa.selenium.support.events.EventFiringWebDriver.lambda$new$1(EventFiringWebDriver.java:105)
-	at io.appium.java_client.android.$Proxy27.getTitle(Unknown Source)
-	at com.qaprosoft.carina.demo.utils.PerfEventHandler.afterClickOn(PerfEventHandler.java:39)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.openqa.selenium.support.events.EventFiringWebDriver.lambda$new$0(EventFiringWebDriver.java:84)
-	at com.sun.proxy.$Proxy26.afterClickOn(Unknown Source)
-	at org.openqa.selenium.support.events.EventFiringWebDriver$EventFiringWebElement.click(EventFiringWebDriver.java:418)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
-	at com.sun.proxy.$Proxy31.click(Unknown Source)
-	at com.qaprosoft.carina.core.foundation.webdriver.decorator.ExtendedWebElement$1.doTap(ExtendedWebElement.java:1442)
-	at com.qaprosoft.carina.core.foundation.webdriver.decorator.ExtendedWebElement.executeAction(ExtendedWebElement.java:1266)
-	at com.qaprosoft.carina.core.foundation.webdriver.decorator.ExtendedWebElement.overrideAction(ExtendedWebElement.java:1408)
-	at com.qaprosoft.carina.core.foundation.webdriver.decorator.ExtendedWebElement.doAction(ExtendedWebElement.java:1377)
-	at com.qaprosoft.carina.core.foundation.webdriver.decorator.ExtendedWebElement.doAction(ExtendedWebElement.java:1345)
-	at com.qaprosoft.carina.core.foundation.webdriver.decorator.ExtendedWebElement.click(ExtendedWebElement.java:493)
-	at com.qaprosoft.carina.core.foundation.webdriver.decorator.ExtendedWebElement.click(ExtendedWebElement.java:481)
-	at com.qaprosoft.carina.core.foundation.webdriver.decorator.ExtendedWebElement.click(ExtendedWebElement.java:472)
-	at com.qaprosoft.carina.demo.mobile.gui.pages.android.WelcomePage.clickNextBtn(WelcomePage.java:31)
-	at com.qaprosoft.carina.demo.MobileSampleTest.testLoginUser(MobileSampleTest.java:85)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
-	at org.testng.TestRunner.privateRun(TestRunner.java:648)
-	at org.testng.TestRunner.run(TestRunner.java:505)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
-	at org.testng.TestNG.runSuites(TestNG.java:1049)
-	at org.testng.TestNG.run(TestNG.java:1017)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-2020-01-24 03:02:12 Messager [ERROR] Redmi Y2 - 94eacea3 TEST [Default test - testLoginUser] FAILED at [03:02:12 2020-01-24] - Unable to detect element: nextBtn (By.id: next_button)
-
-com.qaprosoft.carina.core.foundation.webdriver.decorator.ExtendedWebElement.doAction(ExtendedWebElement.java:1391)
-com.qaprosoft.carina.core.foundation.webdriver.decorator.ExtendedWebElement.doAction(ExtendedWebElement.java:1345)
-com.qaprosoft.carina.core.foundation.webdriver.decorator.ExtendedWebElement.click(ExtendedWebElement.java:493)
-com.qaprosoft.carina.core.foundation.webdriver.decorator.ExtendedWebElement.click(ExtendedWebElement.java:481)
-com.qaprosoft.carina.core.foundation.webdriver.decorator.ExtendedWebElement.click(ExtendedWebElement.java:472)
-com.qaprosoft.carina.demo.mobile.gui.pages.android.WelcomePage.clickNextBtn(WelcomePage.java:31)
-com.qaprosoft.carina.demo.MobileSampleTest.testLoginUser(MobileSampleTest.java:85)
-sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-java.lang.reflect.Method.invoke(Method.java:498)
-org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
-org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
-org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
-org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
-org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
-org.testng.TestRunner.privateRun(TestRunner.java:648)
-org.testng.TestRunner.run(TestRunner.java:505)
-org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
-org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
-org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
-org.testng.SuiteRunner.run(SuiteRunner.java:364)
-org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
-org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
-org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
-org.testng.TestNG.runSuites(TestNG.java:1049)
-org.testng.TestNG.run(TestNG.java:1017)
-org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-2020-01-24 03:02:13 Messager [INFO] INFO: '**************** Test execution summary ****************'.
-2020-01-24 03:02:13 Messager [INFO] RESULT #1: TEST [Default test - testLoginUser] FAIL [screenshots=file://D:\Man_softwares\Myworkspace\Atlas_Demo\.\reports\qa\1579863712051/f33c661d-0df9-4c55-8401-b55a2b57f4f6/report.html | log=file://D:\Man_softwares\Myworkspace\Atlas_Demo\.\reports\qa\1579863712051/f33c661d-0df9-4c55-8401-b55a2b57f4f6/test.log]
-2020-01-24 03:03:54 CarinaListener [INFO] 
-============= Test configuration =============
-url={must_override}
-env=DEMO
-env_arg_resolver=com.qaprosoft.carina.core.foundation.utils.DefaultEnvArgResolver
-platform=*
-browser=
-browser_version=
-browser_language=
-selenium_host=http://0.0.0.0:4723/wd/hub
-driver_event_listeners=com.qaprosoft.carina.demo.utils.PerfEventHandler
-max_driver_count=3
-custom_capabilities=
-chrome_args=
-chrome_experimental_opts=
-chrome_mobile_emulation_opts=
-firefox_args=
-firefox_preferences=
-app_version=
-proxy_host=
-proxy_port=
-proxy_protocols=http,https,ftp
-browsermob_proxy=false
-browsermob_host=
-browsermob_port=0
-browsermob_ports_range=
-browsermob_disabled_mitm=false
-proxy_set_to_system=false
-report_url=
-email_list=
-failure_email_list=
-track_known_issues=false
-auto_screenshot=true
-implicit_timeout=10
-explicit_timeout=20
-auto_download=false
-auto_download_apps=
-custom_artifacts_folder=
-retry_interval=5
-project_report_directory=./reports/qa
-max_screen_history=10
-max_log_file_size=150
-result_sorting=true
-big_screen_width=-1
-big_screen_height=-1
-small_screen_width=90
-small_screen_height=60
-init_retry_count=0
-init_retry_interval=1
-retry_count=0
-enable_l10n=true
-l10n_encoding=ISO-8859-1
-locale=en_US
-enable_i18n=true
-language=en_US
-thread_count=1
-data_provider_thread_count=-1
-core_log_level=INFO
-core_log_packages=com.qaprosoft.carina.core
-artifacts_expiration_seconds=2592000
-log_all_json=true
-date_format=HH:mm:ss yyyy-MM-dd
-time_format=HH:mm:ss
-suite_name=
-jira_updater=com.qaprosoft.carina.core.foundation.jira.DefaultJiraUpdater
-jira_url=
-jira_user=
-jira_password=
-jira_suite_id=
-jira_project=
-jira_project_short=
-jira_create_new_ticket=false
-test_naming_pattern={method_name}
-optimize_video_recording=false
-testrail_run_name=
-testrail_milestone=
-testrail_assignee=
-qtest_cycle_name=DailyAutomation
-qtest_suite_name=
-s3_bucket_name=
-access_key_id=
-secret_key=
-s3_use_presign_url=false
-s3_local_storage=.
-appcenter_token=
-appcenter_local_storage=.
-add_new_localization=false
-add_new_localization_encoding=utf-8
-add_new_localization_path=
-add_new_localization_property_name=new_custom_messages_
-tls_keysecure_location=
-health_check_class=
-health_check_methods=
-uninstall_related_apps=false
-default_device_timezone=GMT
-default_device_time_format=24
-default_device_language=en_US
-android_screen_record_size=
-android_screen_record_bitrate=
-android_enable_bug_report=true
-ios_screen_record_quality=MEDIUM
-ios_screen_record_codec=libx264
-ios_screen_record_fps=10
-screen_record_duration=180
-video_scale=-2:720
-ignore_ssl=false
-test_run_rules=
-hub_mode=selenium
-extract_sys_log=false
-selenium_host=http://0.0.0.0:4723/wd/hub
-
-------------- Driver capabilities -----------
-capabilities.deviceName=redmiy2
-capabilities.appPackage=com.solvd.carinademoapplication
-capabilities.platformVersion=9
-capabilities.appActivity=com.solvd.carinademoapplication.ActivitySplash
-capabilities.automationName=uiautomator2
-capabilities.platformName=ANDROID
-capabilities.deviceType=phone
-capabilities.udid=94eacea3
-================================================
-
-2020-01-24 03:03:54 CarinaListener [INFO] Set data_provider_thread_count=1
-2020-01-24 03:03:54 CarinaListener [INFO] CARINA_CORE_VERSION: 6.3.30
-2020-01-24 03:03:54 Messager [INFO]  TEST [Default test - testLoginUser] STARTED at [03:03:54 2020-01-24]
-2020-01-24 03:04:15 Device [INFO] Test will be started on device: Redmi Y2:94eacea3
-2020-01-24 03:04:15 DriverListener [INFO] PASS: element 'nextBtn' is clicked.
-2020-01-24 03:04:18 ExtendedWebElement [ERROR] catched WebDriverException: 
-org.openqa.selenium.WebDriverException: An unknown server-side error occurred while processing the command. Original error: Could not proxy. Proxy error: Could not proxy command to remote server. Original error: 404 - ""
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'T440P', ip: '192.168.216.94', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_144'
-Driver info: io.appium.java_client.android.AndroidDriver
-Capabilities {appActivity: com.solvd.carinademoapplica..., appPackage: com.solvd.carinademoapplica..., automationName: uiautomator2, carinaTestRunId: 2e6b3560-8600-43a0-8689-01e..., databaseEnabled: false, desired: {appActivity: com.solvd.carinademoapplica..., appPackage: com.solvd.carinademoapplica..., automationName: uiautomator2, carinaTestRunId: 2e6b3560-8600-43a0-8689-01e..., deviceName: redmiy2, deviceType: phone, platformName: android, platformVersion: 9, udid: 94eacea3}, deviceApiLevel: 28, deviceManufacturer: Xiaomi, deviceModel: Redmi Y2, deviceName: 94eacea3, deviceScreenDensity: 320, deviceScreenSize: 720x1440, deviceType: phone, deviceUDID: 94eacea3, javascriptEnabled: true, locationContextEnabled: false, networkConnectionEnabled: true, pixelRatio: 2, platform: LINUX, platformName: ANDROID, platformVersion: 9, statBarHeight: 48, takesScreenshot: true, udid: 94eacea3, viewportRect: {height: 1296, left: 0, top: 48, width: 720}, warnings: {}, webStorageEnabled: false}
-Session ID: b7877e3c-88ce-4b0e-9ce2-09e5be24f0c2
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-	at com.qaprosoft.carina.core.foundation.webdriver.listener.EventFiringAppiumCommandExecutor.execute(EventFiringAppiumCommandExecutor.java:150)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:45)
-	at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)
-	at io.appium.java_client.android.AndroidDriver.execute(AndroidDriver.java:1)
-	at org.openqa.selenium.remote.RemoteWebDriver.getTitle(RemoteWebDriver.java:281)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.openqa.selenium.support.events.EventFiringWebDriver.lambda$new$1(EventFiringWebDriver.java:105)
-	at io.appium.java_client.android.$Proxy27.getTitle(Unknown Source)
-	at com.qaprosoft.carina.demo.utils.PerfEventHandler.afterClickOn(PerfEventHandler.java:39)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.openqa.selenium.support.events.EventFiringWebDriver.lambda$new$0(EventFiringWebDriver.java:84)
-	at com.sun.proxy.$Proxy26.afterClickOn(Unknown Source)
-	at org.openqa.selenium.support.events.EventFiringWebDriver$EventFiringWebElement.click(EventFiringWebDriver.java:418)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
-	at com.sun.proxy.$Proxy31.click(Unknown Source)
-	at com.qaprosoft.carina.core.foundation.webdriver.decorator.ExtendedWebElement$1.doTap(ExtendedWebElement.java:1442)
-	at com.qaprosoft.carina.core.foundation.webdriver.decorator.ExtendedWebElement.executeAction(ExtendedWebElement.java:1266)
-	at com.qaprosoft.carina.core.foundation.webdriver.decorator.ExtendedWebElement.overrideAction(ExtendedWebElement.java:1408)
-	at com.qaprosoft.carina.core.foundation.webdriver.decorator.ExtendedWebElement.doAction(ExtendedWebElement.java:1377)
-	at com.qaprosoft.carina.core.foundation.webdriver.decorator.ExtendedWebElement.doAction(ExtendedWebElement.java:1345)
-	at com.qaprosoft.carina.core.foundation.webdriver.decorator.ExtendedWebElement.click(ExtendedWebElement.java:493)
-	at com.qaprosoft.carina.core.foundation.webdriver.decorator.ExtendedWebElement.click(ExtendedWebElement.java:481)
-	at com.qaprosoft.carina.core.foundation.webdriver.decorator.ExtendedWebElement.click(ExtendedWebElement.java:472)
-	at com.qaprosoft.carina.demo.mobile.gui.pages.android.WelcomePage.clickNextBtn(WelcomePage.java:31)
-	at com.qaprosoft.carina.demo.MobileSampleTest.testLoginUser(MobileSampleTest.java:85)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
-	at org.testng.TestRunner.privateRun(TestRunner.java:648)
-	at org.testng.TestRunner.run(TestRunner.java:505)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
-	at org.testng.TestNG.runSuites(TestNG.java:1049)
-	at org.testng.TestNG.run(TestNG.java:1017)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-2020-01-24 03:04:22 Messager [ERROR] Redmi Y2 - 94eacea3 TEST [Default test - testLoginUser] FAILED at [03:04:22 2020-01-24] - Unable to detect element: nextBtn (By.id: next_button)
-
-com.qaprosoft.carina.core.foundation.webdriver.decorator.ExtendedWebElement.doAction(ExtendedWebElement.java:1391)
-com.qaprosoft.carina.core.foundation.webdriver.decorator.ExtendedWebElement.doAction(ExtendedWebElement.java:1345)
-com.qaprosoft.carina.core.foundation.webdriver.decorator.ExtendedWebElement.click(ExtendedWebElement.java:493)
-com.qaprosoft.carina.core.foundation.webdriver.decorator.ExtendedWebElement.click(ExtendedWebElement.java:481)
-com.qaprosoft.carina.core.foundation.webdriver.decorator.ExtendedWebElement.click(ExtendedWebElement.java:472)
-com.qaprosoft.carina.demo.mobile.gui.pages.android.WelcomePage.clickNextBtn(WelcomePage.java:31)
-com.qaprosoft.carina.demo.MobileSampleTest.testLoginUser(MobileSampleTest.java:85)
-sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-java.lang.reflect.Method.invoke(Method.java:498)
-org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
-org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
-org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
-org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
-org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
-org.testng.TestRunner.privateRun(TestRunner.java:648)
-org.testng.TestRunner.run(TestRunner.java:505)
-org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
-org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
-org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
-org.testng.SuiteRunner.run(SuiteRunner.java:364)
-org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
-org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
-org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
-org.testng.TestNG.runSuites(TestNG.java:1049)
-org.testng.TestNG.run(TestNG.java:1017)
-org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-2020-01-24 03:04:23 Messager [INFO] INFO: '**************** Test execution summary ****************'.
-2020-01-24 03:04:23 Messager [INFO] RESULT #1: TEST [Default test - testLoginUser] FAIL [screenshots=file://D:\Man_softwares\Myworkspace\Atlas_Demo\.\reports\qa\1579863834757/3443832f-276f-4086-99db-81a242ef1f63/report.html | log=file://D:\Man_softwares\Myworkspace\Atlas_Demo\.\reports\qa\1579863834757/3443832f-276f-4086-99db-81a242ef1f63/test.log]
+2020-01-27 01:23:23 CucumberRunner [INFO] In  @AfterClass tearDownClass
+2020-01-27 01:23:24 CucumberRunner [INFO] Report json: CreateUserAPI-test-report.json
+2020-01-27 01:23:25 Messager [INFO] INFO: '**************** Test execution summary ****************'.
+2020-01-27 01:23:25 Messager [INFO] RESULT #1: TEST [Default test - feature] FAIL [screenshots=file://D:\Man_softwares\Myworkspace\Atlas_Demo\.\reports\qa\1580116922621/b59fdbb8-3900-4deb-b230-5284637adf96/report.html | log=file://D:\Man_softwares\Myworkspace\Atlas_Demo\.\reports\qa\1580116922621/b59fdbb8-3900-4deb-b230-5284637adf96/test.log]

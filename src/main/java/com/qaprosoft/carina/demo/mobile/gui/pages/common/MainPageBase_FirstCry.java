@@ -13,9 +13,11 @@ import com.qaprosoft.carina.core.gui.AbstractPage;
 
 		//public abstract void clickAll();
 
-		//public abstract void clickonBoy();
+		public abstract void clickonBoy();
 
-		public abstract void clickyears();
+		//public abstract void clickyears();
+
+		
 
 		//public abstract void checkname();
 

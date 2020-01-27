@@ -29,7 +29,7 @@ public class M1CloudActivities {
 		String userName = R.CONFIG.getProperties().getProperty("userName");
 		String password = R.CONFIG.getProperties().getProperty("password");
 		httpRequest.authentication().basic(userName, password);
-	    httpRequest.header("Authorization", "Basic cWttMS5zdXBwb3J0QHF1YWxpdHlraW9zay5jb206M2dtNnp0NXdicndyajgyYnB3ODRkNjh3");
+	    httpRequest.header("Authorization", "Basic cWtfbmFyZW5kaXJhbnNAdG95b3RhLWtpcmxvc2thci5jby5pbjpkdjl6anM3enJ2OWd5MjZ5NnByam1wZnI=");
 	    									
 	    
 	    Response response = httpRequest.get("/access");
