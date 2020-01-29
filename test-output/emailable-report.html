@@ -9,11 +9,18 @@
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
 <tr><th colspan="7">Default suite</th></tr>
-<tr><td><a href="#t0">Default test</a></td><td class="num">0</td><td class="num">0</td><td class="num attn">1</td><td class="num">26,361</td><td></td><td></td></tr>
+<tr><td><a href="#t0">Default test</a></td><td class="num">0</td><td class="num">0</td><td class="num attn">1</td><td class="num">118,538</td><td></td><td></td></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Default suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Default test &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">com.qaprosoft.carina.demo.manali.API_EmployeeCreationTest</td><td><a href="#m0">feature</a></td><td rowspan="1">1580217015162</td><td rowspan="1">22763</td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Default suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Default test &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">com.qaprosoft.carina.demo.manali.EguruCucumberTest</td><td><a href="#m0">feature</a></td><td rowspan="1">1580300401908</td><td rowspan="1">115920</td></tr></tbody>
 </table>
-<h2>Default test</h2><h3 id="m0">com.qaprosoft.carina.demo.manali.API_EmployeeCreationTest#feature</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>employeeCreation feature</td></tr><tr><th>Messages</th></tr><tr><td><div class="messages"> TEST [Default test - feature] FAILED at [05:10:38 2020-01-28] - java.lang.NullPointerException
+<h2>Default test</h2><h3 id="m0">com.qaprosoft.carina.demo.manali.EguruCucumberTest#feature</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>E-guru feature</td></tr><tr><th>Messages</th></tr><tr><td><div class="messages">Redmi Y2 - 94eacea3 TEST [Default test - feature] FAILED at [04:21:58 2020-01-29] - org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters.
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'T440P', ip: '192.168.216.94', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_144'
+Driver info: io.appium.java_client.android.AndroidDriver
+Capabilities {appActivity: com.tatamotors.eguruhybrid...., appPackage: com.tatamotors.eguruhybrid, automationName: uiautomator2, carinaTestRunId: 1e8fb4a5-ca98-4ba4-b84c-ae9..., databaseEnabled: false, desired: {appActivity: com.tatamotors.eguruhybrid...., appPackage: com.tatamotors.eguruhybrid, automationName: uiautomator2, carinaTestRunId: 1e8fb4a5-ca98-4ba4-b84c-ae9..., deviceName: redmiy2, deviceType: phone, platformName: android, platformVersion: 9, udid: 94eacea3}, deviceApiLevel: 28, deviceManufacturer: Xiaomi, deviceModel: Redmi Y2, deviceName: 94eacea3, deviceScreenDensity: 320, deviceScreenSize: 720x1440, deviceType: phone, deviceUDID: 94eacea3, javascriptEnabled: true, locationContextEnabled: false, networkConnectionEnabled: true, pixelRatio: 2, platform: LINUX, platformName: ANDROID, platformVersion: 9, statBarHeight: 48, takesScreenshot: true, udid: 94eacea3, viewportRect: {height: 1296, left: 0, top: 48, width: 720}, warnings: {}, webStorageEnabled: false}
+Session ID: 14fc7188-8f71-468f-8e14-2e0fbc79490c
+*** Element info: {Using=xpath, value=//android.widget.EditText[@text='Enter Last Name']}
 
 cucumber.api.testng.TestNGCucumberRunner.runCucumber(TestNGCucumberRunner.java:69)
 com.qaprosoft.carina.core.foundation.cucumber.CucumberRunner.feature(CucumberRunner.java:56)
@@ -41,7 +48,14 @@ org.testng.TestNG.runSuites(TestNG.java:1049)
 org.testng.TestNG.run(TestNG.java:1017)
 org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
 org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)</div></td></tr><tr><th>Exception</th></tr><tr><td><div class="stacktrace">cucumber.runtime.CucumberException: java.lang.NullPointerException
+org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)</div></td></tr><tr><th>Exception</th></tr><tr><td><div class="stacktrace">cucumber.runtime.CucumberException: org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters.
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;T440P&apos;, ip: &apos;192.168.216.94&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_144&apos;
+Driver info: io.appium.java_client.android.AndroidDriver
+Capabilities {appActivity: com.tatamotors.eguruhybrid...., appPackage: com.tatamotors.eguruhybrid, automationName: uiautomator2, carinaTestRunId: 1e8fb4a5-ca98-4ba4-b84c-ae9..., databaseEnabled: false, desired: {appActivity: com.tatamotors.eguruhybrid...., appPackage: com.tatamotors.eguruhybrid, automationName: uiautomator2, carinaTestRunId: 1e8fb4a5-ca98-4ba4-b84c-ae9..., deviceName: redmiy2, deviceType: phone, platformName: android, platformVersion: 9, udid: 94eacea3}, deviceApiLevel: 28, deviceManufacturer: Xiaomi, deviceModel: Redmi Y2, deviceName: 94eacea3, deviceScreenDensity: 320, deviceScreenSize: 720x1440, deviceType: phone, deviceUDID: 94eacea3, javascriptEnabled: true, locationContextEnabled: false, networkConnectionEnabled: true, pixelRatio: 2, platform: LINUX, platformName: ANDROID, platformVersion: 9, statBarHeight: 48, takesScreenshot: true, udid: 94eacea3, viewportRect: {height: 1296, left: 0, top: 48, width: 720}, warnings: {}, webStorageEnabled: false}
+Session ID: 14fc7188-8f71-468f-8e14-2e0fbc79490c
+*** Element info: {Using=xpath, value=//android.widget.EditText[@text=&apos;Enter Last Name&apos;]}
 	at cucumber.api.testng.TestNGCucumberRunner.runCucumber(TestNGCucumberRunner.java:69)
 	at com.qaprosoft.carina.core.foundation.cucumber.CucumberRunner.feature(CucumberRunner.java:56)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
@@ -69,10 +83,47 @@ org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)</div></td></tr><tr><th
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-Caused by: java.lang.NullPointerException
-	at com.jayway.restassured.path.json.JsonPath.getInt(JsonPath.java:244)
-	at com.qaprosoft.carina.demo.cucumber.steps.manali.PostCreateEmpStepdef.enterthedetails(PostCreateEmpStepdef.java:62)
-	at ✽.When Enter details(src/test/resources/features/EmployeeCreation.feature:8)
+Caused by: org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters.
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;T440P&apos;, ip: &apos;192.168.216.94&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_144&apos;
+Driver info: io.appium.java_client.android.AndroidDriver
+Capabilities {appActivity: com.tatamotors.eguruhybrid...., appPackage: com.tatamotors.eguruhybrid, automationName: uiautomator2, carinaTestRunId: 1e8fb4a5-ca98-4ba4-b84c-ae9..., databaseEnabled: false, desired: {appActivity: com.tatamotors.eguruhybrid...., appPackage: com.tatamotors.eguruhybrid, automationName: uiautomator2, carinaTestRunId: 1e8fb4a5-ca98-4ba4-b84c-ae9..., deviceName: redmiy2, deviceType: phone, platformName: android, platformVersion: 9, udid: 94eacea3}, deviceApiLevel: 28, deviceManufacturer: Xiaomi, deviceModel: Redmi Y2, deviceName: 94eacea3, deviceScreenDensity: 320, deviceScreenSize: 720x1440, deviceType: phone, deviceUDID: 94eacea3, javascriptEnabled: true, locationContextEnabled: false, networkConnectionEnabled: true, pixelRatio: 2, platform: LINUX, platformName: ANDROID, platformVersion: 9, statBarHeight: 48, takesScreenshot: true, udid: 94eacea3, viewportRect: {height: 1296, left: 0, top: 48, width: 720}, warnings: {}, webStorageEnabled: false}
+Session ID: 14fc7188-8f71-468f-8e14-2e0fbc79490c
+*** Element info: {Using=xpath, value=//android.widget.EditText[@text=&apos;Enter Last Name&apos;]}
+	at sun.reflect.GeneratedConstructorAccessor18.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at com.qaprosoft.carina.core.foundation.webdriver.listener.EventFiringAppiumCommandExecutor.execute(EventFiringAppiumCommandExecutor.java:150)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:41)
+	at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.execute(AndroidDriver.java:1)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:61)
+	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElementByXPath(DefaultGenericMobileDriver.java:151)
+	at io.appium.java_client.AppiumDriver.findElementByXPath(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.findElementByXPath(AndroidDriver.java:1)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:57)
+	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
+	at com.qaprosoft.carina.core.foundation.webdriver.decorator.ExtendedWebElement.refindElement(ExtendedWebElement.java:383)
+	at com.qaprosoft.carina.core.foundation.webdriver.decorator.ExtendedWebElement.doAction(ExtendedWebElement.java:1382)
+	at com.qaprosoft.carina.core.foundation.webdriver.decorator.ExtendedWebElement.type(ExtendedWebElement.java:661)
+	at com.qaprosoft.carina.core.foundation.webdriver.decorator.ExtendedWebElement.type(ExtendedWebElement.java:649)
+	at com.qaprosoft.carina.core.foundation.webdriver.decorator.ExtendedWebElement.type(ExtendedWebElement.java:639)
+	at com.qaprosoft.carina.demo.mobile.gui.pages.android.EguruMainPage.enterbasicdetails(EguruMainPage.java:50)
+	at com.qaprosoft.carina.demo.cucumber.steps.manali.EguruStepdef.enterbasicdetails(EguruStepdef.java:66)
+	at ✽.And Enter Basic Details(src/test/resources/features/E-guru.feature:14)
 </div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 </body>
 </html>

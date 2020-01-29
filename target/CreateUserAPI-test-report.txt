@@ -1,8 +1,55 @@
 @APITest
-Feature: employeeCreation feature
+Feature: E-guru feature
 
   @demo @Dev
-  Scenario: Verify if employee gets added [90m# src/test/resources/features/EmployeeCreation.feature:6[0m
-    [32mGiven [0m[32mpost endpoint[0m                   [90m# PostCreateEmpStepdef.startmethod()[0m
-    [32mWhen [0m[32mEnter details[0m                    [90m# PostCreateEmpStepdef.enterthedetails()[0m
-    [32mThen [0m[32mtake api[0m                         [90m# PostCreateEmpStepdef.postAPI()[0m
+  Scenario: Verify if e-guru is able to login [90m# src/test/resources/features/E-guru.feature:6[0m
+    [32mGiven [0m[32mlaunch your app[0m                     [90m# EguruStepdef.Mainpage()[0m
+    [32mWhen [0m[32mclick on userid and pw[0m               [90m# EguruStepdef.enteruserid()[0m
+    [32mThen [0m[32mclick on login[0m                       [90m# EguruStepdef.clicklogin()[0m
+    [32mAnd [0m[32mClick OK[0m                              [90m# EguruStepdef.ClickOK()[0m
+    [32mAnd [0m[32mClickNavigation[0m                       [90m# EguruStepdef.Clicknavigation()[0m
+    [32mAnd [0m[32mclick Logout[0m                          [90m# EguruStepdef.Clicklogout()[0m
+    [32mThen [0m[32mclickContacts[0m                        [90m# EguruStepdef.clickContacts()[0m
+    [31mAnd [0m[31mEnter Basic Details[0m                   [90m# EguruStepdef.enterbasicdetails()[0m
+      [31morg.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters.
+      For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+      Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+      System info: host: 'T440P', ip: '192.168.216.94', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_144'
+      Driver info: io.appium.java_client.android.AndroidDriver
+      Capabilities {appActivity: com.tatamotors.eguruhybrid...., appPackage: com.tatamotors.eguruhybrid, automationName: uiautomator2, carinaTestRunId: 1e8fb4a5-ca98-4ba4-b84c-ae9..., databaseEnabled: false, desired: {appActivity: com.tatamotors.eguruhybrid...., appPackage: com.tatamotors.eguruhybrid, automationName: uiautomator2, carinaTestRunId: 1e8fb4a5-ca98-4ba4-b84c-ae9..., deviceName: redmiy2, deviceType: phone, platformName: android, platformVersion: 9, udid: 94eacea3}, deviceApiLevel: 28, deviceManufacturer: Xiaomi, deviceModel: Redmi Y2, deviceName: 94eacea3, deviceScreenDensity: 320, deviceScreenSize: 720x1440, deviceType: phone, deviceUDID: 94eacea3, javascriptEnabled: true, locationContextEnabled: false, networkConnectionEnabled: true, pixelRatio: 2, platform: LINUX, platformName: ANDROID, platformVersion: 9, statBarHeight: 48, takesScreenshot: true, udid: 94eacea3, viewportRect: {height: 1296, left: 0, top: 48, width: 720}, warnings: {}, webStorageEnabled: false}
+      Session ID: 14fc7188-8f71-468f-8e14-2e0fbc79490c
+      *** Element info: {Using=xpath, value=//android.widget.EditText[@text='Enter Last Name']}
+      	at sun.reflect.GeneratedConstructorAccessor18.newInstance(Unknown Source)
+      	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+      	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+      	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+      	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+      	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+      	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+      	at com.qaprosoft.carina.core.foundation.webdriver.listener.EventFiringAppiumCommandExecutor.execute(EventFiringAppiumCommandExecutor.java:150)
+      	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+      	at io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:41)
+      	at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)
+      	at io.appium.java_client.android.AndroidDriver.execute(AndroidDriver.java:1)
+      	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+      	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:61)
+      	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
+      	at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
+      	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+      	at io.appium.java_client.DefaultGenericMobileDriver.findElementByXPath(DefaultGenericMobileDriver.java:151)
+      	at io.appium.java_client.AppiumDriver.findElementByXPath(AppiumDriver.java:1)
+      	at io.appium.java_client.android.AndroidDriver.findElementByXPath(AndroidDriver.java:1)
+      	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+      	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+      	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:57)
+      	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
+      	at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
+      	at com.qaprosoft.carina.core.foundation.webdriver.decorator.ExtendedWebElement.refindElement(ExtendedWebElement.java:383)
+      	at com.qaprosoft.carina.core.foundation.webdriver.decorator.ExtendedWebElement.doAction(ExtendedWebElement.java:1382)
+      	at com.qaprosoft.carina.core.foundation.webdriver.decorator.ExtendedWebElement.type(ExtendedWebElement.java:661)
+      	at com.qaprosoft.carina.core.foundation.webdriver.decorator.ExtendedWebElement.type(ExtendedWebElement.java:649)
+      	at com.qaprosoft.carina.core.foundation.webdriver.decorator.ExtendedWebElement.type(ExtendedWebElement.java:639)
+      	at com.qaprosoft.carina.demo.mobile.gui.pages.android.EguruMainPage.enterbasicdetails(EguruMainPage.java:50)
+      	at com.qaprosoft.carina.demo.cucumber.steps.manali.EguruStepdef.enterbasicdetails(EguruStepdef.java:66)
+      	at ✽.And Enter Basic Details(src/test/resources/features/E-guru.feature:14)
+      [0m
