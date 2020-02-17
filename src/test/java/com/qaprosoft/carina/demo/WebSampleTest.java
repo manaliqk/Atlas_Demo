@@ -15,28 +15,16 @@
  */
 package com.qaprosoft.carina.demo;
 
-import java.util.List;
 
 import com.qaprosoft.carina.core.foundation.utils.tag.Priority;
 import com.qaprosoft.carina.core.foundation.utils.tag.TestPriority;
-import com.qaprosoft.carina.core.foundation.utils.tag.TestTag;
-import org.apache.commons.collections.CollectionUtils;
-import org.apache.commons.lang3.StringUtils;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import com.qaprosoft.carina.core.foundation.AbstractTest;
-import com.qaprosoft.carina.core.foundation.dataprovider.annotations.XlsDataSourceParameters;
 import com.qaprosoft.carina.core.foundation.utils.ownership.MethodOwner;
-import com.qaprosoft.carina.demo.gui.components.FooterMenu;
-import com.qaprosoft.carina.demo.gui.components.NewsItem;
-import com.qaprosoft.carina.demo.gui.components.compare.ModelSpecs;
-import com.qaprosoft.carina.demo.gui.components.compare.ModelSpecs.SpecType;
-import com.qaprosoft.carina.demo.gui.pages.BrandModelsPage;
-import com.qaprosoft.carina.demo.gui.pages.CompareModelsPage;
-import com.qaprosoft.carina.demo.gui.pages.HomePage;
-import com.qaprosoft.carina.demo.gui.pages.ModelInfoPage;
-import com.qaprosoft.carina.demo.gui.pages.NewsPage;
+import com.tatadigital.tcpapp.gui.pages.HomePage;
+import com.tatadigital.tcpapp.gui.pages.SignupPage;
 
 /**
  * This sample shows how create Web test.
@@ -44,72 +32,25 @@ import com.qaprosoft.carina.demo.gui.pages.NewsPage;
  * @author qpsdemo
  */
 public class WebSampleTest extends AbstractTest {
-    @Test(dataProvider = "SingleDataProvider", description = "JIRA#AUTO-0008")
-    @MethodOwner(owner = "admin")
-    @TestPriority(Priority.P3)
-    @TestTag(name = "area test", value = "data provider")
-    @TestTag(name = "specialization", value = "xlsx")
-    @XlsDataSourceParameters(path = "xls/demo.xlsx", sheet = "GSMArena", dsUid = "TUID", dsArgs = "brand, model, display, camera, ram, battery")
-    public void testModelSpecs(String brand, String model, String display, String camera, String ram, String battery) {
-        // Open GSM Arena home page and verify page is opened
-        HomePage homePage = new HomePage(getDriver());
-        homePage.open();
-        Assert.assertTrue(homePage.isPageOpened(), "Home page is not opened");
-        
-        //Closing advertising if it's displayed
-        homePage.getWeValuePrivacyAd().closeAdIfPresent();
-        
-        // Select phone brand
-        homePage = new HomePage(getDriver());
-        BrandModelsPage productsPage = homePage.selectBrand(brand);
-        // Select phone model
-        ModelInfoPage productInfoPage = productsPage.selectModel(model);
-        // Verify phone specifications
-        Assert.assertEquals(productInfoPage.readDisplay(), display, "Invalid display info!");
-        Assert.assertEquals(productInfoPage.readCamera(), camera, "Invalid camera info!");
-        Assert.assertEquals(productInfoPage.readRam(), ram, "Invalid ram info!");
-        Assert.assertEquals(productInfoPage.readBattery(), battery, "Invalid battery info!");
-    }
-
-
-    @Test(description = "JIRA#AUTO-0009")
-    @MethodOwner(owner = "qpsdemo")
+	@Test
+    @MethodOwner(owner = "nilesh")
     @TestPriority(Priority.P1)
-    @TestTag(name = "area test", value = "web")
-    public void testCompareModels() {
+    public void testModelSpecs() {
         // Open GSM Arena home page and verify page is opened
+//        HomePage homePage = new HomePage(getDriver());
+    	SignupPage signupPage = new SignupPage(getDriver());
         HomePage homePage = new HomePage(getDriver());
-        homePage.open();
-        Assert.assertTrue(homePage.isPageOpened(), "Home page is not opened");
-        // Open model compare page
-        FooterMenu footerMenu = homePage.getFooterMenu();
-        Assert.assertTrue(footerMenu.isUIObjectPresent(2), "Footer menu wasn't found!");
-        CompareModelsPage comparePage = footerMenu.openComparePage();
-        // Compare 3 models
-        List<ModelSpecs> specs = comparePage.compareModels("Samsung Galaxy J3", "Samsung Galaxy J5", "Samsung Galaxy J7 Pro");
-        // Verify model announced dates
-        Assert.assertEquals(specs.get(0).readSpec(SpecType.ANNOUNCED), "2015, November");
-        Assert.assertEquals(specs.get(1).readSpec(SpecType.ANNOUNCED), "2015, June");
-        Assert.assertEquals(specs.get(2).readSpec(SpecType.ANNOUNCED), "2017, June");
+        signupPage.open();
+        Assert.assertTrue(signupPage.isPageOpened(), "Signup page is not opened");       
+        signupPage.signupWithOTP("", "8823219736");
+        signupPage.newuserReg("Test", "Test", "test@qk.com", "01011991");
+        String userDetails = homePage.viewUserProfileDetails();
+        homePage.viewUserAddressDetails();
+        homePage.browserback();
+        homePage.viewUserLoyaltyDetails();
+        homePage.browserback();
+        homePage.viewUserOffersDetails();
+        homePage.browserback();
+        homePage.signout();   
     }
-    
-    @Test(description = "JIRA#AUTO-0010")
-    @MethodOwner(owner = "qpsdemo")
-    public void testNewsSearch() {
-        HomePage homePage = new HomePage(getDriver());
-        homePage.open();
-        Assert.assertTrue(homePage.isPageOpened(), "Home page is not opened!");
-        
-        NewsPage newsPage = homePage.getFooterMenu().openNewsPage();
-        Assert.assertTrue(newsPage.isPageOpened(), "News page is not opened!");
-        
-        final String searchQ = "iphone";
-        List<NewsItem> news = newsPage.searchNews(searchQ);
-        Assert.assertFalse(CollectionUtils.isEmpty(news), "News not found!");
-        for(NewsItem n : news) {
-            System.out.println(n.readTitle());
-            Assert.assertTrue(StringUtils.containsIgnoreCase(n.readTitle(), searchQ), "Invalid search results!");
-        }
-    }
-
 }

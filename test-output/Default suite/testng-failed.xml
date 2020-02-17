@@ -3,13 +3,12 @@
 <suite thread-count="1" guice-stage="DEVELOPMENT" name="Failed suite [Default suite]" data-provider-thread-count="1">
   <test thread-count="1" name="Default test(failed)">
     <classes>
-      <class name="com.qaprosoft.carina.demo.manali.EguruCucumberTest">
+      <class name="com.qaprosoft.carina.demo.WebSamplePerformanceTest">
         <methods>
-          <include name="tearDownClass"/>
-          <include name="feature" invocation-numbers="0"/>
-          <include name="setUpClass"/>
+          <include name="testNewsSearch"/>
+          <include name="beforeMethod"/>
         </methods>
-      </class> <!-- com.qaprosoft.carina.demo.manali.EguruCucumberTest -->
+      </class> <!-- com.qaprosoft.carina.demo.WebSamplePerformanceTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
