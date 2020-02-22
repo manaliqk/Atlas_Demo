@@ -15,45 +15,51 @@ import com.qaprosoft.carina.demo.api.PostUserMethod;
 
 public class APISampleTest extends AbstractTest {
 
-    @Test(description = "JIRA#DEMO-0001")
-    @MethodOwner(owner = "qpsdemo")
-    public void testCreateUser() throws Exception {
-        setCases("4555,54545");
-        PostUserMethod api = new PostUserMethod();
-        api.expectResponseStatus(HttpResponseStatusType.CREATED_201);
-        api.callAPI();
-        api.validateResponse();
-    }
-
-    @Test(description = "JIRA#DEMO-0002")
-    @MethodOwner(owner = "qpsdemo")
-    public void testCreateUserMissingSomeFields() throws Exception {
-        PostUserMethod api = new PostUserMethod();
-        api.getProperties().remove("name");
-        api.getProperties().remove("username");
-        api.expectResponseStatus(HttpResponseStatusType.CREATED_201);
-        api.callAPI();
-        api.validateResponse();
-    }
-
-    @Test(description = "JIRA#DEMO-0003")
-    @MethodOwner(owner = "qpsdemo")
-    public void testGetUsers() {
-        GetUserMethods getUsersMethods = new GetUserMethods();
-        getUsersMethods.expectResponseStatus(HttpResponseStatusType.OK_200);
-        getUsersMethods.callAPI();
-        getUsersMethods.validateResponse(JSONCompareMode.STRICT, JsonCompareKeywords.ARRAY_CONTAINS.getKey());
-        getUsersMethods.validateResponseAgainstJSONSchema("api/users/_get/rs.schema");
-    }
-
-    @Test(description = "JIRA#DEMO-0004")
-    @MethodOwner(owner = "qpsdemo")
-    @TestPriority(Priority.P1)
-    public void testDeleteUsers() {
-        DeleteUserMethod deleteUserMethod = new DeleteUserMethod();
-        deleteUserMethod.expectResponseStatus(HttpResponseStatusType.OK_200);
-        deleteUserMethod.callAPI();
-        deleteUserMethod.validateResponse();
-    }
-
+	/*
+	 * @Test(description = "JIRA#DEMO-0001")
+	 * 
+	 * @MethodOwner(owner = "qpsdemo") public void testCreateUser() throws Exception
+	 * { setCases("4555,54545"); PostUserMethod api = new PostUserMethod();
+	 * api.expectResponseStatus(HttpResponseStatusType.CREATED_201); api.callAPI();
+	 * api.validateResponse(); }
+	 * 
+	 * @Test(description = "JIRA#DEMO-0002")
+	 * 
+	 * @MethodOwner(owner = "qpsdemo") public void testCreateUserMissingSomeFields()
+	 * throws Exception { PostUserMethod api = new PostUserMethod();
+	 * api.getProperties().remove("name"); api.getProperties().remove("username");
+	 * api.expectResponseStatus(HttpResponseStatusType.CREATED_201); api.callAPI();
+	 * api.validateResponse(); }
+	 * 
+	 * @Test(description = "JIRA#DEMO-0003")
+	 * 
+	 * @MethodOwner(owner = "qpsdemo") public void testGetUsers() { GetUserMethods
+	 * getUsersMethods = new GetUserMethods();
+	 * getUsersMethods.expectResponseStatus(HttpResponseStatusType.OK_200);
+	 * getUsersMethods.callAPI();
+	 * getUsersMethods.validateResponse(JSONCompareMode.STRICT,
+	 * JsonCompareKeywords.ARRAY_CONTAINS.getKey());
+	 * getUsersMethods.validateResponseAgainstJSONSchema("api/users/_get/rs.schema")
+	 * ; }
+	 * 
+	 * @Test(description = "JIRA#DEMO-0004")
+	 * 
+	 * @MethodOwner(owner = "qpsdemo")
+	 * 
+	 * @TestPriority(Priority.P1) public void testDeleteUsers() { DeleteUserMethod
+	 * deleteUserMethod = new DeleteUserMethod();
+	 * deleteUserMethod.expectResponseStatus(HttpResponseStatusType.OK_200);
+	 * deleteUserMethod.callAPI(); deleteUserMethod.validateResponse(); }
+	 */
+	
+	   @Test(description = "JIRA#DEMO-0001")
+	  
+	   @MethodOwner(owner = "qpsdemo") 
+	   public void TDLApi() throws Exception { 
+	   GetUserMethods api = new GetUserMethods();
+	   api.expectResponseStatus(HttpResponseStatusType.OK_200);
+	   api.callAPI();
+	   //api.validateResponse(JSONCompareMode.STRICT,JsonCompareKeywords.ARRAY_CONTAINS.getKey());
+	   //api.validateResponseAgainstJSONSchema("api/users/_get/rs.schema");
+	   }
 }
