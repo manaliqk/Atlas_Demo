@@ -1,0 +1,85 @@
+{
+ "root":{
+   "transaction":[
+     {
+       "type":"mixed",                 				  
+       "number":"BIL3032",
+       "amount":"7000",
+       "notes":"1 line items",
+       "billing_time":"2020-03-26 19:30:00",
+       "gross_amount":"7000",
+       
+       "customer":{
+         "mobile":"919267919468",
+         "email":"",
+         "external_id":"TCP_0022",
+         "firstname":"",
+         "lastname":""
+       },
+       "payment_details":{
+         "payment": [{
+                       "mode": "CARD",
+                       "value": "1000"
+                   },
+                   {
+                       "mode": "CASH",
+                       "value": "1000"
+                   }
+               ]
+           
+       },
+       "custom_fields":{
+         "field":[
+          
+         ]
+       },
+       "line_items":{
+         "line_item":[
+           
+       {
+       	"type":"regular",							
+             "serial":"1",
+             "amount":"7000",
+             "description": "towels",
+              "item_code": "skuattr11",
+             "variant":"",
+            "qty":"1",
+             "rate":"7000",
+             "value":"7000"
+       },
+       
+       {
+       	"type":"return",							   
+            "return_type":"LINE_ITEM",
+		    "transaction_number":"BILL3030",            	 
+		    "transaction_date":"2020-03-12 12:30:00",  	  
+              "serial": "1",
+              "amount": "2500",
+              "description": "soap",
+              "item_code": "skuattr9",
+              "qty": "25",
+               "rate": "100",
+              "value": "2500"
+            },
+            {
+            	"type":"return",							   
+            "return_type":"LINE_ITEM",
+		    "transaction_number":"BILL3030",            	 
+		    "transaction_date":"2020-03-12 12:35:00",  	  
+              "serial": "1",
+              "amount": "2500",
+              "description": "soap",
+              "item_code": "skuattr9",
+              "qty": "25",
+               "rate": "100",
+              "value": "2500"
+            
+            }
+    
+         ]
+         
+       }
+     }
+   ]
+ }
+}

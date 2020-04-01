@@ -3,11 +3,12 @@
 <suite thread-count="1" guice-stage="DEVELOPMENT" name="Failed suite [Default suite]" data-provider-thread-count="1">
   <test thread-count="1" name="Default test(failed)">
     <classes>
-      <class name="com.qaprosoft.carina.demo.WebSampleTest">
+      <class name="com.qaprosoft.carina.demo.tatadigital.Post_RedeemPointsTest">
         <methods>
-          <include name="testModelSpecs"/>
+          <include name="getcustloyaltydetails" invocation-numbers="0"/>
+          <include name="redeempoints_TC003" invocation-numbers="0"/>
         </methods>
-      </class> <!-- com.qaprosoft.carina.demo.WebSampleTest -->
+      </class> <!-- com.qaprosoft.carina.demo.tatadigital.Post_RedeemPointsTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

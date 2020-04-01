@@ -1,0 +1,36 @@
+{ 
+	"response": { 
+			"status": { 
+				"success": "false", 
+				"code": 500, 
+				"message": "All requests have failed due to errors" 
+			}, 
+		
+		"responses": {
+				"points": {
+						"mobile": "919267919468",
+						"email": "manali.dere1@qualitykiosk.com",
+						"external_id": "TCP_0022",
+						"user_id": "395169517",
+
+							"points_redeemed": "0",
+
+							"redeemed_value": 0,
+
+
+
+
+						"side_effects": {
+							"effect": [
+							]
+						},
+
+					"item_status": {
+							"success": "false",
+							"code": 801,
+							"message": "Trying to redeem invalid points"
+					}
+				}
+		} 
+	} 
+} 

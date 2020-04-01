@@ -1,0 +1,142 @@
+{
+    "response": {
+        "status": {
+            "success": "true",
+            "code": 200,
+            "message": "Success",
+            "total": "1",
+            "success_count": "1"
+        },
+        "customers": {
+            "customer": [
+                {
+                    "user_id": 397806129,
+                    "firstname": "James",
+                    "lastname": "Bond",
+                    "mobile": "919345678910",
+                    "email": "manu@qualitykiosk.com",
+                    "external_id": "TCP_100",
+                    "lifetime_points": 27593,
+                    "loyalty_points": 27553,
+                    "current_slab": "NONE",
+                    "tier_expiry_date": "2120-03-18 23:59:59",
+                    "points_summaries": {
+                        "points_summary": [
+                            {
+                                "programId": "1414",
+                                "redeemed": "0",
+                                "expired": "0",
+                                "returned": "0",
+                                "adjusted": "0",
+                                "lifetimePoints": "0",
+                                "loyaltyPoints": "0",
+                                "cumulativePurchases": "93500",
+                                "currentSlab": "NONE",
+                                "nextSlab": "",
+                                "nextSlabSerialNumber": "-1",
+                                "nextSlabDescription": "",
+                                "slabSNo": "1",
+                                "slabExpiryDate": "2120-03-18 23:59:59",
+                                "totalPoints": ""
+                            },
+                            {
+                                "programId": "1423",
+                                "redeemed": "40",
+                                "expired": "0",
+                                "returned": "89",
+                                "adjusted": "0",
+                                "lifetimePoints": "27593",
+                                "loyaltyPoints": "27553",
+                                "cumulativePurchases": "58500",
+                                "currentSlab": "Tier 1",
+                                "nextSlab": "Tier 2",
+                                "nextSlabSerialNumber": "2",
+                                "nextSlabDescription": "Tier 2",
+                                "slabSNo": "1",
+                                "slabExpiryDate": "2120-03-18 23:59:59",
+                                "totalPoints": ""
+                            }
+                        ]
+                    },
+                    "lifetime_purchases": 0,
+                    "registered_on": "2020-03-18 11:35:11",
+                    "updated_on": "2020-03-25 12:05:40",
+                    "type": "LOYALTY",
+                    "source": "instore",
+                    "fraud_status": "NONE",
+                    "custom_fields": {
+                        "field": [
+                            {
+                                "name": "airline_crew",
+                                "value": ""
+                            },
+                            {
+                                "name": "spouse_tier",
+                                "value": ""
+                            },
+                            {
+                                "name": "employees",
+                                "value": ""
+                            }
+                        ]
+                    },
+                    "extended_fields": {
+                        "field": [
+                            {
+                                "name": "gender",
+                                "value": "Male"
+                            },
+                            {
+                                "name": "city",
+                                "value": "Bangalore"
+                            },
+                            {
+                                "name": "dob",
+                                "value": "1994-03-17 05:30:00"
+                            }
+                        ]
+                    },
+                    "subscriptions": {
+                        "subscription": [
+                            {
+                                "channel": "SMS",
+                                "priority": "TRANS",
+                                "scope": "ALL",
+                                "status": "1"
+                            },
+                            {
+                                "channel": "SMS",
+                                "priority": "BULK",
+                                "scope": "ALL",
+                                "status": "1"
+                            },
+                            {
+                                "channel": "EMAIL",
+                                "priority": "TRANS",
+                                "scope": "ALL",
+                                "status": "1"
+                            },
+                            {
+                                "channel": "EMAIL",
+                                "priority": "BULK",
+                                "scope": "ALL",
+                                "status": "0"
+                            }
+                        ]
+                    },
+                    "side_effects": {
+                        "effect": []
+                    },
+                    "item_status": {
+                        "success": "true",
+                        "code": "1000",
+                        "message": "Customer successfully updated",
+                        "warnings": {
+                            "warning": []
+                        }
+                    }
+                }
+            ]
+        }
+    }
+}

@@ -1,0 +1,82 @@
+{ 
+   "root":{ 
+      "customer":[ 
+         { 
+            "mobile":"${mobile}",
+            "email":"${email}",
+            "external_id":"${external_id}",
+            "firstname":"${firstname}",
+            "lastname":"${lastname}",
+            "updated_on":"2020-03-21 13:14:31",
+            "registered_till":"",
+            "associated_with":"",
+            "type":"LOYALTY",
+            "fraud_status":{ 
+               "status":""
+            },
+            "subscriptions":{ 
+               "subscription":[ 
+                  { 
+                     "priority":"TRANS",
+                     "scope":"all",
+                     "is_subscribed":"1",
+                     "channel":"email"
+                  },
+                  { 
+                     "priority":"BULK",
+                     "scope":"all",
+                     "is_subscribed":"0",
+                     "channel":"email"
+                  },
+                  { 
+                     "priority":"TRANS",
+                     "scope":"all",
+                     "is_subscribed":"1",
+                     "channel":"sms"
+                  },
+                  { 
+                     "priority":"BULK",
+                     "scope":"all",
+                     "is_subscribed":"1",
+                     "channel":"sms"
+                  }
+               ]
+            },
+            "extended_fields":{ 
+               "field":[ 
+                  { 
+                     "name":"gender",
+                     "value":"Male"
+                  },
+                  { 
+                     "name":"city",
+                     "value":"Bangalore"
+                  },
+                  { 
+                     "name":"dob",
+                     "value":"1994/03/17"
+                  }
+               ]
+            },
+            "custom_fields":{ 
+               "field":[ 
+               	{
+						"name": "airline_crew",
+						"value": ""
+					},
+					{
+						"name": "employees",
+						"value": ""
+					},
+					{
+						"name": "spouse_tier",
+						"value": ""
+					}
+				]
+                    }
+               
+            
+         }
+      ]
+   }
+}

@@ -1,0 +1,42 @@
+{
+	"response": {
+		"status": {
+			"success": "${success}",
+			"code": 200,
+			"message": "Success"
+		},
+		"responses": {
+			"points": {
+				"mobile": "${mobile}",
+				"email": "${email}",
+				"external_id": "${external_id}",
+				"user_id": "${user_id}",
+				"redemption_id": "${redemption_id}",
+				"points_redeemed": "{points_redeemed}",
+				"redeemed_value": 50,
+				"redeemed_local_value": 50,
+				"balance": 153830,
+				"side_effects": {
+					"effect": [
+						{
+							"id": 810432,
+							"case_value": "true",
+							"num_points": 50,
+							"currency_value": 50,
+							"validation_code": "",
+							"points_redemption_summary_id": "${points_redemption_summary_id}",
+							"redeemed_on_bill_number": "${redeemed_on_bill_number}",
+							"redeemed_on_bill_id": -1,
+							"type": "points"
+						}
+					]
+				},
+				"item_status": {
+					"success": "true",
+					"code": 800,
+					"message": "${message}"
+				}
+			}
+		}
+	}
+}

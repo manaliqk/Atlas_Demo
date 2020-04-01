@@ -1,0 +1,83 @@
+{
+ "root":{
+   "transaction":[
+     {
+       "type":"${type}",                 				  
+       "number":"${number}",
+       "amount":"${amount}",
+       "billing_time":"${billing_time}",
+       "gross_amount":"${gross_amount}",
+       
+       "customer":{
+         "mobile":"${mobile}",
+         "email":"",
+         "external_id":"${external_id}",
+         "firstname":"",
+         "lastname":""
+       },
+       "payment_details":{
+         "payment": [{
+                       "mode": "${mode_cash}",
+                       "value": "${value_cash}"
+                   },
+                   {
+                       "mode": "${mode_credit}",
+                       "value": "${value_credit}"
+                   }
+               ]
+           
+       },
+       "custom_fields":{
+         "field":[
+          
+         ]
+       },
+       "line_items":{
+         "line_item":[
+           
+       {
+       	    "type":"${lineitem1_type}",							
+             "serial":"${lineitem1_serial}",
+             "amount":"${lineitem1_amount}",
+             "description": "${lineitem1_description}",
+             "item_code": "${lineitem1_item_code}",
+             "variant":"",
+             "qty": "${lineitem1_qty}",
+			 "rate": "${lineitem1_rate}",
+			 "value": "${lineitem1_value}",
+       },
+       
+       {
+       	    "type":"${lineitem2_type}",							   
+            "return_type":"LINE_ITEM",
+		    "transaction_number":"${transaction_number2}",            	 
+		    "transaction_date":"${transaction_date2}",  	  
+              "serial": "${lineitem2_serial}",
+              "amount": "${lineitem2_amount}",
+              "description": "${lineitem2_description}",
+			  "item_code": "${lineitem2_item_code}",
+			  "qty": "${lineitem2_qty}",
+			"rate": "${lineitem2_rate}",
+			"value": "${lineitem2_value}
+            },
+            {
+            "type":"${lineitem3_type}",							   
+            "return_type":"LINE_ITEM",
+		    "transaction_number":"${transaction_number3}",            	 
+		    "transaction_date":"${transaction_date3}",  	  
+              "serial": "${lineitem3_serial}",
+              "amount": "${lineitem3_amount}",
+              "description": "${lineitem3_description}",
+			  "item_code": "${lineitem3_item_code}",
+			  "qty": "${lineitem3_qty}",
+			"rate": "${lineitem3_rate}",
+			"value": "${lineitem3_value}            
+            }
+    
+         ]
+         
+       }
+     }
+   ]
+ }
+}

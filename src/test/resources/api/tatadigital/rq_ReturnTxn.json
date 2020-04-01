@@ -1,0 +1,66 @@
+{
+  "root": {
+    "transaction": [
+      {
+        "type": "${type}",
+        "return_type":"${return_type}",
+        "number": "${number}",
+        "parent_bill_number":"${parent_bill_number}",
+        "amount": "${amount}",
+        "currency_code": "${currency_code}",
+        "gross_amount": "${gross_amount}",
+         "purchase_time": "${purchase_time}",
+         "billing_time": "${billing_time}",
+        "program_id": "${program_id}",
+        "source": "${source}",
+        "offer_id": "${offer_id}",
+        "customer": {
+          "external_id": "${external_id}"
+        },
+        "payment_details": {
+          "payment": [
+            {
+							"mode": "${mode_cash}",
+							"value": "${value_cash}"
+			}
+          ]
+        },
+       			"custom_fields": {
+				"field": [
+				{
+							"name": "${name}",
+							"value": "${value}"
+						}
+				]
+			},
+        "line_items": {
+          "line_item": [
+            {
+							"serial": "${lineitem1_serial}",
+							"type": "${lineitem1_type}",
+							"amount": "${lineitem1_amount}",
+							"description": "${lineitem1_description}",
+							"item_code": "${lineitem1_item_code}",
+							"qty": "${lineitem1_qty}",
+							"rate": "${lineitem1_rate}",
+							"value": "${lineitem1_value}",
+							"discount_value": "${lineitem1_discount_value}",
+							"offer_id": "${lineitem1_offer_id}"
+						},
+						{
+							"serial": "${lineitem2_serial}",							
+							"type": "${lineitem2_type}",
+	                         "amount": "${lineitem2_amount}",
+							"description": "${lineitem2_description}",
+							"item_code": "${lineitem2_item_code}",
+							"qty": "${lineitem2_qty}",
+							"rate": "${lineitem2_rate}",
+							"value": "${lineitem2_value}",
+							"discount_value": "${lineitem2_discount_value}",
+							"offer_id": "${lineitem2_offer_id}"
+						}             ]
+        }
+      }
+    ]
+  }
+}

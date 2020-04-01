@@ -40,9 +40,11 @@
  * public void Proposal_Submission(String firstname, String lastname, String
  * emailid, String mobile, String type, String maritalStatus, String
  * nationality, String annualIncome, String occupation, String relationToHolder,
- * String sumAssured) { System.out.println(System.currentTimeMillis());
- * POSTProposalSubmission proposubmit = new POSTProposalSubmission(); Response
- * rs = proposubmit.callAPI(); long rsTime = rs.timeIn(TimeUnit.MILLISECONDS);
+ * String sumAssured) { 
+ * System.out.println(System.currentTimeMillis());
+ * POSTProposalSubmission proposubmit = new POSTProposalSubmission(); 
+ * Response rs = proposubmit.callAPI(); 
+ * long rsTime = rs.timeIn(TimeUnit.MILLISECONDS);
  * System.out.println("Response time: " + rsTime);
  * 
  * 

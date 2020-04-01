@@ -1,0 +1,16 @@
+{
+  "root": {
+    "redeem": [
+      {
+        "points_redeemed": "${points_redeemed}",
+        "transaction_number": "${transaction_number}",
+        "customer": {
+          "external_id": "${external_id}"
+        },
+      "redemption_time": "${redemption_time}",
+
+        "program_id": "${program_id}"
+      }
+    ]
+  }
+}

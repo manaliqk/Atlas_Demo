@@ -1,0 +1,22 @@
+{
+"entityType":"${entityType}",
+"entityValue":"${entityValue}",
+"action":"${action}",
+"template":"${template}",
+
+"emailTemplate":{
+"subject":"${EmailTemplateSUbject}",
+"body":"${EmailTemplatebody}"
+},
+"channels":[
+
+{
+"type":"${smstype}",
+"value":"${smsvalue}"
+},
+{
+    "type":"${emailtype}",
+     "value":"${emailvalue}"
+      }
+]
+}

@@ -1,0 +1,85 @@
+{
+    "response": {
+        "status": {
+            "success": "true",
+            "code": 200,
+            "message": "Success"
+        },
+        "transactions": {
+            "transaction": [
+                {
+                    "id": 115150897,
+                    "shipping_source_till_code": "",
+                    "number": "BILL9051",
+                    "bill_client_id": "",
+                    "type": "REGULAR",
+                    "delivery_status": "DELIVERED",
+                    "parent_bill_number": "",
+                    "outlier_status": "NORMAL",
+                    "customer": {
+                        "user_id": "394482760",
+                        "mobile": "919167919465",
+                        "firstname": "UAT 1",
+                        "lastname": "Dere",
+                        "email": "manali.dere@qualitykiosk.com",
+                        "external_id": "TCP_0001",
+                        "lifetime_points": "4523",
+                        "loyalty_points": "1523",
+                        "current_slab": "NONE",
+                        "tier_expiry_date": "2112-09-11 23:59:59",
+                        "points_summaries": {
+                            "points_summary": [
+                                {
+                                    "programId": "1414",
+                                    "redeemed": "0",
+                                    "expired": "0",
+                                    "returned": "0",
+                                    "adjusted": "0",
+                                    "lifetimePoints": "0",
+                                    "loyaltyPoints": "0",
+                                    "cumulativePurchases": "371400",
+                                    "currentSlab": "NONE",
+                                    "nextSlab": "",
+                                    "nextSlabSerialNumber": "-1",
+                                    "nextSlabDescription": "",
+                                    "slabSNo": "1",
+                                    "slabExpiryDate": "2112-09-11 23:59:59",
+                                    "totalPoints": ""
+                                },
+                                {
+                                    "programId": "1423",
+                                    "redeemed": "3000",
+                                    "expired": "0",
+                                    "returned": "2",
+                                    "adjusted": "0",
+                                    "lifetimePoints": "4523",
+                                    "loyaltyPoints": "1523",
+                                    "cumulativePurchases": "371400",
+                                    "currentSlab": "Tier 3",
+                                    "nextSlab": "Tier 4",
+                                    "nextSlabSerialNumber": "4",
+                                    "nextSlabDescription": "Tier 4",
+                                    "slabSNo": "3",
+                                    "slabExpiryDate": "2021-02-28 23:59:59",
+                                    "totalPoints": ""
+                                }
+                            ]
+                        },
+                        "lifetime_purchases": "371400",
+                        "type": "LOYALTY",
+                        "source": "instore"
+                    },
+                    "side_effects": {
+                        "effect": []
+                    },
+                    "source": "INSTORE",
+                    "item_status": {
+                        "success": "true",
+                        "code": 600,
+                        "message": "Transaction added successfully"
+                    }
+                }
+            ]
+        }
+    }
+}

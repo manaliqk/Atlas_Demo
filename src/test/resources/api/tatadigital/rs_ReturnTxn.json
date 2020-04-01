@@ -1,0 +1,93 @@
+{
+    "response": {
+        "status": {
+            "success": "true",
+            "code": 200,
+            "message": "Success"
+        },
+        "transactions": {
+            "transaction": [
+                {
+                    "id": 3977042,
+                    "shipping_source_till_code": "",
+                    "number": "111201",
+                    "bill_client_id": "",
+                    "type": "RETURN",
+                    "delivery_status": "DELIVERED",
+                    "parent_bill_number": "111202",
+                    "outlier_status": "NORMAL",
+                    "customer": {
+                        "user_id": "395169517",
+                        "mobile": "",
+                        "firstname": "Manali",
+                        "lastname": "[]",
+                        "email": "manali.dere1@qualitykiosk.com",
+                        "external_id": "TCP_0022",
+                        "lifetime_points": "61532",
+                        "loyalty_points": "61532",
+                        "current_slab": "NONE",
+                        "tier_expiry_date": "2120-02-27 23:59:59",
+                        "points_summaries": {
+                            "points_summary": [
+                                {
+                                    "programId": "1414",
+                                    "redeemed": "0",
+                                    "expired": "0",
+                                    "returned": "0",
+                                    "adjusted": "0",
+                                    "lifetimePoints": "0",
+                                    "loyaltyPoints": "0",
+                                    "cumulativePurchases": "8500",
+                                    "currentSlab": "NONE",
+                                    "nextSlab": "",
+                                    "nextSlabSerialNumber": "-1",
+                                    "nextSlabDescription": "",
+                                    "slabSNo": "1",
+                                    "slabExpiryDate": "2120-02-27 23:59:59",
+                                    "totalPoints": ""
+                                },
+                                {
+                                    "programId": "1423",
+                                    "redeemed": "0",
+                                    "expired": "0",
+                                    "returned": "180",
+                                    "adjusted": "0",
+                                    "lifetimePoints": "61532",
+                                    "loyaltyPoints": "61532",
+                                    "cumulativePurchases": "9500.00",
+                                    "currentSlab": "Tier 1",
+                                    "nextSlab": "Tier 2",
+                                    "nextSlabSerialNumber": "2",
+                                    "nextSlabDescription": "Tier 2",
+                                    "slabSNo": "1",
+                                    "slabExpiryDate": "2120-02-27 23:59:59",
+                                    "totalPoints": ""
+                                }
+                            ]
+                        },
+                        "lifetime_purchases": "8500",
+                        "type": "LOYALTY",
+                        "source": "instore"
+                    },
+                    "side_effects": {
+                        "effect": [
+                            {
+                                "awarded_points": "4000",
+                                "total_points": "61532",
+                                "type": "points"
+                            }
+                        ]
+                    },
+                    "points_deducted": -4000,
+                    "points_balance": 61532,
+                    "source": "INSTORE",
+                    "item_status": {
+                        "success": "true",
+                        "code": 600,
+                        "message": "Transaction added successfully"
+                    }
+                }
+            ]
+        }
+    }
+}
